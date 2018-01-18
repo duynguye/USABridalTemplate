@@ -1,0 +1,12 @@
+@import './bootstrap/bootstrap';
+@import './bootstrap/bootstrap-grid';
+@import './bootstrap/bootstrap-reboot';
+
+@import './config/fonts';
+@import './config/variables';
+@import './config/mixins';
+@import './config/globals';
+
+body {
+    padding: 50px;
+}

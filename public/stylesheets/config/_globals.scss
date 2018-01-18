@@ -1,0 +1,10 @@
+@import './variables';
+@import './mixins';
+@import './globals/typography';
+
+// Normalize All Box Sizing
+*, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

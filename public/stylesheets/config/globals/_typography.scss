@@ -1,0 +1,93 @@
+@import '../variables';
+@import '../mixins';
+
+// Large Line Underneath H1
+%underline {
+    border-bottom: 10px solid $black;
+    display: block;
+    margin-bottom: 40px;
+    padding: 0 30px 20px 20px;
+}
+
+h1 {
+    @extend %underline;
+    @include heading($h1-size, .85, 900, $h2-size / 1.5); //heading size, heading line-height, heading weight, small size
+}
+
+h2 {
+    @include heading($h2-size, 1, 900, $h3-size); //heading size, heading line-height, heading weight, small size
+}
+
+h3 {
+    @include heading($h3-size, 1, 900); //size, line-height, weight
+}
+
+h4 {
+    @include heading($h4-size, 1, 900); //size, line-height, weight
+}
+
+h5 {
+    @include heading($h5-size, 1, 900); //size, line-height, weight
+}
+
+h6 {
+    @include heading($h6-size, 1, 900); //size, line-height, weight
+}
+
+// Lines On Both Sides of Header
+%accent-line {
+    background: rgb(34, 49, 63);
+    content: '';
+    height: 2px;
+    position: absolute;
+    width: 1680px;
+}
+
+.accent__lines {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    > span {
+        display: inline-block;
+        position: relative;
+        &:before {
+            @extend %accent-line;
+            bottom: 0;
+            margin-right: 15px;
+            right: 100%;
+        }
+        &:after {
+            @extend %accent-line;
+            bottom: 0;
+            left: 100%;
+            margin-left: 15px;
+        }
+    }
+}
+
+// Small Line Underneath NOT Using H1
+.title__underline {
+    margin-bottom: 50px;
+    position: relative;
+    &:before {
+        background: $black;
+        bottom: -20px;
+        content: '';
+        display: block;
+        height: 2px;
+        left: 0;
+        max-width: 215px;
+        position: absolute;
+        width: 100%;
+    }
+}
+
+p {
+    @include paragraph($font-base + 2, 1.5, 400); //size, line-height, weight
+    color: $black;
+}
+
+strong {
+    font-weight: 900;
+}

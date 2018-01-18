@@ -1,0 +1,38 @@
+<!-- views/pages/index.ejs -->
+<% include ../partials/head %>
+<% include ../partials/header %>
+
+<main>
+    <div class="jumbotron">
+        <h1><small style="color: #888;">Discover your</small>Perfect<br>Look</h1>
+        <h2><%= title %></h2>
+
+        <% image = [
+            '/images/logo.png',
+            '/images/logo.png',
+            '/images/logo.png',
+            '/images/logo.png',
+            '/images/logo.png',
+            '/images/logo.png',
+            '/images/logo.png',
+            {
+                source: '/images/logo.png',
+                dressName: 'Dress Name',
+                price: '299',
+                off: '/images/sales/20off.png',
+                url: '/products/dress/1234234234234234',
+                stock: true,
+                ships: false
+            }
+        ] %>
+        <% include ../partials/image %>
+
+        <h3>Announcements</h3>
+        <h4>Casablanca</h4>
+        <h5>Customer Service</h5>
+        <p>You have embarked on a very important<br>journey that you, all of your friends & family</p>
+        <p><strong>USA BRIDAL</strong></p>
+    </div>
+</main>
+
+<% include ../partials/footer %>

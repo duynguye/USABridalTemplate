@@ -1,0 +1,50 @@
+@import './variables';
+
+// Heading
+@mixin heading($size: false, $line-height: false, $weight: false, $subscript-size: false) {
+    color: $black;
+    font-family: $primary-font;
+
+    @if $size {
+        font-size: $size;
+    }
+
+    @if $line-height {
+        line-height: $line-height;
+    }
+
+    @if $weight {
+        font-weight: $weight;
+    }
+
+    small {
+        color: inherit;
+        font-family: $secondary-font;
+        font-weight: 200;
+        display: block;
+        letter-spacing: -2px;
+        line-height: 1;
+
+        @if $subscript-size {
+            font-size: $subscript-size;
+        }
+    }
+}
+
+// Paragraph
+@mixin paragraph($size: false, $line-height: false, $weight: false) {
+    color: $black;
+    font-family: $secondary-font;
+
+    @if $size {
+        font-size: $size;
+    }
+
+    @if $line-height {
+        line-height: $line-height;
+    }
+
+    @if $weight {
+        font-weight: $weight;
+    }
+}

@@ -4,7 +4,7 @@ Please read these instructions for getting the project started and troubleshooti
 
 ### How do I get set up? ###
 
-1) Run this command to get started ```npm install``` 
+1) Run this command to get started ```npm install```
 2) Run this command to start the server ```npm run start``` 
     * If this does not successfully run, try running this command below. 
     * ```npm install -g nodemon``` 

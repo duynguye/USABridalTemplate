@@ -355,6 +355,7 @@ hr {
 
 small,
 .small,
+.footer-events__date p,
 .footer-copyright__body > p {
   font-size: 80%;
   font-weight: 400; }
@@ -7520,8 +7521,8 @@ a {
   font-size: 20px;
   padding: 0; }
 
-.small, .footer-copyright__body > p,
-.footer-nav-item > li {
+.small, .footer-events__date p, .footer-copyright__body > p,
+.footer-events .footer-nav-item > li {
   text-transform: uppercase; }
 
 strong {
@@ -7556,7 +7557,8 @@ strong {
 
 .footer-events {
   color: #282828;
-  position: relative; }
+  position: relative;
+  padding: 60px 0; }
   .footer-events:before {
     background: url("../images/hero.png") no-repeat center fixed;
     background-size: cover;
@@ -7629,7 +7631,7 @@ strong {
     .footer-events__designer h4 {
       font-size: 30px; }
     .footer-events__event {
-      padding-bottom: 5px;
+      padding: 10px 0;
       max-height: 70px; }
     .footer-events__date {
       order: 1; }
@@ -7726,13 +7728,6 @@ strong {
   .footer-copyright__body span {
     color: #282828; }
 
-.footer li,
-.footer p,
-.footer a {
-  font-size: 12px;
-  font-weight: 600;
-  color: #757575; }
-
 .footer__nav, .footer__seo, .footer__policy,
 .footer__policy span {
   color: #818181; }
@@ -7745,6 +7740,12 @@ strong {
   align-items: flex-start;
   justify-content: space-between;
   padding-top: 50px; }
+  .footer__wrapper li,
+  .footer__wrapper p,
+  .footer__wrapper a {
+    font-size: 12px;
+    font-weight: 600;
+    color: #818181; }
 
 .footer__column {
   flex: 1;

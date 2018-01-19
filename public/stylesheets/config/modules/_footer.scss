@@ -4,6 +4,7 @@
 $line: 195px;
 // Placeholders
 .small,
+.footer-events
 .footer-nav-item>li {
     text-transform: uppercase;
 }
@@ -104,6 +105,7 @@ strong {
 .footer-events {
     color: $black;
     position: relative;
+    padding: 60px 0;
     @include image-bg--overlay("../images/hero.png", $dk-blue);
     .row {
         [class*="col-"] {
@@ -183,9 +185,10 @@ strong {
         }
     }
     &__date {
-        order: 2; // p {
-        //     @extend .small;
-        // }
+        order: 2; 
+        p {
+            @extend .small;
+        }
     }
     &__designer {
         order: 1;
@@ -208,7 +211,7 @@ strong {
             font-size: 30px;
         }
         &__event {
-            padding-bottom: 5px;
+            padding: 10px 0 ;
             max-height: 70px;
         }
         &__date {
@@ -349,13 +352,6 @@ strong {
 // FOOTER NAV
 //============================================
 .footer {
-    li,
-    p,
-    a {
-        font-size: 12px;
-        font-weight: 600;
-        color: lighten($black, 35%);
-    }
     
     &__nav,
     &__seo,
@@ -370,6 +366,13 @@ strong {
         display: flex;
     }
     &__wrapper {
+        li,
+        p,
+        a {
+            font-size: 12px;
+            font-weight: 600;
+            color: lighten($black, 35%);
+        }
         flex-flow: row wrap;
         align-items: flex-start;
         justify-content: space-between;

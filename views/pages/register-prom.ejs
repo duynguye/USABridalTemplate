@@ -1,9 +1,121 @@
 <% include ../partials/head %>
 <% include ../partials/header %>
 
-<div>
-    <!-- Your Content Goes Here -->
+<%
+    breadcrumb = {
+        pageTitle: 'Register Your Prom'
+    };
 
-</div>
+    page = {
+        smallTitle: 'Register Your',
+        largeTitle: 'Prom',
+        description: 'Os excestrum et mod quis minvele ssernate ant lignatur aliquaes ipsantis corro occabor solorporatur sit quiate aditior secesto rporem et laborib usapit aut qui tem. Laccus, optas si sit et expe sinci doluptatur antem.'
+    };
+
+    excerpt = {
+        title: 'Chance to Win When Registering Your Prom',
+        description: 'Get on our list! Special drawing to Win the Perfect Prom Dress or an iPad. Plus you will receive huge savings on your prom shoes & prom jewelry!'
+    };
+%>
+<% include ../partials/header-trio  %>
+
+
+<!-- REGISTER PROM FORM -->
+<section class="container-fluid">
+    <form action="" post="">
+        <div class="row">
+            <div class="col-md-1 hidden-sm hidden-xs"></div>
+            <div class="col-md-10 col-sm-12 input__divide">
+                <p class="input__label">
+                    My Prom date is schedule for
+                </p>
+                <input type="date" class="input__calendar" placeholder="Date" /> 
+                <p class="input__label">
+                    and I plan to graduate
+                </p>
+                <input type="date" class="input__calendar" placeholder="Year" /> 
+            </div>
+            <div class="col-md-1 hidden-sm hidden-xs"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 hidden-sm hidden-xs"></div>
+            <div class="col-md-10 col-sm-12 input__divide">
+                <p class="input__label">
+                    The name of my school is
+                </p>
+                <input type="text" class="input__field" placeholder="School Name*" /> 
+            </div>
+            <div class="col-md-1 hidden-sm hidden-xs"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 hidden-sm hidden-xs"></div>
+            <div class="col-md-10 col-sm-12 input__divide">
+                <p class="input__label">
+                    My name is
+                </p>
+                <input type="text" class="input__field" placeholder="First Name*" /> 
+                <input type="text" class="input__field" placeholder="Last Name*" /> 
+                <p class="input__label">
+                    and I live in 
+                </p>
+                <select class="input__dropdown">
+                    <option>Country*</option>
+                    <option>The second option</option>
+                    <option>The third option</option>
+                </select>
+            </div>
+            <div class="col-md-1 hidden-sm hidden-xs"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 hidden-sm hidden-xs"></div>
+            <div class="col-md-10 col-sm-12 input__divide">
+                <p class="input__label">
+                    at
+                </p>
+                <input type="text" class="input__field input__extend" placeholder="Address*" /> 
+                <input type="text" class="input__field" placeholder="City*" /> 
+                <select class="input__dropdown">
+                    <option>State*</option>
+                    <option>The second option</option>
+                    <option>The third option</option>
+                </select>
+                <input type="text" class="input__field" placeholder="Zip*" /> 
+            </div>
+            <div class="col-md-1 hidden-sm hidden-xs"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 hidden-sm hidden-xs"></div>
+            <div class="col-md-10 col-sm-12 input__divide">
+                <p class="input__label">
+                    I can be best reached at
+                </p>
+                <input type="tel" class="input__field" placeholder="Phone*" /> 
+                <p class="input__label">
+                    and/or
+                </p>
+                <input type="email" class="input__field input__extend" placeholder="Email*" /> 
+            </div>
+            <div class="col-md-1 hidden-sm hidden-xs"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 hidden-sm hidden-xs"></div>
+            <div class="col-md-10 col-sm-12 input__divide">
+                <p class="input__label">
+                    Some Designers &amp; Styles I like are
+                </p>
+                <input type="tel" class="input__field input__extend" placeholder="Interests*" /> 
+            </div>
+            <div class="col-md-1 hidden-sm hidden-xs"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <a href="#" class="input__submit">
+                    schedule appointment
+                </a>
+            </div>
+        </div>
+    </form>
+</section>
+<!-- end REGISTER PROM FORM -->
 
 <% include ../partials/footer %>

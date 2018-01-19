@@ -1,6 +1,12 @@
 @import './variables';
 @import './mixins';
 @import './globals/typography';
+@import './globals/bootstrap-overrides';
+@import './globals/breadcrumbs';
+@import './globals/buttons';
+@import './globals/inputs';
+@import './globals/pagination';
+@import './globals/social-links';
 
 // Normalize All Box Sizing
 *, *::before, *::after {

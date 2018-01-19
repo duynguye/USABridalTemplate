@@ -1,0 +1,85 @@
+//--------------------------
+// Section - Header Trio 
+//--------------------------
+
+.sub-hero {
+	&__section--trio {
+		padding: 0 60px;
+		.row {
+			position: relative;
+		}
+		.col-md-7 {
+			display: flex;
+			height: calc(100vh - 220px);
+			min-height: 600px;
+			padding: 0 0 100px;
+			z-index: 100;
+			.trio__header {
+				align-self: flex-end;
+				h1 {
+					display: inline-block;
+				}
+				p {
+					margin-bottom: 0;
+					margin-left: 20px;
+					width: 50%;
+				}
+			}
+		}
+		.col-md-6:first-child {
+			height: calc(100vh - 220px);
+			padding: 0 0 125px;
+		}
+	}
+	&__description {
+		padding-left: 20px;
+	}
+	&__img {
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		width: 100%;
+		&-hero {
+			height: calc(100vh - 220px);
+			min-height: 600px;
+		}
+	}
+	&__arrow-accent {
+		align-items: center;
+		background: $tan;
+		content: '';
+		display: flex;
+		height: 30%;
+		min-height: 250px;
+		min-width: 250px;
+		right: 0;
+		position: absolute;
+		top: 0;
+		width: 30%;
+		z-index: 100;
+		&--container {
+			margin: 0 auto;
+			position: relative;
+			&:after {
+				background: $black;
+				bottom: -20px;
+				content: '';
+				height: 5px;
+				left: 50%;
+				position: absolute;
+				transform: translateX(-50%);
+				width: 225%;
+			}
+		}
+		svg {
+			position: relative;
+			height: 70px;
+			width: 70px !important;
+		}
+	}
+	&__excerpt {
+		background: $lt-blue;
+		padding: 200px 80px 60px;
+		transform: translateY(-100px);
+	}
+}

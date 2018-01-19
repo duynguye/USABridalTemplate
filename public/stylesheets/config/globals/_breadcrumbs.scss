@@ -1,0 +1,32 @@
+//--------------------------
+// Breadcrumbs
+//--------------------------
+
+.breadcrumbs {
+	display: block;
+	list-style-type: none;
+	margin-bottom: 40px;
+	padding-left: 20px;
+	li {
+		@include heading($font-base, 1, 400);
+		display: inline-block;
+		&:not(:last-child) {
+			margin-right: 5px;
+			&:after {
+				@include heading($font-base, 1, 400);
+				content: '\203A';
+				display: inline-block;
+				font-weight: 400;
+				margin-left: 5px;
+			}
+		}
+	}
+	a {
+		@include heading($font-base, 1, 400);
+		border-bottom: 2px solid $black;
+		padding-bottom: 6px;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

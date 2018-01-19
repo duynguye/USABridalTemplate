@@ -1,11 +1,14 @@
 //============================================ 
-// FOOTER: variables, placeholders and mixins
+// FOOTER: general styles, variables, placeholders and mixins
 //============================================ 
-$line: 195px;
-// Placeholders
+.section-contain {
+    margin: 0 50px;
+}
+
 .small,
-.footer-events
-.footer-nav-item>li {
+.footer-events__date,
+.footer-nav-item>li,
+.footer-copyright__body p {
     text-transform: uppercase;
 }
 
@@ -13,6 +16,9 @@ strong {
     color: $black;
 }
 
+// Variables
+$line: 195px;
+// Placeholders
 %psuedo {
     content: '';
     position: absolute;
@@ -99,6 +105,7 @@ strong {
     align-self: $flex-direction;
 }
 
+
 //============================================ 
 // TRUNK SHOW EVENTS
 //============================================ 
@@ -107,19 +114,28 @@ strong {
     position: relative;
     padding: 60px 0;
     @include image-bg--overlay("../images/hero.png", $dk-blue);
-    .row {
-        [class*="col-"] {
-            &:first-of-type {
-                margin-bottom: 20px;
+    >.container {
+        .row {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            [class*="col-"] {
+                &:first-of-type {
+                    margin-bottom: 20px;
+                }
+                &:last-of-type {
+                    align-self: center;
+                }
             }
         }
     }
-
     p {
-        font-size: 15px;
+        font-size: $font-sm;
         font-weight: 200;
         text-align: left;
     }
+
 
     p,
     &__designer h4 {
@@ -171,21 +187,37 @@ strong {
     }
 
     &__table {
-        flex-flow: column wrap;
+        flex-flow: column nowrap;
         align-self: center;
+        max-height: 400px;
+        overflow-y: scroll;
+        margin-right: 60px;
     } // --> Stacked Event Rows
+    a.list-group-item {
+        border: none;
+        background-color: unset;
+        color: unset;
+        padding: 0;
+        transition: all .2s;
+        &:first-child {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    }
     &__event {
         flex: 1; // span the full width of table
         flex-flow: row wrap;
         align-items: flex-end;
         border-bottom: 2px solid $black;
         padding: 5px 0;
-        &:last-of-type {
-            border-bottom: none;
-        }
+        // &: {
+        //     padding-top: 0;
+        //     max-height: 50px;
+        // }
+       
     }
     &__date {
-        order: 2; 
+        order: 2;
         p {
             @extend .small;
         }
@@ -205,13 +237,13 @@ strong {
     } // SMALL SCREENS - 768 --> 2 col Event Rows
     @media screen and (min-width: 768px) {
         &__date p {
-            font-size: 13px;
+            font-size: $font-xs;
         }
         &__designer h4 {
-            font-size: 30px;
+            font-size: $h5-size;
         }
         &__event {
-            padding: 10px 0 ;
+            padding: 10px 0;
             max-height: 70px;
         }
         &__date {
@@ -227,7 +259,8 @@ strong {
     } // MEDIUM SCREENS - 980 --> 3 col Event Rows
     @media screen and (min-width: 980px) {
         &__table {
-            flex-flow: column wrap;
+            max-height: 260px;
+            margin-right: 60px;
         }
         &__headers {
             display: flex;
@@ -237,6 +270,7 @@ strong {
                 flex: 4;
             }
         }
+        &__event {}
         &__designer,
         &__address {
             flex: 2;
@@ -251,6 +285,10 @@ strong {
     @include flex-center(column, wrap);
     position: relative;
     max-width: 100%;
+    &__summary,
+    &__form {
+        max-width: 370px;
+    }
     &:before {
         @extend %psuedo;
         @include accent--left( $line, 0, 0); // (width, top, left) 
@@ -277,13 +315,14 @@ strong {
 
     &__content {
         align-self: center;
-        max-width: 385px;
+        max-width: 364px;
     }
     &__headline {
         text-align: left;
         margin: 30px 0;
     }
     &__summary {
+        max-width: 370px;
         padding-bottom: 20px;
     }
     &__form {
@@ -338,7 +377,7 @@ strong {
 
     >p {
         margin: 0;
-        @extend .small;
+        font-size: $font-xs;
         color: #fff;
         font-weight: 500;
         letter-spacing: 1.8px;
@@ -352,7 +391,9 @@ strong {
 // FOOTER NAV
 //============================================
 .footer {
-    
+    h3 {
+        font-size: $h4-size;
+    }
     &__nav,
     &__seo,
     &__policy,
@@ -369,7 +410,7 @@ strong {
         li,
         p,
         a {
-            font-size: 12px;
+            font-size: $font-xs;
             font-weight: 600;
             color: lighten($black, 35%);
         }
@@ -429,7 +470,7 @@ strong {
             margin: 0 5px;
         }
     } // SMALL SCREENS - 768 --> 2 col Event Rows
-    @media screen and (min-width : 768px) {
+    @media screen and (min-width: 768px) {
         &__column {
             &:first-of-type,
             &:nth-of-type(2) {
@@ -447,7 +488,7 @@ strong {
             }
         }
     } // MEDIUM SCREENS - 980 --> 3 col Event Rows
-    @media screen and (min-width : 980px) {
+    @media screen and (min-width: 980px) {
         &__seo {
             p {
                 padding-top: 60px;
@@ -463,6 +504,11 @@ strong {
                 justify-content: center;
                 flex: 2;
             }
+        }
+    } // LARGE SCREENS - 1200 --> 3 col Event Rows
+    @media screen and (min-width: 1200px) {
+        .section-contain {
+            // margin: 0 50px;
         }
     }
 }

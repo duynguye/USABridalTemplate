@@ -7,6 +7,12 @@
 @import './config/mixins';
 @import './config/globals';
 
+// MODULES
+@import './config/modules/buttons';
+@import './config/modules/footer';
+
+
+
 body {
     padding: 50px;
 }

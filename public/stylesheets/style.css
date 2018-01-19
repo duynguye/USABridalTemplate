@@ -354,7 +354,8 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.1); }
 
 small,
-.small {
+.small,
+.footer-copyright__body p {
   font-size: 80%;
   font-weight: 400; }
 
@@ -7513,7 +7514,18 @@ strong {
   font-size: 20px;
   padding: 0; }
 
-.footer-cta:before, .footer-cta:after {
+.small, .footer-copyright__body p,
+.footer-nav-item > li {
+  text-transform: uppercase; }
+
+strong {
+  color: #282828; }
+
+.footer-events:before, .footer-cta:before, .footer-cta:after, .footer-copyright__body:before, .footer-copyright__body::after {
+  content: '';
+  position: absolute; }
+
+.footer-cta:before, .footer-cta:after, .footer-copyright__body:before, .footer-copyright__body::after {
   width: 1680px;
   height: 2px;
   background: #22313f; }
@@ -7540,8 +7552,6 @@ strong {
   color: #282828;
   position: relative; }
   .footer-events:before {
-    content: '';
-    position: absolute;
     background: url("../images/hero.png") no-repeat center fixed;
     background-size: cover;
     background-color: #c5eff7;
@@ -7640,8 +7650,6 @@ strong {
   position: relative;
   max-width: 100%; }
   .footer-cta:before {
-    content: '';
-    position: absolute;
     width: 195px;
     top: 0;
     left: 0;
@@ -7657,8 +7665,6 @@ strong {
       .footer-cta:before {
         left: -20px; } }
   .footer-cta:after {
-    content: '';
-    position: absolute;
     width: 195px;
     top: 90%;
     right: 0;
@@ -7683,6 +7689,36 @@ strong {
     width: 100%;
     justify-self: flex-start;
     align-self: flex-start; }
+
+.footer-copyright {
+  text-align: center;
+  background: #e396df;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 40px; }
+
+.footer-copyright__body {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 0;
+  max-width: 780px; }
+  .footer-copyright__body:before, .footer-copyright__body:after {
+    max-width: 100%; }
+  .footer-copyright__body:before {
+    width: 195px;
+    top: 0;
+    left: 0; }
+  .footer-copyright__body::after {
+    width: 195px;
+    top: 100%;
+    right: 0; }
+  .footer-copyright__body p {
+    margin: 0;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1.8px; }
+  .footer-copyright__body span {
+    color: #282828; }
 
 body {
   padding: 50px; }

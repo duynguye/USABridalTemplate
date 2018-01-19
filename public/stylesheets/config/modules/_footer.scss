@@ -1,38 +1,52 @@
 //============================================ 
 // FOOTER: variables, placeholders and mixins
 //============================================ 
-// Variables
 $line: 195px;
 // Placeholders
+.small,
+.footer-nav-item>li
+{
+    text-transform: uppercase;
+}
+strong {
+    color: $black;
+}
+%psuedo {
+    content: '';
+    position: absolute;
+}
 %footer-accent-line {
     width: 1680px;
     height: 2px;
     background: rgb(34, 49, 63);
 }
-%input{
+
+%input {
     &[type*="email"] {
-    font-family: $primary-font;
-    font-style: italic;
-    font-weight: 200;
-    color: $black;
-    padding: 20px;
-    width: 100%;
-    border: none;
-    box-shadow: none;
-    border-style: none;
-    height: 2.5em; /* for IE */
-    vertical-align: middle; /* This is optional but it makes legacy IEs look better */
-    &::placeholder {
-        color: inherit;
-        font-size: $font-base;
-      }
+        font-family: $primary-font;
+        font-style: italic;
+        font-weight: 200;
+        color: $black;
+        padding: 20px;
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        border-style: none;
+        height: 2.5em;
+        /* for IE */
+        vertical-align: middle;
+        /* This is optional but it makes legacy IEs look better */
+        &::placeholder {
+            color: inherit;
+            font-size: $font-base;
+        }
     }
 }
+
 // Add to element you want to add a bg-img overlay
 @mixin image-bg--overlay( $image-url, $color) {
     &:before {
-        content: '';
-        position: absolute;
+        @extend %psuedo;
         background: url($image-url) no-repeat center fixed;
         background-size: cover;
         background-color: $color;
@@ -51,6 +65,7 @@ $line: 195px;
         }
     }
 }
+
 // Lines - Right
 @mixin accent--right($width, $top, $right) {
     @extend %footer-accent-line;
@@ -58,6 +73,7 @@ $line: 195px;
     top: $top;
     right: $right;
 }
+
 // Lines - Left
 @mixin accent--left($width, $top, $left) {
     @extend %footer-accent-line;
@@ -65,6 +81,7 @@ $line: 195px;
     top: $top;
     left: $left;
 }
+
 // FLEX CENTER
 @mixin flex-center($direction, $wrap) {
     display: flex;
@@ -72,6 +89,7 @@ $line: 195px;
     align-items: center;
     flex-flow: $direction $wrap;
 }
+
 // FLEX SELF
 @mixin flex-self($flex-direction) {
     justify-self: $flex-direction;
@@ -220,19 +238,18 @@ $line: 195px;
         }
     }
 }
+
 //============================================ 
 // FOOTER CTA
 //============================================ 
 .footer-cta {
-    @include flex-center(column, wrap); // centers child items via flexbox
-    position: relative; 
+    @include flex-center(column, wrap); 
+    position: relative;
     max-width: 100%;
     &:before {
-        content: '';
-        position: absolute;
+        @extend %psuedo;
         @include accent--left( $line, 0, 0); // (width, top, left) 
-        max-width: 100%; 
-        // SMALL SCREENS - 768
+        max-width: 100%; // SMALL SCREENS - 768
         @media screen and (min-width: 768px) {
             padding-right: 0;
             left: -20px;
@@ -245,8 +262,7 @@ $line: 195px;
         }
     }
     &:after {
-        content: '';
-        position: absolute;
+        @extend %psuedo;
         @include accent--right( $line, 90%, 0); // (width, top, right)
         display: none; // SMALL SCREENS - 768
         @media screen and (min-width: 768px) {
@@ -278,14 +294,55 @@ $line: 195px;
             }
             &__btn {
                 width: 100%;
-                @include flex-self(flex-start); 
+                @include flex-self(flex-start);
             }
         }
     }
 }
+
 //============================================ 
 // COPYRIGHT
 //============================================ 
+.footer-copyright {
+    text-align: center;
+    background: $lavender;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 40px;
+}
+
+.footer-copyright__body {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 780px;
+    &:before,
+    &:after {
+        max-width: 100%;
+    }
+
+    &:before {
+        @extend %psuedo;
+        @include accent--left($line, 0, 0);
+    }
+
+    &::after {
+        @extend %psuedo;
+        @include accent--right($line, 100%, 0);
+    }
+
+    p {
+        margin: 0;
+        @extend .small;
+        color: #fff;
+        font-weight: 500;
+        letter-spacing: 1.8px;
+    }
+    span {
+        color: $black;
+    }
+}
+
 //============================================ 
 // FOOTER NAV
-//============================================ 
+//============================================

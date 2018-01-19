@@ -4,17 +4,19 @@
 $line: 195px;
 // Placeholders
 .small,
-.footer-nav-item>li
-{
+.footer-nav-item>li {
     text-transform: uppercase;
 }
+
 strong {
     color: $black;
 }
+
 %psuedo {
     content: '';
     position: absolute;
 }
+
 %footer-accent-line {
     width: 1680px;
     height: 2px;
@@ -102,7 +104,7 @@ strong {
 .footer-events {
     color: $black;
     position: relative;
-    @include image-bg--overlay("../images/hero.png", $lt-blue);
+    @include image-bg--overlay("../images/hero.png", $dk-blue);
     .row {
         [class*="col-"] {
             &:first-of-type {
@@ -243,7 +245,7 @@ strong {
 // FOOTER CTA
 //============================================ 
 .footer-cta {
-    @include flex-center(column, wrap); 
+    @include flex-center(column, wrap);
     position: relative;
     max-width: 100%;
     &:before {
@@ -331,7 +333,7 @@ strong {
         @include accent--right($line, 100%, 0);
     }
 
-    p {
+    >p {
         margin: 0;
         @extend .small;
         color: #fff;
@@ -346,18 +348,20 @@ strong {
 //============================================ 
 // FOOTER NAV
 //============================================
-
-li {
-    list-style: none;
-}
-
 .footer {
     li,
     p,
     a {
         font-size: 12px;
         font-weight: 600;
-        color: tint($black, 30%);
+        color: lighten($black, 35%);
+    }
+    
+    &__nav,
+    &__seo,
+    &__policy,
+    &__policy span {
+        color: lighten($black, 35%);
     }
 
     &__wrapper,
@@ -369,12 +373,15 @@ li {
         flex-flow: row wrap;
         align-items: flex-start;
         justify-content: space-between;
+        padding-top: 50px;
     }
 
     &__column {
-        flex: 1 ;
+        flex: 1;
         justify-content: flex-start;
-        &:first-of-type { flex: 2;}
+        &:first-of-type {
+            flex: 2;
+        }
         &:last-of-type {
             align-self: center;
             padding: 0;
@@ -413,14 +420,16 @@ li {
     }
     &__policy {
         justify-content: flex-start;
+        align-items: center;
         span {
+            color: inherit;
             margin: 0 5px;
         }
     } // SMALL SCREENS - 768 --> 2 col Event Rows
-    @include respond-to(min-width, 'sm') {
+    @media screen and (min-width : 768px) {
         &__column {
             &:first-of-type,
-            &:nth-of-type(2) { 
+            &:nth-of-type(2) {
                 flex: 2;
                 justify-content: center;
             }
@@ -428,14 +437,14 @@ li {
                 h5 {
                     &::before {
                         width: 175px;
-                        left: -82px; 
+                        left: -82px;
                         max-width: unset;
                     }
                 }
             }
         }
     } // MEDIUM SCREENS - 980 --> 3 col Event Rows
-    @include respond-to(min-width, 'md') {
+    @media screen and (min-width : 980px) {
         &__seo {
             p {
                 padding-top: 60px;
@@ -444,15 +453,13 @@ li {
         &__column {
             justify-content: flex-start;
             &:first-of-type,
-            &:last-of-type { flex: 1 ;}
+            &:last-of-type {
+                flex: 1;
+            }
             &:nth-of-type(2) {
                 justify-content: center;
                 flex: 2;
             }
-           
         }
-    } // LARGE SCREENS - 1200
-    @include respond-to(min-width, 'lg') {}
-    // XL SCREENS - 1441
-    @include respond-to(min-width, 'xlg') {}
+    }
 }

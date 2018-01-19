@@ -1,0 +1,11 @@
+//--------------------------
+// Buttons
+//--------------------------
+
+.btn__outline {
+	@include heading($button-size, 1, 900);
+    border-bottom: 5px solid $black;
+    color: $black;
+    display: inline-block;
+    font-style: italic;
+}

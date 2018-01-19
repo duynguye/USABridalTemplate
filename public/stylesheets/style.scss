@@ -6,7 +6,4 @@
 @import './config/variables';
 @import './config/mixins';
 @import './config/globals';
-
-body {
-    padding: 50px;
-}
+@import './config/modules';

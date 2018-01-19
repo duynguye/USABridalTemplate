@@ -1,0 +1,37 @@
+//--------------------------
+// Pagination
+//--------------------------
+
+.pagination {
+	&__prev {
+		background: $tan;
+		display: flex;
+		height: 230px;
+		.btn_outline {
+			align-self: center;
+		}
+	}
+	&__links {
+		list-style-type: none;
+		margin-top: 20px;
+		li {
+			display: inline-block;
+		}
+		a {
+			@include paragraph(16px, 1, 200);
+			&:not(:last-child) {
+				margin-right: 10px;
+				&:after {
+					content: '/';
+					display: block;
+					font-family: inherit;
+					font-weight: 200;
+					margin-right: 10px;
+				}
+			}
+			&.selected {
+				font-weight: 900;
+			}
+		}
+	}
+}

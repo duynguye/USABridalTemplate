@@ -1,0 +1,63 @@
+<!-- HEADER TRIO -->
+<section class="container-fluid sub-hero__section--trio">
+    <div class="row">
+         <div class="social__links hidden-sm hidden-xs">
+            <a href="#">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-pinterest"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div class="col-md-7 col-md-push-1">
+            <div class="trio__header">
+                <ul class="breadcrumbs">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <%= breadcrumb.pageTitle %>
+                    </li>
+                </ul>
+                <h1>
+                    <small>
+                        <%= page.smallTitle %>
+                    </small>
+                    <%= page.largeTitle %>
+                </h1>
+                <p>
+                    <%= page.description %>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-5 col-lg-4 col-md-pull-1 hidden-sm hidden-xs">
+            <img class="sub-hero__img sub-hero__img-hero" src="http://placehold.it/2000" alt="" />
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+    <div class="row row-eq-height">
+        <div class="col-md-6 col-lg-7">
+            <img class="sub-hero__img" src="http://placehold.it/2000" alt="" />
+            <div class="sub-hero__arrow-accent">
+                <div class="sub-hero__arrow-accent--container">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-5 sub-hero__excerpt">
+            <h4 class="title__underline">
+                <%= excerpt.title %>
+            </h4>
+            <p>
+                <%= excerpt.description %>
+            </p>
+        </div>
+    </div>
+</section>
+<!-- end HEADER TRIO -->

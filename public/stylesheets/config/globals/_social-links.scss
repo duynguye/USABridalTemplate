@@ -1,0 +1,22 @@
+//--------------------------
+// Social Links
+//--------------------------
+
+.social__links {
+	bottom: 40px;
+	left: 0;
+	position: absolute;
+	a {
+		color: $black;
+		display: block;
+		font-size: $font-lg;
+		text-align: center;
+		transition: all 0.2s ease-in;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		&:hover {
+			color: lighten($black, 20%);
+		}
+	}
+}

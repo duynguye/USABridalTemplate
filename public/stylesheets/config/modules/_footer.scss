@@ -346,3 +346,113 @@ strong {
 //============================================ 
 // FOOTER NAV
 //============================================
+
+li {
+    list-style: none;
+}
+
+.footer {
+    li,
+    p,
+    a {
+        font-size: 12px;
+        font-weight: 600;
+        color: tint($black, 30%);
+    }
+
+    &__wrapper,
+    &__column,
+    &__policy {
+        display: flex;
+    }
+    &__wrapper {
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__column {
+        flex: 1 ;
+        justify-content: flex-start;
+        &:first-of-type { flex: 2;}
+        &:last-of-type {
+            align-self: center;
+            padding: 0;
+            flex: 1 0 100%;
+        }
+        &__wrapper {
+            text-align: left;
+        }
+        &__title {
+            position: relative;
+            margin-bottom: 20px;
+            h5 {
+                padding-bottom: 5px;
+                &::before {
+                    @extend %psuedo;
+                    @include accent--left(50%, 100%, 0);
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    &__nav {
+        padding-left: 0;
+    }
+    &__nav-item {
+        margin-bottom: 10px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    &__seo {
+        margin-bottom: 30px;
+        p {
+            padding-top: 30px;
+        }
+    }
+    &__policy {
+        justify-content: flex-start;
+        span {
+            margin: 0 5px;
+        }
+    } // SMALL SCREENS - 768 --> 2 col Event Rows
+    @include respond-to(min-width, 'sm') {
+        &__column {
+            &:first-of-type,
+            &:nth-of-type(2) { 
+                flex: 2;
+                justify-content: center;
+            }
+            &__title {
+                h5 {
+                    &::before {
+                        width: 175px;
+                        left: -82px; 
+                        max-width: unset;
+                    }
+                }
+            }
+        }
+    } // MEDIUM SCREENS - 980 --> 3 col Event Rows
+    @include respond-to(min-width, 'md') {
+        &__seo {
+            p {
+                padding-top: 60px;
+            }
+        }
+        &__column {
+            justify-content: flex-start;
+            &:first-of-type,
+            &:last-of-type { flex: 1 ;}
+            &:nth-of-type(2) {
+                justify-content: center;
+                flex: 2;
+            }
+           
+        }
+    } // LARGE SCREENS - 1200
+    @include respond-to(min-width, 'lg') {}
+    // XL SCREENS - 1441
+    @include respond-to(min-width, 'xlg') {}
+}

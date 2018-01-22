@@ -1,7 +1,7 @@
 
 
 .blog__post-snippet {
-    padding: 10% 2%;
+    padding: 5% 2% 10%;
     position: relative;
     &:before {
         @extend %accent-line;
@@ -9,19 +9,23 @@
         left: 0;
         bottom: 0;
     }
-    h2,p {
-        margin-bottom: 0;
-    }
     &__title {
         @extend %underline;
-        padding:0 20px;
+        padding:0 30px;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 60px;
+        }
         h2 {
+            margin-bottom: 5px;
+            font-size: 110px;
+            line-height: 1;
             span {
                 font-family: $secondary-font;
                 font-weight: 100;
                 font-size: 43px;
                 display: inline-block;
                 padding-bottom: 10px;
+                letter-spacing: -0.1rem;
             }
         }
     }
@@ -29,7 +33,7 @@
         display: flex;
         justify-content: flex-start;
         flex-flow: row wrap;
-        padding: 0 20px;
+        padding: 0 30px;
          p {
              flex: 1 100%;
              margin-bottom: 30px;

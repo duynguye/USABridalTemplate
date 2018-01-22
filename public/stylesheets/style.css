@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Muli:200,400,600,900|Playfair+Display:400,400i,700,700i,900,900i");
-h1, .blog__post-snippet__title {
+h1, .blog__header__box-2 h2, .blog__post-snippet__title {
   border-bottom: 10px solid #282828;
   display: block;
   margin-bottom: 40px;
@@ -414,6 +414,37 @@ li {
 
 a {
   color: unset; }
+
+.blog, .blog [class*="col-md-"]:first-of-type {
+  padding-top: 130px;
+  height: calc(100vh - 128px); }
+  .blog [class*="col-md-"]:first-of-type {
+    padding-top: 0;
+    z-index: 1; }
+  .blog__header .social {
+    height: 100%;
+    width: 100%;
+    background: red; }
+  .blog__header__box-1 {
+    padding: 100px;
+    background: #f2d0a4; }
+  .blog__header__box-2 {
+    background: #81cfe0;
+    padding: 50px 100px; }
+  .blog__header__image {
+    max-width: 100%; }
+    .blog__header__image img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      width: 100%; }
+  .blog__header__title h1 span {
+    font-family: "Muli", sans-serif;
+    font-weight: 100;
+    font-size: 43px;
+    display: block;
+    padding-bottom: 10px;
+    letter-spacing: -0.1rem; }
 
 .sub-hero__section--trio {
   padding: 0 60px; }

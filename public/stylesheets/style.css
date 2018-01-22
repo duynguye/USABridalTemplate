@@ -507,7 +507,8 @@ a {
     flex-flow: row wrap;
     padding: 0 20px; }
     .blog__post-snippet__content p {
-      flex: 1 100%; }
+      flex: 1 100%;
+      margin-bottom: 30px; }
     @media screen and (min-width: 768px) {
       .blog__post-snippet__content p {
         flex: 1 33%;

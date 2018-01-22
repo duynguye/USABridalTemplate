@@ -1,11 +1,8 @@
 .post {
+    $parent: &;
     padding-top: 150px;
     &__content {
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
         column-count: 2;
-        -moz-column-gap: 4em;
-        -webkit-column-gap: 4em;
         column-gap: 4em;
         &--left {
             margin-right: 4em;
@@ -17,32 +14,31 @@
     img {
         max-width: 100%;
         object-fit: cover;
-        height: 500px;
-        
+        height: 500px;   
     }
     &__nav {
         padding: 30px;
-    }
-    &__pager--prev {
-        background: $tan;
-        padding: 80px 70px;
-        max-width: 100%;
-        margin: 30px;
-        text-align: center;
-        vertical-align: middle;
-    }
-    &__related {
-        // margin-right:60px;
-        @extend .post__nav;
-        &:last-child {
-            margin-right: 0;
+        @at-root #{$parent}__pager--prev {
+            background: $tan;
+            padding: 80px 70px;
+            max-width: 100%;
+            margin: 30px;
+            text-align: center;
+            vertical-align: middle;
         }
-        &-title{
+        @at-root #{$parent}__related {
+            @extend .post__nav;
+            &:last-child {
+                margin-right: 0;
+            }
+            &-title{
+                
+            }
+            &-body {
+                
+            }
             
         }
-        &-body {
-            
-        }
+    }
         
-    }    
 }

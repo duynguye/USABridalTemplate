@@ -23,27 +23,27 @@ strong {
     background: rgb(34, 49, 63);
 }
 
-%input {
-    &[type*="email"] {
-        font-family: $primary-font;
-        font-style: italic;
-        font-weight: 200;
-        color: $black;
-        padding: 20px;
-        width: 100%;
-        border: none;
-        box-shadow: none;
-        border-style: none;
-        height: 2.5em;
-        /* for IE */
-        vertical-align: middle;
-        /* This is optional but it makes legacy IEs look better */
-        &::placeholder {
-            color: inherit;
-            font-size: $font-base;
-        }
-    }
-}
+// %input {
+//     &[type*="email"] {
+//         font-family: $primary-font;
+//         font-style: italic;
+//         font-weight: 200;
+//         color: $black;
+//         padding: 20px;
+//         width: 100%;
+//         border: none;
+//         box-shadow: none;
+//         border-style: none;
+//         height: 2.5em;
+//         /* for IE */
+//         vertical-align: middle;
+//         /* This is optional but it makes legacy IEs look better */
+//         &::placehoxlder {
+//             color: inherit;
+//             font-size: $font-base;
+//         }
+//     }
+// }
 
 // Add to element you want to add a bg-img overlay
 @mixin image-bg--overlay( $image-url, $color) {
@@ -59,12 +59,12 @@ strong {
         width: 100%;
         object-fit: cover;
         z-index: -1;
-        @supports (mix-blend-mode: soft-light) {
-            mix-blend-mode: soft-light;
-        }
-        @supports not (mix-blend-mode: soft-light) {
-            opacity: .1;
-        }
+        // @supports (mix-blend-mode: soft-light) {
+        //     mix-blend-mode: soft-light;
+        // }
+        // @supports not (mix-blend-mode: soft-light) {
+        //     opacity: .1;
+        // }
     }
 }
 
@@ -285,14 +285,14 @@ strong {
     }
     &__form {
         input {
-            @extend %input;
-            &[type*="email"] {
-                margin-bottom: 20px; // SMALL SCREENS - 768
-                @media screen and (min-width: 768px) {
-                    & {
-                        margin-bottom: 50px;
-                    }
-                }
+            // @extend %input;
+            // &[type*="email"] {
+            //     margin-bottom: 20px; // SMALL SCREENS - 768
+            //     @media screen and (min-width: 768px) {
+            //         & {
+            //             margin-bottom: 50px;
+            //         }
+            //     }
             }
             &__btn {
                 width: 100%;

@@ -1,12 +1,37 @@
 <% include ../partials/head %>
 <% include ../partials/header %>
 
+<%
+    breadcrumb = {
+        pageTitle: 'Appointment By Request'
+    };
+
+    page = {
+        smallTitle: 'Appointment by',
+        largeTitle: 'Request',
+        description: 'Os excestrum et mod quis minvele ssernate ant lignatur aliquaes ipsantis corro occabor solorporatur sit quiate aditior secesto rporem et laborib usapit aut qui tem. Laccus, optas si sit et expe sinci doluptatur antem.'
+    };
+
+    image = {
+        hero: 'http://placehold.it/2000',
+        heroAlt: '',
+
+        heroSupport: 'http://placehold.it/2000'
+        heroSupportAlt: ''
+    };
+
+    cta = {
+        title: 'For the attention & service you deserve.',
+        description: 'A member of our professional bridal consultant staff will contact you within 48 hours to confirm your appointment.'
+    };
+%>
+<% include ../partials/header-trio  %>
+
 <!-- APPOINTMENT FORM -->
 <section class="container-fluid">
     <form action="" post="">
         <div class="row">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12 input__divide">
+            <div class="col-offset-1 col-md-10 input__divide">
                 <p class="input__label">
                     I am seeking professional help with 
                 </p>
@@ -25,11 +50,9 @@
                 </p>
                 <input type="date" class="input__calendar" placeholder="Date & Time" /> 
             </div>
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
         </div>
         <div class="row">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12 input__divide">
+            <div class="col-offset-1 col-md-10 input__divide">
                 <p class="input__label">
                     My name is
                 </p>
@@ -44,11 +67,9 @@
                     <option>The third option</option>
                 </select>
             </div>
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
         </div>
         <div class="row">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12 input__divide">
+            <div class="col-offset-1 col-md-10 input__divide">
                 <p class="input__label">
                     at
                 </p>
@@ -61,11 +82,9 @@
                 </select>
                 <input type="text" class="input__field" placeholder="Zip*" /> 
             </div>
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
         </div>
         <div class="row">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12 input__divide">
+            <div class="col-offset-1 col-md-10 input__divide">
                 <p class="input__label">
                     I can be best reached at
                 </p>
@@ -75,11 +94,9 @@
                 </p>
                 <input type="email" class="input__field input__extend" placeholder="Email*" /> 
             </div>
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
         </div>
         <div class="row">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12 input__divide">
+            <div class="col-offset-1 col-md-10 input__divide">
                 <p class="input__label">
                     My budget is
                 </p>
@@ -93,11 +110,9 @@
                 </p>
                 <input type="date" class="input__calendar" placeholder="Date*" /> 
             </div>
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
         </div>
         <div class="row">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12 input__divide">
+            <div class="col-offset-1 col-md-10 input__divide">
                 <p class="input__label">
                     My size is
                 </p>
@@ -114,7 +129,6 @@
                     groomsmen.
                 </p>
             </div>
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
             <div class="row">
                 <div class="col-xs-12">
                     <a href="#" class="input__submit">

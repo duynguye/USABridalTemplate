@@ -9,15 +9,3 @@
     display: inline-block;
     font-style: italic;
 }
-
-.btn--dark {
- background: none;
- border-bottom: 5px solid $black;
- display: inline-block;
- color: $black;
- font-family: $primary-font;
- font-style: italic;
- font-weight: 800;
- font-size: $button-size;
- padding: 0;
-}

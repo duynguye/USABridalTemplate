@@ -8,7 +8,7 @@
 
 // 2. Input Field Placeholder
 
-// 2. Input Range Thumb
+// 3. Input Range Thumb
 
 
 // -----------------------
@@ -32,16 +32,15 @@
         font-weight: $weight;
     }
 
-    small {
-        color: inherit;
-        font-family: $secondary-font;
-        font-weight: 200;
-        display: block;
-        letter-spacing: -2px;
-        line-height: 1;
-
-        @if $subscript-size {
+    @if $subscript-size {
+        small {
+            color: inherit;
+            font-family: $secondary-font;
             font-size: $subscript-size;
+            font-weight: 200;
+            display: block;
+            letter-spacing: -2px;
+            line-height: 1;
         }
     }
 }
@@ -70,7 +69,7 @@
 // -----------------------
 
 @mixin placeholder {
-    @each $prefix in -webkit-, -ms-, -moz-, -o-, '' {
+    @each $prefix in -webkit-, -ms-, -moz-, -o- {
         &::#{$prefix}placeholder {
             @content;
         }
@@ -83,7 +82,7 @@
 // -----------------------
 
 @mixin thumb {
-    @each $prefix in -webkit-, -ms-, -moz-, '' {
+    @each $prefix in -webkit-, -ms-, -moz- {
         &::#{$prefix}slider-thumb {
             #{$prefix}apperance: none;
             @content;

@@ -4,7 +4,6 @@
 // Large Line Underneath H1
 %underline {
     border-bottom: 10px solid $black;
-    display: block;
     margin-bottom: 40px;
     padding: 0 30px 20px 20px;
 }
@@ -12,6 +11,7 @@
 h1 {
     @extend %underline;
     @include heading($h1-size, .85, 900, $h2-size / 1.5); //heading size, heading line-height, heading weight, small size
+    display: inline-block;
 }
 
 h2 {
@@ -91,5 +91,6 @@ p {
 
 strong {
     font-weight: 900;
+    text-transform: uppercase;
 }
 

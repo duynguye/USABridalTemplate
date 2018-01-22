@@ -1,29 +1,66 @@
 <% include ../partials/head %>
 <% include ../partials/header %>
 
+<%
+    breadcrumb = {
+        pageTitle: 'Register Your Wedding'
+    };
+    // breadcrumb = [
+    //     'Register Your Wedding',
+    //     '/images/logo.png',
+    //     '/images/logo.png',
+    //     '/images/logo.png',
+    //     '/images/logo.png',
+    //     '/images/logo.png',
+    //     '/images/logo.png',
+    //     {
+    //         home: '/images/logo.png',
+    //         child: 'Dress Name',
+    //         child-child:
+    //     }
+    // ]
+
+    page = {
+        smallTitle: 'Register Your',
+        largeTitle: 'Wedding',
+        description: 'Os excestrum et mod quis minvele ssernate ant lignatur aliquaes ipsantis corro occabor solorporatur sit quiate aditior secesto rporem et laborib usapit aut qui tem. Laccus, optas si sit et expe sinci doluptatur antem.'
+    };
+
+    image = {
+        hero: 'http://placehold.it/2000',
+        heroAlt: '#',
+        heroSupport: 'http://placehold.it/2000' // Image below the fold
+    };
+
+    cta = {
+        title: 'Chance to Win When Registering Your Wedding',
+        description: 'FREE Wedding Gown or Bridal Gown Up to 5 Brides Maid Dresses $300 Bridal Warehouse Gift Card Plus receive sale announcements, show dates notifications & special email promotions!'
+    };
+%>
+<% include ../partials/header-trio  %>
+
 <!-- REGISTER WEDDING FORM -->
 <section class="container-fluid">
     <form action="" post="">
         <div class="row">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12 input__divide">
+            <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
                 <p class="input__label">
                     My
                 </p>
                 <select class="input__dropdown">
                     <option>Wedding</option>
-                    <option>Prom</option>
+                    <option>Quinceanera</option>
+                    <option>Pageant</option>
+                    <option>Other</option>
                 </select>
                 <p class="input__label">
                     date is scheduled for
                 </p>
                 <input type="date" class="input__calendar" placeholder="Date & Time" /> 
             </div>
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
         </div>
         <div class="row">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12 input__divide">
+            <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
                 <p class="input__label">
                     My name is
                 </p>
@@ -38,11 +75,9 @@
                     <option>The third option</option>
                 </select>
             </div>
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
         </div>
         <div class="row">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12 input__divide">
+            <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
                 <p class="input__label">
                     at
                 </p>
@@ -55,11 +90,9 @@
                 </select>
                 <input type="text" class="input__field" placeholder="Zip*" /> 
             </div>
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
         </div>
         <div class="row">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12 input__divide">
+            <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
                 <p class="input__label">
                     I can be best reached at
                 </p>
@@ -69,11 +102,10 @@
                 </p>
                 <input type="email" class="input__field input__extend" placeholder="Email*" /> 
             </div>
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
         </div>
+        <!-- APPEARS WHEN WEDDING OPTION IS SELECTED -->
         <div class="row">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12 input__divide">
+            <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
                 <p class="input__label">
                     The Groom's Name  is
                 </p>
@@ -83,11 +115,9 @@
                 </p>
                 <input type="date" class="input__calendar" placeholder="Date*" /> 
             </div>
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
         </div>
         <div class="row">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12 input__divide">
+            <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
                 <p class="input__label">
                     For my event, I expect
                 </p>
@@ -100,18 +130,16 @@
                     groomsmen.
                 </p>
             </div>
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
         </div>
         <div class="row">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12 input__divide">
+            <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
                 <p class="input__label">
                     Some Designers &amp; Styles I like are
                 </p>
-                <input type="tel" class="input__field input__extend" placeholder="Interests*" /> 
+                <textarea class="input__textarea input__extend" placeholder="Interests*"></textarea>
             </div>
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
         </div>
+        <!-- end APPEARS WHEN WEDDING OPTION IS SELECTED -->
         <div class="row">
             <div class="col-xs-12">
                 <a href="#" class="input__submit">

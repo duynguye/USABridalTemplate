@@ -1,0 +1,208 @@
+//============================================
+// NAVIGATION
+//============================================ 
+//  This file contains all styles related to all NAVIGATION of the site/application.
+// 
+//  1. MAIN
+//  2. 
+//  3. 
+//============================================ 
+// -------------------------------------------
+// 1. MAIN
+// -------------------------------------------
+.navbar {
+	background: white;
+	border: none;
+	// height: 13vh;
+	/* adjust the vh of .swiper-container to equal 100vh */
+	// padding-top: 40px;
+	margin-bottom: 0;
+	/* override bootstrap default value */
+	&-brand {
+		padding-top: 40px;
+		height: 100%;
+		img {
+			height: auto;
+			width: 230px;
+			max-width: 100%;
+		}
+	}
+	.navbar-toggle {
+		.collapsed {
+			padding-top: 40px;
+		}
+	}
+	.navbar-nav {
+		padding-top: 40px; // Remove padding on last navigation item
+		>.nav-item {
+			color: $black;
+			font-family: $primary-font;
+			font-weight: 900;
+			margin-right: 25px;
+			border: 1px solid $white;
+			>a {
+				color: inherit;
+			}
+			&-last {
+				margin-right: 100px;
+			}
+			.dropdown-menu.show {
+				position: fixed;
+				top: 92px;
+				left: 0;
+				background-color: rgba(255, 255, 255, 0.95);
+				height: calc(100vh - 92px);
+				width: 100%;
+				border: none;
+				border-radius: 0;
+				-webkit-box-shadow: none;
+				box-shadow: none;
+
+				.dropdown-menu-category-row {
+					width: 100%;
+					padding: 35px 50px 0px 50px;
+
+					.dropdown-menu-category-col-heading {
+						display: inline-block;
+						width: 25%;
+						padding-left: 82px;
+						vertical-align: top;
+
+						@media (max-width: 992px) {
+							width: 100%;
+						}
+
+						h6 {
+							padding-top: 20px;
+
+							&:before {
+								width: 175px;
+								left: -82px;
+								max-width: unset;
+								height: 2px;
+								background: #22313f;
+								content: '';
+							}
+						}
+					}
+					.dropdown-menu-category-col-menu-container {
+						display: inline-block;
+						width: 70%;
+						vertical-align: top;
+
+						@media (max-width: 992px) {
+							width: 100%;
+						}
+
+						.dropdown-menu-category-col-menu {
+							display: inline-block;
+							width: 50%;
+							vertical-align: top;
+							float: left;
+							padding-bottom: 35px;
+
+							@media (max-width: 768px) {
+								width: 100%;
+							}
+
+							.dropdown-menu-category-label {
+								font-family: $secondary-font;
+								text-transform: uppercase;
+								font-size: 11px;
+								letter-spacing: 1px;
+							}
+							ul {
+								font-family: $secondary-font;
+								text-transform: uppercase;
+								font-size: 11px;
+								letter-spacing: 1px;
+
+								li {
+									padding-bottom: 8px;
+
+									a {
+										color: lighten($black, 40%);
+									}
+								}	
+							}
+						}
+					}
+				}
+				.dropdown-menu-custom-close-container {
+					position: absolute;
+					bottom: 30px;
+					right: 30px;
+					
+					&:hover {
+						cursor: pointer;
+					}
+						
+					.dropdown-menu-custom-close-txt {
+						font-family: $secondary-font;
+						text-transform: uppercase;
+						font-size: 11px;
+						letter-spacing: 1px;
+						display: inline-block;
+						padding: 19px 6px;
+						vertical-align: top;
+
+					}
+					.dropdown-menu-custom-close-btn {
+						font-size: 30px;
+						line-height: 30px;
+						padding-top: 8px;
+						text-align: center;
+						border: 2px solid $black;
+						border-radius: 100px;
+						height: 50px;
+						width: 50px;
+						text-align: center;
+						display: inline-block;
+
+					}
+				}
+			}
+		}
+		.nav-item.show {
+			border: 1px solid $lavender;
+
+			.dropdown-toggle {
+				background-color: transparent;
+				color: $lavender;
+			}
+		}
+		>.nav-icon {
+			padding-left: 0;
+			padding-right: 0;
+			>a {
+				color: $black;
+
+				.svg-inline--fa {
+					z-index: 10;
+				}
+
+				.nav-icon-counter {
+					float: right;
+					position: relative;
+					color: $white;
+					background-color: $lavender;
+					padding-top: 3px;
+					border-radius: 50px;
+					height: 18px;
+					width: 18px;
+					margin: 9px 0 0 -11px;
+					font-size: 12px;
+					line-height: 12px;
+					font-weight: 700;
+					z-index: 1;
+					text-align: center;
+				}
+			}
+		}
+	}
+	&.navbar-fixed-top {
+		box-shadow: 1px 16px 51px -10px rgba(0, 0, 0, 0.16);
+		-webkit-box-shadow: 1px 16px 51px -10px rgba(0, 0, 0, 0.16);
+		-moz-box-shadow: 1px 16px 51px -10px rgba(0, 0, 0, 0.16);
+	}
+}

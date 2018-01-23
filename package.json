@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "watch": "webpack -w --colors --progress",
-    "build": ""
+    "build": "webpack -p --colors --progress",
+    "compilse": ""
   },
   "dependencies": {
     "@google/maps": "^0.4.5",

@@ -5,12 +5,13 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "watch": "webpack -w --colors --progress",
-    "build": ""
+    "build": "webpack -p --colors --progress",
+    "compile": ""
   },
   "dependencies": {
     "@google/maps": "^0.4.5",
     "body-parser": "~1.18.2",
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^3.3.7",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "ejs": "~2.5.7",

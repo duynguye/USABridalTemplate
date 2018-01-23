@@ -181,7 +181,8 @@ h6 {
 
 p,
 ul,
-li {
+li,
+a {
     @include paragraph($font-base, 1.5, 400); //size, line-height, weight
     color: $black;
     @media (max-width: $bp-sm) {
@@ -189,12 +190,35 @@ li {
     }
 }
 
-strong {
+strong,
+b {
     color: inherit;
     font-weight: 900;
     text-transform: uppercase;
 }
 
 a:hover {
+    color: unset;
     text-decoration: none;
+}
+
+.txt__columns--2 {
+    columns: 2 40px;
+    @media (max-width: $bp-lg) {
+        column-count: 1;
+        strong:not(:first-child) {
+            display: block;
+            margin: 20px 0 -20px;
+        }
+    }
+    @media (max-width: $bp-md) {
+        column-count: 2;
+    }
+    @media (max-width: $bp-xs) {
+        column-count: 1;
+        strong:not(:first-child){
+            display: block;
+            margin: 20px 0 -20px;
+        }
+    }
 }

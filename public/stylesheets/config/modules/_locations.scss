@@ -1,0 +1,114 @@
+.scrollmagic-pin-spacer {
+    position: absolute !important;
+    width: calc(100% - 100px) !important;
+
+    // &::before {
+    //     content: '';
+    //     display: block;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100% !important;
+    //     max-height: calc(100% + 60px) !important;
+    //     background-color: $tan;
+    //     margin: 0 0 0 -30px;
+    //     z-index: -1;
+    // }
+}
+
+#mapPin {
+    position: relative;
+}
+
+.map {
+    padding: 40px 0;
+
+    &__column {
+        position: relative;
+        padding: 0 50px;
+        min-height: 700px;
+
+        &--accent {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100% + 60px);
+            background-color: $tan;
+            margin-left: -30px;
+            margin-top: -30px;
+            margin-bottom: -30px;
+        }
+
+        &--container {
+            height: 600px;
+            margin: 30px;
+            width: calc(100%);
+            transform: translateX(-30px);
+        }
+    }
+
+    &--moving {
+        .map__column--accent {
+            margin-top: 0;
+            margin-bottom: 0;
+            height: 100%;
+        }
+    }
+}
+
+.location {
+    &__column {
+        &--node {
+            cursor: pointer;
+            margin: 0 0 0 40px;
+            padding: 0 0 30px 20px;
+            border-collapse: collapse;
+            transition: all 175ms ease-in;
+
+            h4 {
+                margin: 0;
+                padding: 10px 0;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    height: 2px;
+                    background-color: $black;
+                    width: 215px;
+                    margin: 20px 0;
+                }
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+
+            &:first-child {
+                h4 {
+                    padding-top: 22px;
+                }
+            }
+
+            &:not(:first-child) {
+                border-top: 2px solid black;
+                margin-top: -2px;
+
+                h4 {
+                    margin-top: 30px;
+                }
+            }
+
+            &:not(:last-child) {
+                border-bottom: 2px solid black;
+            }
+
+            &:hover {
+                margin-left: 0;
+                padding-left: 60px;
+                background-color: $lt-blue;
+            }
+        }
+    }
+}

@@ -8,11 +8,6 @@
 	position: relative;
 }
 
-<<<<<<< HEAD
-// List Groups
-.list-group-item {
-	border: none;
-=======
 //Mimics bootstrap offset for right side instead of left
 @for $offset from 1 through 12 {
 	.col-md-offset-right-#{$offset} {
@@ -26,5 +21,4 @@
 // Equal height columns
 .row--eq-height {
 	display: flex;
->>>>>>> 230faff5cdbfb459f5c88d6b84df27748345c259
 }

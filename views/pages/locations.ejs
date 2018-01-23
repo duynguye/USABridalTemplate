@@ -1,9 +1,80 @@
 <% include ../partials/head %>
 <% include ../partials/header %>
 
-<div>
-    <!-- Your Content Goes Here -->
+<%
+    breadcrumb = {
+        pageTitle: "Store Locations"
+    };
 
+    page = {
+        largeTitle: "Many Locations",
+        smallTitle: "Visit One of Our",
+        description: "We have 5 convenient locations. Please feel free to get in touch with us anytime as you go through your wedding planning process. Call or email your local store concerning Appointments, Orders, Layaway, Dress Availability, etc."
+    };
+
+    excerpt = {
+        title: "Corporate Office",
+        description: '<div class="row"></div>'
+    }
+%>
+<% include ../partials/header-trio %>
+
+<div class="container-fluid">
+    <div class="row map">
+        <div class="col-sm-5 col-sm-offset-1 map__column">
+            <div id="mapScroll"></div>
+            <div id="mapTrigger" style="position: relative; transform: translateY(350px);"></div>
+            <div id="mapPin">
+                <div class="hidden-xs map__column--accent"></div>
+                <div id="map" class="map__column--container"></div>
+            </div>
+        </div>
+
+        <%
+            locations = [
+                {
+                    name: 'Louisville, KY',
+                    coords: { lat: 38.220980, lng: -85.582809 },
+                    address: '1850 South Hustborne Pky, Louisville, KY 40220',
+                    phone: '502.499.7911'
+                },
+                {
+                    name: 'Nashville / Goodlettsville, TN',
+                    coords: { lat: 36.321912, lng: -86.702927 },
+                    address: '900 Conference Dr, Goodlettsville, TN 37072',
+                    phone: '615.855.1005'
+                },
+                {
+                    name: 'Evansville, IN',
+                    coords: { lat: 37.984952, lng: -87.490620 },
+                    address: '865 N Green River Rd, Evansville, IN 47715',
+                    phone: '812.471,9993'
+                },
+                {
+                    name: 'Elizabethtown, KY',
+                    coords: { lat: 37.719040, lng: -85.878343 },
+                    address: '1201 N Dixie Hwy Suite 103, Elizabethtown, KY 42701',
+                    phone: '270.769.5785'
+                },
+                {
+                    name: 'Owensboro, KY',
+                    coords: { lat: 37.743540, lng: -87.041851 },
+                    address: '4551 Springhill Drive/Hwy 54, Owensboro, KY 42301',
+                    phone: '270.683.7808'
+                }
+            ]
+        %>
+
+        <div class="col-sm-5 location__column">
+            <% locations.forEach(function (location) { %>
+                <div class="location__column--node" data-lat="<%- location.coords.lat %>" data-lng="<%- location.coords.lng %>">
+                    <h4><%- location.name %></h4>
+                    <p><small><%- location.address %></small></p>
+                    <p><small><strong>P:</strong> <%- location.phone %></small></p>
+                </div>
+            <% }); %>
+        </div>
+    </div>
 </div>
 
 <% include ../partials/footer %>

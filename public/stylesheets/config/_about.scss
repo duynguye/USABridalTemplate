@@ -116,8 +116,8 @@
 		margin-top: -40px;
 
 		 &:before {
-	        @extend %psuedo;
-	        @include accent--left( $line, 0, 0); // (width, top, left) 
+	        // @extend %psuedo;
+	        // @include accent--left( $line, 0, 0); // (width, top, left) 
 	        max-width: 100%; // SMALL SCREENS - 768
 	        @media screen and (min-width: 768px) {
 	            padding-right: 0;
@@ -131,8 +131,8 @@
 	        }
 	    }
 	    &:after {
-	        @extend %psuedo;
-	        @include accent--right( $line, 90%, 0); // (width, top, right)
+	        // @extend %psuedo;
+	        // @include accent--right( $line, 90%, 0); // (width, top, right)
 	        display: none; // SMALL SCREENS - 768
 	        @media screen and (min-width: 768px) {
 	            display: initial;

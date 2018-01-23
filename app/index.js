@@ -1,8 +1,10 @@
+// Global Dependencies
 import jQuery from 'jquery';
 import 'popper.js';
 import 'bootstrap';
 const $ = jQuery;
 
+<<<<<<< HEAD
 // Increases height of textarea to fit container to content
 var textarea = null;
 window.addEventListener("load", function() {
@@ -13,3 +15,10 @@ window.addEventListener("load", function() {
         }
     }, false);
 }, false);
+=======
+// Google Maps
+import initializeMap from './map';
+
+
+window.initializeMap = initializeMap;
+>>>>>>> bf9a168c69553f216cf1388018702943d38d758d

@@ -33,7 +33,7 @@ h2 {
 h3 {
     @include heading($h3-size, 1, 900); //size, line-height, weight
     @media (max-width: $bp-xs) {
-        font-size: $h2-size / 2.5;;
+        font-size: $h2-size / 2.5;
     }
 }
 
@@ -175,3 +175,10 @@ a:hover {
     text-decoration: none;
 }
 
+.h1-lead, h1-lead {
+    font-family: Muli,sans-serif;
+    font-weight: 200;
+    font-size: 46px;
+    letter-spacing: -2.1px;
+    color: #8e8e8e;
+}

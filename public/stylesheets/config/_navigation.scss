@@ -21,10 +21,27 @@
 	&-brand {
 		padding-top: 40px;
 		height: 100%;
+
+		@media (max-width: 768px) {
+			padding-top: 12px;
+		}
 		img {
 			height: auto;
 			width: 230px;
 			max-width: 100%;
+
+			@media (max-width: 992px) {
+				width: 185px;
+			}
+		}
+	}
+	.container-fluid {
+		padding-left: 45px;
+		padding-right: 45px;
+
+		@media (max-width: 1200px) {
+			padding-left: 15px;
+			padding-right: 15px;
 		}
 	}
 	.navbar-toggle {
@@ -34,17 +51,36 @@
 	}
 	.navbar-nav {
 		padding-top: 40px; // Remove padding on last navigation item
+		
+		@media (max-width: 992px) {
+			padding-top: 30px;
+		}
+		@media (max-width: 768px) {
+			padding-top: 12px;
+		}
 		>.nav-item {
 			color: $black;
 			font-family: $primary-font;
 			font-weight: 900;
 			margin-right: 25px;
 			border: 1px solid $white;
+
+			@media (max-width: 992px) {
+				margin-right: 10px;
+			}
 			>a {
 				color: inherit;
+
+				@media (max-width: 992px) {
+					padding: 10px 7px;
+				}
 			}
 			&-last {
 				margin-right: 100px;
+
+				@media (max-width: 1200px) {
+					margin-right: 40px;
+				}
 			}
 			.dropdown-menu.show {
 				position: fixed;
@@ -61,6 +97,10 @@
 				.dropdown-menu-category-row {
 					width: 100%;
 					padding: 35px 50px 0px 50px;
+
+					@media (max-width: 768px) {
+					    padding: 10px 25px 0px 25px;
+					}
 
 					.dropdown-menu-category-col-heading {
 						display: inline-block;
@@ -136,7 +176,7 @@
 					&:hover {
 						cursor: pointer;
 					}
-						
+
 					.dropdown-menu-custom-close-txt {
 						font-family: $secondary-font;
 						text-transform: uppercase;
@@ -174,8 +214,17 @@
 		>.nav-icon {
 			padding-left: 0;
 			padding-right: 0;
+
+			@media (max-width: 768px) {
+				width: 42px;
+				display: inline-block;
+			}
 			>a {
 				color: $black;
+
+				@media (max-width: 992px) {
+					padding: 10px 7px;
+				}
 
 				.svg-inline--fa {
 					z-index: 10;
@@ -200,9 +249,9 @@
 			}
 		}
 	}
-	&.navbar-fixed-top {
+	/* &.navbar-fixed-top {
 		box-shadow: 1px 16px 51px -10px rgba(0, 0, 0, 0.16);
 		-webkit-box-shadow: 1px 16px 51px -10px rgba(0, 0, 0, 0.16);
 		-moz-box-shadow: 1px 16px 51px -10px rgba(0, 0, 0, 0.16);
-	}
+	} */
 }

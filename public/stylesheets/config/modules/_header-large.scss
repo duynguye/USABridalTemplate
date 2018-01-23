@@ -1,50 +1,60 @@
+// Still working on this... not for use...yet
+%content-padding {
+    padding-left: 200;
+    padding-right: 200;
+}
 
-.blog {
-    padding-top: 130px;
-    height: calc(100vh - 128px);
-    [class*="col-md-"]:first-of-type {
-        @extend .blog;
-        padding-top: 0;
-        z-index: 1;
+%large-height {
+    height: calc(100vh - 500px) !important;
+    min-height: 600px;
+}
+
+.sub-hero {
+    $parent: &;
+    &__section--large {
+        @extend %large-height;
+        margin: 94px 0;
+        padding: 0 60px;
+        .row {
+            position: relative;
+            .social__links {
+                height: 70vh;
+            }
+        }
     }
-    &__header {
-        .social {
-            
-            height: 100%;
-            width: 100%;
-            background: red;
+   
+    &__arrow-accent--large {
+        @extend .sub-hero__arrow-accent;
+        left: 0;
+        position: absolute;
+        top: 110vh;
+        width: 30%;
+        z-index: 10;
+        &__container {
+            @extend .sub-hero__arrow-accent__container;
         }
-        &__box-1 {
-            padding: 100px;
-            background: $tan;
+        svg {
+            position: relative;
+            height: 70px;
+            width: 70px !important;
         }
-        &__box-2 {
-            background: $dk-blue;
-            padding: 50px 100px;
-            h2 {
-                @extend %underline;
-            }
-        }
-        &__image {
+    }
+    &__img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        &--large {
             max-width: 100%;
-            img {
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
-                width: 100%;
-            }
+            min-height: 130vh;
         }
-        &__title {
-            h1 {
-                span {
-                    font-family: $secondary-font;
-                    font-weight: 100;
-                    font-size: 43px;
-                    display: block;
-                    padding-bottom: 10px;
-                    letter-spacing: -0.1rem;
-                }
-            }
+    }
+    &__cta--single {
+        background: $lt-blue;
+        padding: 60px 80px; // transform: translateY(-100px);
+        text-align: center;
+        h4 {
+            display: inline-block;
         }
     }
 }

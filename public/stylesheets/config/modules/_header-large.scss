@@ -10,7 +10,7 @@
     $parent: &;
     &__section--large {
         // @extend %large-height;
-        margin: 94px 0;
+        margin: 94px 0 0;
         padding: 0 60px;
         .row {
             position: relative;
@@ -70,5 +70,6 @@
     &__dropdowns {
         @extend .sub-hero__large-body;
         @extend %padding-sides;
+        margin-bottom: 0;
     }
 }

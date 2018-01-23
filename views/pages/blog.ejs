@@ -2,19 +2,40 @@
 <% include ../partials/head %>
     <% include ../partials/header %>
         <% include ../partials/header-large%>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="list-group">
-                        <!-- List of Blog Post Snippets Here -->
-                        <% for(var i=0; i<4; i++) { %>
-                            <% include ../partials/post-snippet.ejs %>
-                                <% } %>
-                                    <!-- End list-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="list-group">
+                            <!-- List of Blog Post Snippets Here -->
+                            <% for(var i=0; i<4; i++) { %>
+                                <% include ../partials/post-snippet.ejs %>
+                                    <% } %>
+                                        <!-- End list-->
+                        </div>
                     </div>
                 </div>
+                    <div class="row pagination">
+                        <div class="col-md-4">
+                            <div class="pagination__prev">
+                                <a href="" class="btn__outline btn_outline">
+                                    older entries
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="pagination__links">
+                                <h5 class="title__underline">Blog Navigation</h5>
+                                <li>
+                                    <a href="">1</a>
+                                    <a href="">2</a>
+                                    <a href="">3</a>
+                                    <a href="">4</a>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
             </div>
-        </div>
 
-        <% include ../partials/footer.ejs %>
+            </div>
 
+            <% include ../partials/footer.ejs %>

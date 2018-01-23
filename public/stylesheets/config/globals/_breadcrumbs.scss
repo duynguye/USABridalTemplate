@@ -3,13 +3,27 @@
 //--------------------------
 
 .breadcrumbs {
+	$parent: &;
 	display: block;
 	list-style-type: none;
 	margin-bottom: 40px;
 	padding-left: 20px;
 	li {
-		@include heading($font-base, 1, 400);
 		display: inline-block;
+		a {
+			@include heading($font-base, 1, 400);
+			border-bottom: 2px solid $black;
+			padding-bottom: 6px;
+			@at-root {
+	            #{$parent} li:last-child a {
+	                cursor: default;
+					pointer-events: none;
+	            }
+	        }
+	        &:hover {
+				text-decoration: none;
+			}
+		}
 		&:not(:last-child) {
 			margin-right: 5px;
 			&:after {
@@ -19,14 +33,6 @@
 				font-weight: 400;
 				margin-left: 5px;
 			}
-		}
-	}
-	a {
-		@include heading($font-base, 1, 400);
-		border-bottom: 2px solid $black;
-		padding-bottom: 6px;
-		&:hover {
-			text-decoration: none;
 		}
 	}
 }

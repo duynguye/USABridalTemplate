@@ -2,7 +2,23 @@
 // Columns
 //--------------------------
 
+// Targets all classes starting with 'col-'
 [class*='col-']{
 	padding: 0;
 	position: relative;
+}
+
+//Mimics bootstrap offset for right side instead of left
+@for $offset from 1 through 12 {
+	.col-md-offset-right-#{$offset} {
+		margin-right: 100% / 12 * $offset;
+		@media screen and (max-width: 767px) {
+			margin-right: 0;
+		}
+	}
+}
+
+// Equal height columns
+.row--eq-height {
+	display: flex;
 }

@@ -18,12 +18,7 @@
         <div class="col-md-7 col-md-push-1">
             <div class="trio__header">
                 <ul class="breadcrumbs">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <%= breadcrumb.pageTitle %>
-                    </li>
+
                 </ul>
                 <h1>
                     <small>
@@ -37,25 +32,24 @@
             </div>
         </div>
         <div class="col-md-5 col-lg-4 col-md-pull-1 hidden-sm hidden-xs">
-            <img class="sub-hero__img sub-hero__img-hero" src="http://placehold.it/2000" alt="" />
+            <img class="sub-hero__img-hero" src="<%= image.hero %>" alt="<%= image.heroAlt %>" />
         </div>
         <div class="col-lg-2"></div>
     </div>
-    <div class="row row-eq-height">
-        <div class="col-md-6 col-lg-7">
-            <img class="sub-hero__img" src="http://placehold.it/2000" alt="" />
-            <div class="sub-hero__arrow-accent">
-                <div class="sub-hero__arrow-accent--container">
+    <div class="row row--eq-height">
+        <div class="col-md-6 col-lg-7" style="background: url('<%= image.heroSupport %>') center no-repeat; background-size: cover;">
+            <div class="sub-hero__arrow-accent hidden-sm hidden-xs">
+                <div class="sub-hero__arrow-accent__container">
                     <i class="fas fa-arrow-down"></i>
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-lg-5 sub-hero__excerpt">
+        <div class="col-md-6 col-lg-5 sub-hero__cta">
             <h4 class="title__underline">
-                <%= excerpt.title %>
+                <%= cta.title %>
             </h4>
             <p>
-                <%- excerpt.description %>
+                <%- cta.description %>
             </p>
         </div>
     </div>

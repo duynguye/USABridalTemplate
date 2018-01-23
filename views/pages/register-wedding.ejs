@@ -2,23 +2,7 @@
 <% include ../partials/header %>
 
 <%
-    breadcrumb = {
-        pageTitle: 'Register Your Wedding'
-    };
-    // breadcrumb = [
-    //     'Register Your Wedding',
-    //     '/images/logo.png',
-    //     '/images/logo.png',
-    //     '/images/logo.png',
-    //     '/images/logo.png',
-    //     '/images/logo.png',
-    //     '/images/logo.png',
-    //     {
-    //         home: '/images/logo.png',
-    //         child: 'Dress Name',
-    //         child-child:
-    //     }
-    // ]
+    path = "register your wedding" // Keep text lowercase. Seperate additional links with "/" and no spaces
 
     page = {
         smallTitle: 'Register Your',
@@ -34,6 +18,7 @@
 
     cta = {
         title: 'Chance to Win When Registering Your Wedding',
+        columns: false, // True for 2 columns, false for 1 column
         description: 'FREE Wedding Gown or Bridal Gown<br>Up to 5 Brides Maid Dresses<br>$300 Bridal Warehouse Gift Card<br>Plus receive sale announcements, show dates notifications & special email promotions!'
     };
 %>

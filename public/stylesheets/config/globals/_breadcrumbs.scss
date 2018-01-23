@@ -8,12 +8,20 @@
 	list-style-type: none;
 	margin-bottom: 40px;
 	padding-left: 20px;
+	white-space: nowrap;
+	@media (max-width: $bp-md) {
+		padding-left: 0;
+	}
 	li {
 		display: inline-block;
 		a {
 			@include heading($font-base, 1, 400);
 			border-bottom: 2px solid $black;
 			padding-bottom: 6px;
+			text-transform: capitalize;
+			@media (max-width: $bp-xs) {
+				font-size: $font-base - 2px;
+			}
 			@at-root {
 	            #{$parent} li:last-child a {
 					border: none;

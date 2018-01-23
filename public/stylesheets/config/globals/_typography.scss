@@ -22,8 +22,9 @@
 
 h1 {
     @extend %underline;
-    @include heading($h1-size, .85, 900, $h2-size / 1.5); //heading size, heading line-height, heading weight, small size
+    @include heading($h1-size, .9, 900, $h2-size / 1.5); //heading size, heading line-height, heading weight, small size
     display: inline-block;
+    white-space: nowrap;
     @media (max-width: $bp-md) {
         margin-left: -20px;
     }
@@ -32,6 +33,14 @@ h1 {
         font-size: $h1-size / 1.75;
         small {
             font-size: $h4-size;
+        }
+    }
+    @media (max-width: $bp-xs - 1px) {
+        border-width: 6px;
+        font-size: $h2-size / 1.5;
+        small {
+            font-size: $h5-size / 1.15;
+            letter-spacing: -1px;
         }
     }
 }
@@ -159,7 +168,7 @@ h6 {
         display: block;
         height: 2px;
         left: 0;
-        max-width: 215px;
+        max-width: 175px;
         position: absolute;
         width: 100%;
     }
@@ -170,28 +179,46 @@ h6 {
 // Paragraphs
 // -----------------------
 
-p {
-    @include paragraph($font-base + 2, 1.5, 400); //size, line-height, weight
+p,
+ul,
+li,
+a {
+    @include paragraph($font-base, 1.5, 400); //size, line-height, weight
     color: $black;
     @media (max-width: $bp-sm) {
-        font-size: $font-base;
+        font-size: $font-base - 2px;
     }
 }
 
-strong {
+strong,
+b {
     color: inherit;
     font-weight: 900;
     text-transform: uppercase;
 }
 
 a:hover {
+    color: unset;
     text-decoration: none;
 }
 
-.h1-lead, h1-lead {
-    font-family: Muli,sans-serif;
-    font-weight: 200;
-    font-size: 46px;
-    letter-spacing: -2.1px;
-    color: #8e8e8e;
+.txt__columns--2 {
+    columns: 2 40px;
+    @media (max-width: $bp-lg) {
+        column-count: 1;
+        strong:not(:first-child) {
+            display: block;
+            margin: 20px 0 -20px;
+        }
+    }
+    @media (max-width: $bp-md) {
+        column-count: 2;
+    }
+    @media (max-width: $bp-xs) {
+        column-count: 1;
+        strong:not(:first-child){
+            display: block;
+            margin: 20px 0 -20px;
+        }
+    }
 }

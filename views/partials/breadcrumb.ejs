@@ -1,0 +1,27 @@
+<ul class="breadcrumbs">
+    <%
+        newPath = path.split('/');
+        newPath.unshift("Home");
+
+        pathURL = ['/'];
+
+        for (let i = 0; i < newPath.length; i++) {
+            let modifiedString = newPath[i];
+
+            if (i > 0) {
+                if (i == 1) {
+                    pathURL.push(pathURL[i - 1] + newPath[i]);
+                } else {
+                    pathURL.push(pathURL[i - 1] + '/' + newPath[i]);
+                }
+            }
+
+            modifiedString = modifiedString.charAt(0).toUpperCase() + modifiedString.slice(1);
+            newPath[i] = modifiedString;
+        }
+    %>
+
+    <% for (let i = 0; i < newPath.length; i++) { %>
+        <li><a href="<%= pathURL[i] %>"><%= newPath[i] %></a></li>
+    <% } %>
+</ul>

@@ -34,13 +34,18 @@ const base = {
         timings: true
     },
 
-    entry: [
-        PATHS.app + '/index.js'
-    ],
+    entry: {
+        index: [ PATHS.app + '/index.js' ],
+        vendor: [
+            'jquery',
+            'popper.js',
+            'bootstrap'
+        ]
+    },
 
     output: {
-        path: PATHS.build,
-        filename: './javascript/bundle.js'
+        path: PATHS.build + '/javascript/',
+        filename: 'bundle.js'
     },
 
     module: {
@@ -52,7 +57,13 @@ const base = {
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"
-        })
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            filename: 'vendor.js',
+            minChunks: Infinity
+        }),
+        new webpack.NamedModulesPlugin(),
     ],
     resolve: {
         modules: [path.resolve(__dirname, './src'), 'node_modules']

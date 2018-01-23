@@ -1,6 +1,5 @@
-import GoogleMaps from '@google/maps';
 import ScrollMagic from 'scrollmagic';
-import { TweenMax, TweenLite, Power2 } from 'gsap';
+import { TweenLite, Power2 } from 'gsap';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
 
 let map, marker, controller, scene;
@@ -35,7 +34,7 @@ if (document.getElementById('mapTrigger')) {
             if (window.innerWidth <= MINIMUM_WIDTH && controller.enabled()) {
                 controller.enabled(false);
                 controller.update(true);
-                scene.setTween(TweenMax.to('#mapTrigger'), 1, { x: 0 });
+                scene.setTween(TweenLite.to('#mapTrigger', 1, { x: 0 }));
             } else if (window.innerWidth > MINIMUM_WIDTH && !controller.enabled()) {
                 controller.enabled(true);
                 controller.update(true);

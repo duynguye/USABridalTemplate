@@ -69,6 +69,10 @@ router.get('/promotions', function (req, res) {
     res.render('pages/promotions', { title: 'Promotions' });
 });
 
+router.get('/promotions-details', function (req, res) {
+    res.render('pages/promotions-details', { title: 'Promotions Detail' });
+});
+
 router.get('/contests', function (req, res) {
     res.render('pages/contests', { title: 'Contests' });
 });

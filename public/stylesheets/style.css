@@ -19,6 +19,15 @@ h1 {
     display: block;
     letter-spacing: -2px;
     line-height: 1; }
+  @media (max-width: 992px) {
+    h1 {
+      margin-left: -20px; } }
+  @media (max-width: 767px) {
+    h1 {
+      border-width: 8px;
+      font-size: 91.42857px; }
+      h1 small {
+        font-size: 34.66667px; } }
 
 h2 {
   color: #282828;
@@ -150,6 +159,9 @@ p {
   line-height: 1.5;
   font-weight: 400;
   color: #282828; }
+  @media (max-width: 768px) {
+    p {
+      font-size: 16px; } }
 
 strong {
   color: inherit;
@@ -261,6 +273,7 @@ a:hover {
       border-bottom: 2px solid #282828;
       padding-bottom: 6px; }
       .breadcrumbs li:last-child a {
+        border: none;
         cursor: default;
         pointer-events: none; }
       .breadcrumbs li a:hover {
@@ -529,6 +542,9 @@ a:hover {
 .sub-hero__section--trio {
   margin: 94px 0;
   padding: 0 60px; }
+  @media (max-width: 992px) {
+    .sub-hero__section--trio {
+      padding: 0; } }
   .sub-hero__section--trio .row {
     position: relative; }
     .sub-hero__section--trio .row:last-child {
@@ -542,6 +558,14 @@ a:hover {
       margin-bottom: 0;
       margin-left: 20px;
       width: 50%; }
+      @media (max-width: 992px) {
+        .sub-hero__section--trio .col-md-7 .trio__header p {
+          margin-left: 0px;
+          max-width: 600px;
+          width: 100%; } }
+      @media (max-width: 768px) {
+        .sub-hero__section--trio .col-md-7 .trio__header p {
+          transform: translateY(-20px); } }
 
 .sub-hero__description {
   padding-left: 20px; }
@@ -586,6 +610,13 @@ a:hover {
   background: #c5eff7;
   padding: 200px 80px 60px;
   transform: translateY(-100px); }
+  @media (max-width: 992px) {
+    .sub-hero__cta {
+      padding: 100px 70px 60px;
+      transform: none; } }
+  @media (max-width: 768px) {
+    .sub-hero__cta {
+      transform: none; } }
 
 .blog__post-snippet {
   border: none;
@@ -636,6 +667,9 @@ a:hover {
 .sub-hero__section--trio {
   margin: 94px 0;
   padding: 0 60px; }
+  @media (max-width: 992px) {
+    .sub-hero__section--trio {
+      padding: 0; } }
   .sub-hero__section--trio .row {
     position: relative; }
     .sub-hero__section--trio .row:last-child {
@@ -649,6 +683,14 @@ a:hover {
       margin-bottom: 0;
       margin-left: 20px;
       width: 50%; }
+      @media (max-width: 992px) {
+        .sub-hero__section--trio .col-md-7 .trio__header p {
+          margin-left: 0px;
+          max-width: 600px;
+          width: 100%; } }
+      @media (max-width: 768px) {
+        .sub-hero__section--trio .col-md-7 .trio__header p {
+          transform: translateY(-20px); } }
 
 .sub-hero__description {
   padding-left: 20px; }
@@ -693,6 +735,13 @@ a:hover {
   background: #c5eff7;
   padding: 200px 80px 60px;
   transform: translateY(-100px); }
+  @media (max-width: 992px) {
+    .sub-hero__cta {
+      padding: 100px 70px 60px;
+      transform: none; } }
+  @media (max-width: 768px) {
+    .sub-hero__cta {
+      transform: none; } }
 
 .scrollmagic-pin-spacer {
   position: absolute !important;
@@ -761,7 +810,7 @@ a:hover {
 
 .footer {
   padding: 0 60px; }
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     .footer {
       padding: 0; } }
   .footer p {
@@ -771,11 +820,14 @@ a:hover {
       display: block;
       margin: 0;
       padding: 0 60px; } }
-  @media (max-width: 500px) {
+  @media (max-width: 768px) {
     .footer .row--eq-height:first-child {
       padding: 0 40px !important; } }
   .footer__top {
     padding: 60px 0 80px; }
+    @media (max-width: 992px) {
+      .footer__top {
+        padding: 80px 0 100px; } }
     @supports (background-blend-mode: soft-light) {
       .footer__top {
         background: #c5eff7 url("../images/hero.png") no-repeat center right;
@@ -864,7 +916,7 @@ a:hover {
     .footer__middle .accent__offset-lines:after {
       bottom: -20px;
       right: -35%; }
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     .footer__bottom {
       margin: 0;
       padding: 0 75px; } }
@@ -895,7 +947,7 @@ a:hover {
   .footer__end {
     margin-left: -15px;
     padding: 40px 0; }
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
       .footer__end {
         margin: 0;
         padding: 40px 75px; } }

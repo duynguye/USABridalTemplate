@@ -24,6 +24,16 @@ h1 {
     @extend %underline;
     @include heading($h1-size, .85, 900, $h2-size / 1.5); //heading size, heading line-height, heading weight, small size
     display: inline-block;
+    @media (max-width: $bp-md) {
+        margin-left: -20px;
+    }
+    @media (max-width: $bp-sm - 1px) {
+        border-width: 8px;
+        font-size: $h1-size / 1.75;
+        small {
+            font-size: $h4-size;
+        }
+    }
 }
 
 h2 {
@@ -163,6 +173,9 @@ h6 {
 p {
     @include paragraph($font-base + 2, 1.5, 400); //size, line-height, weight
     color: $black;
+    @media (max-width: $bp-sm) {
+        font-size: $font-base;
+    }
 }
 
 strong {

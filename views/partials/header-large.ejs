@@ -4,8 +4,13 @@
 ** If you want to display dropdowns, set 
 ** categoriesTagsSection = True
 ** OTHERWISE... set leave it set to False, to hide
-==================================== -->
+**
+Set condition: 
 <% categoriesTagsSection = false; %>
+Wrap dropdown section: 
+<% if (categoriesTagsSection) { %> 
+<% } %>
+==================================== -->
 
 <!-- HEADER LARGE -->
 <section class="container-fluid sub-hero__section--large">
@@ -31,18 +36,18 @@
         </div>
         <!-- HEADER -->
         <div class="col-md-6 col-md-pull-1 ">
-            <div class="large__header">
-                <ul class="breadcrumbs ">
+            <div class="sub-hero__large-header">
+                <ul class="breadcrumbs">
                     <li class=" "><a href=" ">Home</a></li>
                     <li class=" "><a href=" ">Blog</a></li>
                 </ul>
-                <div class="large__header__title ">
+                <div class="sub-hero__large-title ">
                     <h1>
                         <small>
                             The Blog:
                         </small> Bridal &amp; Prom
                     </h1>
-                    <p>
+                    <p class="sub-hero__large-body">
                         Os excestrum et mod quis minvele ssernate ant lignatur aliquaes ipsantis corro occabor solorporatur sit quiate aditior secesto rporem et laborib usapit aut qui tem. Laccus, optas si sit et expe sinci doluptatur antem.
                     </p>
                 </div>
@@ -53,7 +58,6 @@
                     It's All About You!
                 </h4>
             </div>
-            <% if (categoriesTagsSection) { %> 
             <div class="sub-hero__dropdowns">
                 <!-- Categories -->
                 <select class="input__dropdown">
@@ -73,8 +77,6 @@
                     <option value=" ">Tag 5</option>
                 </select>
             </div>
-            <% } %>
-                
         </div>
     </div>
 </section>

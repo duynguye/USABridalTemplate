@@ -1,18 +1,15 @@
 // Still working on this... not for use...yet
-%content-padding {
-    padding-left: 200;
-    padding-right: 200;
+%padding-sides {
+    padding-left: 25% !important;
 }
-
 %large-height {
     height: calc(100vh - 500px) !important;
     min-height: 600px;
 }
-
 .sub-hero {
     $parent: &;
     &__section--large {
-        @extend %large-height;
+        // @extend %large-height;
         margin: 94px 0;
         padding: 0 60px;
         .row {
@@ -22,12 +19,17 @@
             }
         }
     }
-   
     &__arrow-accent--large {
-        @extend .sub-hero__arrow-accent;
+        align-items: center;
+        background: $tan;
+        content: '';
+        display: flex;
+        height: 30%;
+        min-height: 250px;
+        min-width: 250px;
         left: 0;
+        top: 82vh;
         position: absolute;
-        top: 110vh;
         width: 30%;
         z-index: 10;
         &__container {
@@ -49,12 +51,24 @@
             min-height: 130vh;
         }
     }
+    &__large-header {
+        @extend %padding-sides;
+        @at-root #{$parent}__large-body {
+            padding: 0 47px 0 20px;
+            margin-bottom: 80px; 
+        }
+    }
     &__cta--single {
         background: $lt-blue;
         padding: 60px 80px; // transform: translateY(-100px);
         text-align: center;
+        margin-bottom: 80px;
         h4 {
             display: inline-block;
         }
+    }
+    &__dropdowns {
+        @extend .sub-hero__large-body;
+        @extend %padding-sides;
     }
 }

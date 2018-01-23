@@ -496,9 +496,8 @@ a:hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.sub-hero__section--large {
-  height: calc(100vh - 500px) !important;
-  min-height: 600px; }
+.sub-hero__large-header, .sub-hero__dropdowns {
+  padding-left: 25% !important; }
 
 .sub-hero__section--large {
   margin: 94px 0;
@@ -509,9 +508,16 @@ a:hover {
       height: 70vh; }
 
 .sub-hero__arrow-accent--large {
+  align-items: center;
+  background: #f2d0a4;
+  content: '';
+  display: flex;
+  height: 30%;
+  min-height: 250px;
+  min-width: 250px;
   left: 0;
+  top: 82vh;
   position: absolute;
-  top: 110vh;
   width: 30%;
   z-index: 10; }
   .sub-hero__arrow-accent--large svg {
@@ -528,10 +534,15 @@ a:hover {
     max-width: 100%;
     min-height: 130vh; }
 
+.sub-hero__large-body, .sub-hero__dropdowns {
+  padding: 0 47px 0 20px;
+  margin-bottom: 80px; }
+
 .sub-hero__cta--single {
   background: #c5eff7;
   padding: 60px 80px;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 80px; }
   .sub-hero__cta--single h4 {
     display: inline-block; }
 
@@ -576,7 +587,7 @@ a:hover {
   object-position: center;
   width: 100%; }
 
-.sub-hero__arrow-accent, .sub-hero__arrow-accent--large {
+.sub-hero__arrow-accent {
   align-items: center;
   background: #f2d0a4;
   content: '';
@@ -601,7 +612,7 @@ a:hover {
       position: absolute;
       transform: translateX(-50%);
       width: 225%; }
-  .sub-hero__arrow-accent svg, .sub-hero__arrow-accent--large svg {
+  .sub-hero__arrow-accent svg {
     position: relative;
     height: 70px;
     width: 70px !important; }
@@ -701,7 +712,7 @@ a:hover {
   object-position: center;
   width: 100%; }
 
-.sub-hero__arrow-accent, .sub-hero__arrow-accent--large {
+.sub-hero__arrow-accent {
   align-items: center;
   background: #f2d0a4;
   content: '';
@@ -726,7 +737,7 @@ a:hover {
       position: absolute;
       transform: translateX(-50%);
       width: 225%; }
-  .sub-hero__arrow-accent svg, .sub-hero__arrow-accent--large svg {
+  .sub-hero__arrow-accent svg {
     position: relative;
     height: 70px;
     width: 70px !important; }

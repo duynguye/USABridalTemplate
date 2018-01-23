@@ -15,13 +15,13 @@
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
-        <div class="col-md-7 col-md-push-1">
+        <div class="col-sm-6 col-md-7 col-sm-push-1 col-md-push-1">
             <div class="trio__header">
                 <% path = "locations/detail/blah/food/wedding" %>
                 <% include ./breadcrumb %>
                 <h1>
                     <small>
-                        <%= page.smallTitle %>
+                        <%- page.smallTitle %>
                     </small>
                     <%- page.largeTitle %>
                 </h1>
@@ -30,7 +30,7 @@
                 </p>
             </div>
         </div>
-        <div class="col-md-5 col-lg-4 col-md-pull-1 hidden-sm hidden-xs">
+        <div class="col-sm-6 col-md-5 col-lg-4 col-sm-pull-1 col-md-pull-1 hidden-xs">
             <img class="sub-hero__img-hero" src="<%= image.hero %>" alt="<%= image.heroAlt %>" />
         </div>
         <div class="col-lg-2"></div>

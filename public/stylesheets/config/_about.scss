@@ -114,7 +114,6 @@
 		position: relative;
 		max-width: 100%;
 		margin-top: -40px;
-
 		&:before {
 			//@extend %psuedo;
 			//@include accent--left( $line, 0, 0); // (width, top, left) 
@@ -135,7 +134,6 @@
 			//@include accent--right( $line, 90%, 0); // (width, top, right)
 			content: '';
 			position: absolute;
-
 	        display: none; // SMALL SCREENS - 768
 	        @media screen and (min-width: 768px) {
 	            display: initial;

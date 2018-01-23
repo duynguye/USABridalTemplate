@@ -16,6 +16,7 @@
 			padding-bottom: 6px;
 			@at-root {
 	            #{$parent} li:last-child a {
+					border: none;
 	                cursor: default;
 					pointer-events: none;
 	            }

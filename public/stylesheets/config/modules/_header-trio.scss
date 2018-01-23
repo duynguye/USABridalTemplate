@@ -11,6 +11,9 @@
 	&__section--trio {
 		margin: 94px 0;
 		padding: 0 60px;
+		@media (max-width: $bp-md) {
+			padding: 0;
+		}
 		.row {
 			position: relative;
 			&:last-child {
@@ -27,6 +30,14 @@
 				margin-bottom: 0;
 				margin-left: 20px;
 				width: 50%;
+				@media (max-width: $bp-md) {
+					margin-left: 0px;
+					max-width: 600px;
+					width: 100%;
+				}
+				@media (max-width: $bp-sm) {
+					transform: translateY(-20px);
+				}
 			}
 		}
 	}
@@ -80,5 +91,12 @@
 		background: $lt-blue;
 		padding: 200px 80px 60px;
 		transform: translateY(-100px);
+		@media (max-width: $bp-md) {
+			padding: 100px 70px 60px;
+			transform: none;
+		}
+		@media (max-width: $bp-sm) {
+			transform: none;
+		}
 	}
 }

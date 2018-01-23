@@ -1,5 +1,3 @@
-@import './variables';
-
 // -----------------------
 // Table of Contents
 // -----------------------
@@ -8,7 +6,11 @@
 
 // 2. Input Field Placeholder
 
-// 2. Input Range Thumb
+// 3. Input Range Thumb
+
+// 4. Shade
+
+// 5. Tint
 
 
 // -----------------------
@@ -32,16 +34,15 @@
         font-weight: $weight;
     }
 
-    small {
-        color: inherit;
-        font-family: $secondary-font;
-        font-weight: 200;
-        display: block;
-        letter-spacing: -2px;
-        line-height: 1;
-
-        @if $subscript-size {
+    @if $subscript-size {
+        small {
+            color: inherit;
+            font-family: $secondary-font;
             font-size: $subscript-size;
+            font-weight: 200;
+            display: block;
+            letter-spacing: -2px;
+            line-height: 1;
         }
     }
 }
@@ -70,11 +71,18 @@
 // -----------------------
 
 @mixin placeholder {
-    @each $prefix in -webkit-, -ms-, -moz-, -o-, '' {
-        &::#{$prefix}placeholder {
-            @content;
-        }
+    ::-webkit-input-placeholder {
+        @content;
     }
+    :-moz-placeholder {
+        @content;
+    }
+    ::-moz-placeholder {
+        @content;
+    }
+    :-ms-input-placeholder {
+        @content;
+    }  
 }
 
 
@@ -83,10 +91,28 @@
 // -----------------------
 
 @mixin thumb {
-    @each $prefix in -webkit-, -ms-, -moz-, '' {
+    @each $prefix in -webkit-, -ms-, -moz- {
         &::#{$prefix}slider-thumb {
             #{$prefix}apperance: none;
             @content;
         }
     }
+}
+
+
+// -----------------------
+// Shade
+// -----------------------
+
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}
+
+
+// -----------------------
+// Tint
+// -----------------------
+
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
 }

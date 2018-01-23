@@ -1,5 +1,3 @@
-@import '../mixins';
-
 //--------------------------
 // Input Fields
 //--------------------------
@@ -25,11 +23,11 @@
 		padding-bottom: 18px;
 		white-space: nowrap;
 	}
+	// Input for large "story-driven" forms
 	&__field {
 		@include heading($h4-size, 1.5, 900);
 		-webkit-appearance: none;
 		-moz-appearance: none;
-    	appearance: none;
 		border: none;
 		border-bottom: 1px solid $black;
 		color: $black;
@@ -37,10 +35,25 @@
 		padding-bottom: 10px;
 		width: 100%;
 		// Placeholder styles
-		@include placeholder {
+
+		// Input for colored backgrounds
+		&--on-bg {
+			@include heading($font-base, 1, 400);
+			border: none;
+			box-shadow: none;
 			color: $black;
+			font-style: italic;
+			margin-bottom: 50px;
+			outline: none;
+	        padding: 20px;
+	        width: 100%;
+	        vertical-align: middle; // For IE. This is optional but it makes legacy IEs look better
+		    @include placeholder {
+				color: inherit;
+			}
 		}
 	}
+	// Input for large "story-driven" forms
 	&__dropdown {
 		@extend .input__field;
 		background: transparent url("data:image/svg+xml;utf8,<svg class='svg-inline--fa fa-angle-down fa-w-10' aria-hidden='true' data-fa-processed='' data-prefix='fas' data-icon='angle-down' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'><path fill='currentColor' d='M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z'></path></svg>")  no-repeat center right;
@@ -48,15 +61,16 @@
 		border-radius: 0;
 		cursor: pointer;
 	}
+	// Input for large "story-driven" forms
 	&__calendar {
 		@extend .input__dropdown;
 		background: transparent url("data:image/svg+xml;utf8,<svg class='svg-inline--fa fa-calendar-alt fa-w-14' aria-hidden='true' data-fa-processed='' data-prefix='far' data-icon='calendar-alt' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'><path fill='currentColor' d='M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z'></path></svg>")  no-repeat center right;
 		background-size: 35px 35px;
 	}
+	// Input for large "story-driven" forms
 	&__range {
 		-webkit-appearance: none;
 		-moz-appearance: none;
-    	appearance: none;
 	    background: white;
 	    border: 1px solid tint($black, 75%);
 	    border-radius: 0;
@@ -107,10 +121,17 @@
 			top: -15px;
 		}
 	}
-	//Doubles the size of input within a row
+	&__textarea {
+		@extend .input__field;
+		height: 80px;
+		overflow: hidden;
+		resize: none;
+	}
+	// Doubles the size of input within a row
 	&__extend {
 		width: 200%;
 	}
+	// Large submit button
 	&__submit {
 		@include heading($font-base + 2px, 1, 900);
 		background: $black;
@@ -126,4 +147,9 @@
 			text-decoration: none;
 		}
 	}
+}
+
+// Placeholder styles
+@include placeholder {
+	color: $black;
 }

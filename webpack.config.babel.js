@@ -48,10 +48,16 @@ const base = {
             { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
         ]
     },
-
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
+    ],
     resolve: {
         modules: [path.resolve(__dirname, './src'), 'node_modules']
-    }
+    },
+    
 };
 
 const developmentConfig = {

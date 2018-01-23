@@ -1,514 +1,209 @@
-//============================================ 
-// FOOTER: general styles, variables, placeholders and mixins
-//============================================ 
-.section-contain {
-    margin: 0 50px;
-}
-
-.small,
-.footer-events__date,
-.footer-nav-item>li,
-.footer-copyright__body p {
-    text-transform: uppercase;
-}
-
-strong {
-    color: $black;
-}
-
-// Variables
-$line: 195px;
-// Placeholders
-%psuedo {
-    content: '';
-    position: absolute;
-}
-
-%footer-accent-line {
-    width: 1680px;
-    height: 2px;
-    background: rgb(34, 49, 63);
-}
-
-// %input {
-//     &[type*="email"] {
-//         font-family: $primary-font;
-//         font-style: italic;
-//         font-weight: 200;
-//         color: $black;
-//         padding: 20px;
-//         width: 100%;
-//         border: none;
-//         box-shadow: none;
-//         border-style: none;
-//         height: 2.5em;
-//         /* for IE */
-//         vertical-align: middle;
-//         /* This is optional but it makes legacy IEs look better */
-//         &::placehoxlder {
-//             color: inherit;
-//             font-size: $font-base;
-//         }
-//     }
-// }
-
-// Add to element you want to add a bg-img overlay
-@mixin image-bg--overlay( $image-url, $color) {
-    &:before {
-        @extend %psuedo;
-        background: url($image-url) no-repeat center fixed;
-        background-size: cover;
-        background-color: $color;
-        background-blend-mode: soft-light;
-        opacity: 0.5;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        z-index: -1;
-        // @supports (mix-blend-mode: soft-light) {
-        //     mix-blend-mode: soft-light;
-        // }
-        // @supports not (mix-blend-mode: soft-light) {
-        //     opacity: .1;
-        // }
-    }
-}
-
-// Lines - Right
-@mixin accent--right($width, $top, $right) {
-    @extend %footer-accent-line;
-    width: $width;
-    top: $top;
-    right: $right;
-}
-
-// Lines - Left
-@mixin accent--left($width, $top, $left) {
-    @extend %footer-accent-line;
-    width: $width;
-    top: $top;
-    left: $left;
-}
-
-// FLEX CENTER
-@mixin flex-center($direction, $wrap) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: $direction $wrap;
-}
-
-// FLEX SELF
-@mixin flex-self($flex-direction) {
-    justify-self: $flex-direction;
-    align-self: $flex-direction;
-}
-
-
-//============================================ 
-// TRUNK SHOW EVENTS
-//============================================ 
-.footer-events {
-    color: $black;
-    position: relative;
-    padding: 60px 0;
-    @include image-bg--overlay("../images/hero.png", $dk-blue);
-    >.container {
-        .row {
-            display: flex;
-            flex-flow: row wrap;
-            align-items: flex-start;
-            justify-content: space-between;
-            [class*="col-"] {
-                &:first-of-type {
-                    margin-bottom: 20px;
-                }
-                &:last-of-type {
-                    align-self: center;
-                }
-            }
-        }
+.footer {
+    $parent: &;
+    padding: 0 60px;
+    @media (max-width: 768px) {
+        padding: 0;
     }
     p {
         font-size: $font-sm;
-        font-weight: 200;
-        text-align: left;
     }
-
-
-    p,
-    &__designer h4 {
-        margin: 0;
-    }
-
-    &__date p,
-    &__address span {
-        font-weight: 900;
-    }
-
-    &__headers,
-    &__table,
-    &__event,
-    &__date,
-    &__designer,
-    &__address {
-        display: flex;
-    }
-
-    &__header,
-    &__date,
-    &__event,
-    &__address {
-        align-items: flex-start;
-    }
-
-    &__header,
-    &__date,
-    &__designer,
-    &__address {
-        flex: 1;
-    }
-
-
-    &__title {
-        position: relative;
-        padding-bottom: 10px;
-    }
-
-    &__headers {
-        flex-flow: row nowrap;
-        display: none;
-    }
-    &__header {
-        &:last-of-type {
-            flex: 3;
+    .row--eq-height:first-child {
+        @media (max-width: 1200px) {
+            display: block;
+            margin: 0;
+            padding: 0 60px;
+        }
+        @media (max-width: 500px) {
+            padding: 0 40px !important;
         }
     }
-
-    &__table {
-        flex-flow: column nowrap;
-        align-self: center;
-        max-height: 400px;
-        overflow-y: scroll;
-        margin-right: 60px;
-    } // --> Stacked Event Rows
-    a.list-group-item {
-        border: none;
-        background-color: unset;
-        color: unset;
-        padding: 0;
-        transition: all .2s;
-        &:first-child {
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-        }
-    }
-    &__event {
-        flex: 1; // span the full width of table
-        flex-flow: row wrap;
-        align-items: flex-end;
-        border-bottom: 2px solid $black;
-        padding: 5px 0;
-        // &: {
-        //     padding-top: 0;
-        //     max-height: 50px;
-        // }
-       
-    }
-    &__date {
-        order: 2;
-        p {
-            @extend .small;
-        }
-    }
-    &__designer {
-        order: 1;
-        flex: 2;
-    }
-    &__address {
-        order: 3;
-        flex-flow: column;
-        flex-basis: 100%;
-        align-items: flex-start;
-        p {
-            margin-bottom: 0;
-        }
-    } // SMALL SCREENS - 768 --> 2 col Event Rows
-    @media screen and (min-width: 768px) {
-        &__date p {
-            font-size: $font-xs;
-        }
-        &__designer h4 {
-            font-size: $h5-size;
-        }
-        &__event {
-            padding: 10px 0;
-            max-height: 70px;
-        }
-        &__date {
-            order: 1;
-        }
-        &__designer {
-            order: 2;
-        }
-        &__address {
-            order: 3;
-            flex-basis: unset;
-        }
-    } // MEDIUM SCREENS - 980 --> 3 col Event Rows
-    @media screen and (min-width: 980px) {
-        &__table {
-            max-height: 260px;
-            margin-right: 60px;
-        }
-        &__headers {
-            display: flex;
-        }
-        &__header {
-            &:last-of-type {
-                flex: 4;
+    // Top Section
+    &__top {
+        padding: 60px 0 80px;
+        @supports (background-blend-mode: soft-light) {
+            background: $lt-blue url('../images/hero.png') no-repeat center right;
+            background-blend-mode: soft-light;
+            @media (max-width: 768px) {
+                background-position: bottom center;
             }
         }
-        &__event {}
-        &__designer,
-        &__address {
-            flex: 2;
+        @supports not (background-blend-mode: soft-light) { // Fallback for no blend-mode support
+            background: $lt-blue;
         }
-    }
-}
-
-//============================================ 
-// FOOTER CTA
-//============================================ 
-.footer-cta {
-    @include flex-center(column, wrap);
-    position: relative;
-    max-width: 100%;
-    &__summary,
-    &__form {
-        max-width: 370px;
-    }
-    &:before {
-        @extend %psuedo;
-        @include accent--left( $line, 0, 0); // (width, top, left) 
-        max-width: 100%; // SMALL SCREENS - 768
-        @media screen and (min-width: 768px) {
-            padding-right: 0;
-            left: -20px;
-        } // BREAKPOINT: 1200 
-        @media screen and (min-width: 1200px) {
-            left: 0;
-        } // BREAKPOINT: 1440
-        @media screen and (min-width: 1441px) {
-            left: -20px;
-        }
-    }
-    &:after {
-        @extend %psuedo;
-        @include accent--right( $line, 90%, 0); // (width, top, right)
-        display: none; // SMALL SCREENS - 768
-        @media screen and (min-width: 768px) {
-            display: initial;
-        }
-    }
-
-    &__content {
-        align-self: center;
-        max-width: 364px;
-    }
-    &__headline {
-        text-align: left;
-        margin: 30px 0;
-    }
-    &__summary {
-        max-width: 370px;
-        padding-bottom: 20px;
-    }
-    &__form {
-        input {
-            // @extend %input;
-            // &[type*="email"] {
-            //     margin-bottom: 20px; // SMALL SCREENS - 768
-            //     @media screen and (min-width: 768px) {
-            //         & {
-            //             margin-bottom: 50px;
-            //         }
-            //     }
-            }
-            &__btn {
-                width: 100%;
-                @include flex-self(flex-start);
-            }
-        }
-    }
-}
-
-//============================================ 
-// COPYRIGHT
-//============================================ 
-.footer-copyright {
-    text-align: center;
-    background: $lavender;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-top: 40px;
-}
-
-.footer-copyright__body {
-    position: relative;
-    margin: 0 auto;
-    padding: 20px 0;
-    max-width: 780px;
-    &:before,
-    &:after {
-        max-width: 100%;
-    }
-
-    &:before {
-        @extend %psuedo;
-        @include accent--left($line, 0, 0);
-    }
-
-    &::after {
-        @extend %psuedo;
-        @include accent--right($line, 100%, 0);
-    }
-
-    >p {
-        margin: 0;
-        font-size: $font-xs;
-        color: #fff;
-        font-weight: 500;
-        letter-spacing: 1.8px;
-    }
-    span {
-        color: $black;
-    }
-}
-
-//============================================ 
-// FOOTER NAV
-//============================================
-.footer {
-    h3 {
-        font-size: $h4-size;
-    }
-    &__nav,
-    &__seo,
-    &__policy,
-    &__policy span {
-        color: lighten($black, 35%);
-    }
-
-    &__wrapper,
-    &__column,
-    &__policy {
-        display: flex;
-    }
-    &__wrapper {
-        li,
-        p,
-        a {
-            font-size: $font-xs;
-            font-weight: 600;
-            color: lighten($black, 35%);
-        }
-        flex-flow: row wrap;
-        align-items: flex-start;
-        justify-content: space-between;
-        padding-top: 50px;
-    }
-
-    &__column {
-        flex: 1;
-        justify-content: flex-start;
-        &:first-of-type {
-            flex: 2;
-        }
-        &:last-of-type {
-            align-self: center;
-            padding: 0;
-            flex: 1 0 100%;
-        }
-        &__wrapper {
-            text-align: left;
-        }
-        &__title {
-            position: relative;
-            margin-bottom: 20px;
-            h5 {
-                padding-bottom: 5px;
-                &::before {
-                    @extend %psuedo;
-                    @include accent--left(50%, 100%, 0);
-                    max-width: 100%;
+        // Events Container
+        @at-root #{$parent}__events {
+            .title__underline {
+                margin-bottom: 60px;
+                @media (max-width: 1200px) {
+                    margin-bottom: 40px;
                 }
             }
         }
-    }
-    &__nav {
-        padding-left: 0;
-    }
-    &__nav-item {
-        margin-bottom: 10px;
-        &:last-of-type {
-            margin-bottom: 0;
-        }
-    }
-    &__seo {
-        margin-bottom: 30px;
-        p {
-            padding-top: 30px;
-        }
-    }
-    &__policy {
-        justify-content: flex-start;
-        align-items: center;
-        span {
-            color: inherit;
-            margin: 0 5px;
-        }
-    } // SMALL SCREENS - 768 --> 2 col Event Rows
-    @media screen and (min-width: 768px) {
-        &__column {
-            &:first-of-type,
-            &:nth-of-type(2) {
-                flex: 2;
-                justify-content: center;
+        // Events Table
+        @at-root #{$parent}__table {
+            @media (max-width: 1200px) {
+                margin-bottom: 80px;
             }
-            &__title {
-                h5 {
-                    &::before {
-                        width: 175px;
-                        left: -82px;
-                        max-width: unset;
+            @media (max-width: 500px) {
+                margin-bottom: 40px;
+            }
+            &--row {
+                align-items: flex-end;
+                margin: 0;
+                @media (max-width: 768px) {
+                    display: block;
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+                    > * {
+                        margin-bottom: 15px;
                     }
                 }
+                &:not(:first-child) {
+                    border-bottom: 2px solid $black;
+                    padding: 10px 0;
+                }
+                h4 {
+                    margin: 0;
+                }
+                p {
+                    margin-bottom: -2px;
+                }
+            }
+            &-category {
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+            &-address {
+                @media (max-width: 768px) {
+                    margin-bottom: 0 !important;
+                }
+                strong {
+                    text-transform: initial !important;
+                }
             }
         }
-    } // MEDIUM SCREENS - 980 --> 3 col Event Rows
-    @media screen and (min-width: 980px) {
-        &__seo {
+        // Call To Action
+        @at-root #{$parent}__cta {
+            align-self: center;
+            padding: 0 2.5%;
+            transform: translateY(20px);
+            @media (max-width: 1200px) {
+                padding: 0;
+            }
             p {
-                padding-top: 60px;
+                margin: 30px 0;
             }
         }
-        &__column {
-            justify-content: flex-start;
-            &:first-of-type,
-            &:last-of-type {
-                flex: 1;
+        .accent__offset-lines {
+            &:before {
+                top: -15px;
             }
-            &:nth-of-type(2) {
-                justify-content: center;
-                flex: 2;
+            &:after {
+                bottom: 30px;
             }
         }
-    } // LARGE SCREENS - 1200 --> 3 col Event Rows
-    @media screen and (min-width: 1200px) {
-        .section-contain {
-            // margin: 0 50px;
+    }
+    // Middle Section
+    &__middle {
+        background: $lavender;
+        margin: 50px 0;
+        padding: 60px 40px;
+        text-align: center;
+        span {
+            @media (max-width: 992px) {
+                &:last-child {
+                    display: block;
+                }
+            }
+            @media (max-width: 500px) {
+                display: block;
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        p {
+            color: white;
+            letter-spacing: 2px;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            @media (max-width: 500px) {
+                font-size: $font-xs;
+            }
+        }
+        strong {
+            color: $black;
+        }
+        .accent__offset-lines {
+            &:before {
+                left: -35%;
+                top: -20px;
+            }
+            &:after {
+                bottom: -20px;
+                right: -35%;
+            }
+        }
+    }
+    // Bottom Section
+    &__bottom {
+        @media (max-width: 768px) {
+            margin: 0;
+            padding: 0 75px;
+        }
+        @media (max-width: 500px) {
+            padding: 0 60px;
+        }
+        // Footer Navigation
+        @at-root #{$parent}__nav {
+            padding: 15px 0 0;
+            @media (max-width: 1200px) {
+                margin-bottom: 40px;
+            }
+            li {
+                list-style-type: none;
+                a {
+                    color: rgba($black, .5) !important;
+                    font-size: $font-xs;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                    line-height: 2.5;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        // SEO Text
+        @at-root #{$parent}__seo {
+            color: rgba($black, .5) !important; 
+            line-height: 1.75;
+            padding: 60px 0 0;
+            @media (max-width: 768px) {
+                padding: 0;
+            }
+        }
+    }
+    // End Section
+    &__end {
+        margin-left: -15px;
+        padding: 40px 0;
+        @media (max-width: 768px) {
+            margin: 0;
+            padding: 40px 75px;
+        }
+        @media (max-width: 500px) {
+            padding: 40px 60px;
+        }
+        &-links a {
+            color: rgba($black, .5) !important;
+            display: inline-block;
+            position: relative;
+            &:not(:last-child):after {
+                content: '|';
+                display: inline-block;
+                margin: 0 10px;
+            }
         }
     }
 }

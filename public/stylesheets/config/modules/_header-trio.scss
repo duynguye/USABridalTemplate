@@ -3,16 +3,19 @@
 //--------------------------
 
 %trio-height {
-	height: calc(100vh - 155px) !important;
+	height: calc(100vh - 185px) !important;
 	min-height: 600px;
 }
 
 .sub-hero {
 	&__section--trio {
-		margin-bottom: 100px;
+		margin: 94px 0;
 		padding: 0 60px;
 		.row {
 			position: relative;
+			&:last-child {
+				transform: translateY(-1px); // Super dumb that I had to add this...
+			}
 		}
 		.col-md-7 {
 			@extend %trio-height;
@@ -26,9 +29,6 @@
 				width: 50%;
 			}
 		}
-		// .col-md-6:first-child {
-		// 	@extend %trio-height;
-		// }
 	}
 	&__description {
 		padding-left: 20px;

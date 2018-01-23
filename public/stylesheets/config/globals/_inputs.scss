@@ -44,13 +44,12 @@
 			border: none;
 			box-shadow: none;
 			color: $black;
-	        font-style: italic;
+			font-style: italic;
+			margin-bottom: 50px;
+			outline: none;
 	        padding: 20px;
 	        width: 100%;
 	        vertical-align: middle; // For IE. This is optional but it makes legacy IEs look better
-	        @media screen and (min-width: 768px) {
-                margin-bottom: 50px;
-            }
 		    @include placeholder {
 				color: inherit;
 			}
@@ -152,6 +151,7 @@
 	}
 }
 
+// Placeholder styles
 @include placeholder {
-				color: $black;
-			}
+	color: $black;
+}

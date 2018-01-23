@@ -68,12 +68,19 @@
 // Input Field Placeholder
 // -----------------------
 
+// @mixin placeholder {
+//     @each $prefix in -webkit-, -ms-, -moz-, -o- {
+//         &::#{$prefix}placeholder {
+//             @content;
+//         }
+//     }
+// }
+
 @mixin placeholder {
-    @each $prefix in -webkit-, -ms-, -moz-, -o- {
-        &::#{$prefix}placeholder {
-            @content;
-        }
-    }
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
 }
 
 

@@ -162,7 +162,8 @@ h6 {
 
 p,
 ul,
-li {
+li,
+a {
   color: #282828;
   font-family: "Muli", sans-serif;
   font-size: 16px;
@@ -172,16 +173,37 @@ li {
   @media (max-width: 768px) {
     p,
     ul,
-    li {
+    li,
+    a {
       font-size: 14px; } }
 
-strong {
+strong,
+b {
   color: inherit;
   font-weight: 900;
   text-transform: uppercase; }
 
 a:hover {
+  color: unset;
   text-decoration: none; }
+
+.txt__columns--2 {
+  columns: 2 40px; }
+  @media (max-width: 1200px) {
+    .txt__columns--2 {
+      column-count: 1; }
+      .txt__columns--2 strong:not(:first-child) {
+        display: block;
+        margin: 20px 0 -20px; } }
+  @media (max-width: 992px) {
+    .txt__columns--2 {
+      column-count: 2; } }
+  @media (max-width: 500px) {
+    .txt__columns--2 {
+      column-count: 1; }
+      .txt__columns--2 strong:not(:first-child) {
+        display: block;
+        margin: 20px 0 -20px; } }
 
 [class*='col-'] {
   padding: 0;
@@ -266,7 +288,8 @@ a:hover {
   display: block;
   list-style-type: none;
   margin-bottom: 40px;
-  padding-left: 20px; }
+  padding-left: 20px;
+  white-space: nowrap; }
   @media (max-width: 992px) {
     .breadcrumbs {
       padding-left: 0; } }

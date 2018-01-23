@@ -46,7 +46,13 @@
             <h4 class="title__underline">
                 <%= cta.title %>
             </h4>
-            <p>
+            <%
+                className = ""
+                if (cta.columns) {
+                    className = "class=txt__columns--2";
+                }
+            %>
+            <p <%= className %>>
                 <%- cta.description %>
             </p>
         </div>

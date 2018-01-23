@@ -1,10 +1,11 @@
 <!-- ====================================
 ** OPTIONAL: Input Dropdowns ***
 **
-** If you want to display dropdowns, set 
-** categoriesTagsSection = True
+** If you want to display dropdowns,  
+** dropdownsInHeader = true" in your ejs page 
+** before you include this partial!
+** 
 ** OTHERWISE... set leave it set to False, to hide
-
 ==================================== -->
 
 <!-- HEADER LARGE -->
@@ -53,7 +54,7 @@
                     It's All About You!
                 </h4>
             </div>
-            
+            <% if(dropdownsInHeader) { %>            
             <div class="sub-hero__dropdowns">
                 <!-- Categories -->
                 <select class="input__dropdown">
@@ -73,6 +74,7 @@
                     <option value=" ">Tag 5</option>
                 </select>
             </div>
+                <% } %> 
         </div>
     </div>
 </section>

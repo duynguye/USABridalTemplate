@@ -1,9 +1,29 @@
 <% include ../partials/head %>
 <% include ../partials/header %>
+<% let dropdownsInHeader = false; %>
+<% include ../partials/header-large %>
+<% 
+    let i = 0;
+    page = {
+        content: [
+            {
+                "title": "<h5>Terms &amp; Conditions<\/h5>",
+                "body": '<p> Due to the nature of the items ordered and the nature of the formal wear industry, <b>ALL SALES ARE FINAL. Bridal Warehouse does not accept returns, issue refunds or allow exchanges.<\/b> It is important to note, formal wear designers will not allow orders to be canceled, modifed, or allow Bridal Warehouse to return an ordered item. <b>ALL SALES ARE FINAL, NO EXCHANGES, NO REFUNDS, NO CANCELLATIONS, and NO EXCEPTIONS.<\/b>A small insurance fee based on the dollar value of your order will be added to your order total.You will not be notifed of the fee before your credit card is charged. Click here to see the amount to be added to your order total. Insurance Fee.   Checking the box that you accept these terms and conditions you are taking the equivalent action of signing a sales contract and the equivalent action of signing your credit card receipt.<\/p>'
+            },
+            {
+                "title": 'Second',
+                "body": 'Body' 
+            }
+        ]
 
-<div>
-    <!-- Your Content Goes Here -->
+    }
+%>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <% include ../partials/content-fullwidth %>
+        </div>
+    </div>
 </div>
-
 <% include ../partials/footer %>

@@ -9,7 +9,6 @@ import initializeMap from './map';
 
 window.initializeMap = initializeMap;
 
-
 // Increases height of textarea to fit container to content
 var textarea = null;
 window.addEventListener("load", function() {

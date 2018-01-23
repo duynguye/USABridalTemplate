@@ -37,6 +37,9 @@ router.get('/info', function (req, res) {
 router.get('/policy', function (req, res) {
     res.render('pages/policy', { title: 'Online Policy' });
 });
+router.get('/post', function (req, res) {
+    res.render('pages/post', { title: 'Blog Post' });
+});
 
 router.get('/sitemap', function (req, res) {
     res.render('pages/sitemap', { title: 'Site Map' });

@@ -1,19 +1,23 @@
+// -----------------------
+// Footer
+// -----------------------
+
 .footer {
     $parent: &;
     padding: 0 60px;
-    @media (max-width: 768px) {
+    @media (max-width: $bp-sm) {
         padding: 0;
     }
     p {
         font-size: $font-sm;
     }
     .row--eq-height:first-child {
-        @media (max-width: 1200px) {
+        @media (max-width: $bp-lg) {
             display: block;
             margin: 0;
             padding: 0 60px;
         }
-        @media (max-width: 500px) {
+        @media (max-width: $bp-xs) {
             padding: 0 40px !important;
         }
     }
@@ -23,7 +27,7 @@
         @supports (background-blend-mode: soft-light) {
             background: $lt-blue url('../images/hero.png') no-repeat center right;
             background-blend-mode: soft-light;
-            @media (max-width: 768px) {
+            @media (max-width: $bp-sm) {
                 background-position: bottom center;
             }
         }
@@ -34,23 +38,23 @@
         @at-root #{$parent}__events {
             .title__underline {
                 margin-bottom: 60px;
-                @media (max-width: 1200px) {
+                @media (max-width: $bp-lg) {
                     margin-bottom: 40px;
                 }
             }
         }
         // Events Table
         @at-root #{$parent}__table {
-            @media (max-width: 1200px) {
+            @media (max-width: $bp-lg) {
                 margin-bottom: 80px;
             }
-            @media (max-width: 500px) {
+            @media (max-width: $bp-xs) {
                 margin-bottom: 40px;
             }
             &--row {
                 align-items: flex-end;
                 margin: 0;
-                @media (max-width: 768px) {
+                @media (max-width: $bp-sm) {
                     display: block;
                     &:not(:last-child) {
                         margin-bottom: 20px;
@@ -71,12 +75,12 @@
                 }
             }
             &-category {
-                @media (max-width: 768px) {
+                @media (max-width: $bp-sm) {
                     display: none;
                 }
             }
             &-address {
-                @media (max-width: 768px) {
+                @media (max-width: $bp-sm) {
                     margin-bottom: 0 !important;
                 }
                 strong {
@@ -89,7 +93,7 @@
             align-self: center;
             padding: 0 2.5%;
             transform: translateY(20px);
-            @media (max-width: 1200px) {
+            @media (max-width: $bp-lg) {
                 padding: 0;
             }
             p {
@@ -112,12 +116,12 @@
         padding: 60px 40px;
         text-align: center;
         span {
-            @media (max-width: 992px) {
+            @media (max-width: $bp-md) {
                 &:last-child {
                     display: block;
                 }
             }
-            @media (max-width: 500px) {
+            @media (max-width: $bp-xs) {
                 display: block;
                 &:not(:last-child) {
                     margin-bottom: 5px;
@@ -129,7 +133,7 @@
             letter-spacing: 2px;
             margin-bottom: 0;
             text-transform: uppercase;
-            @media (max-width: 500px) {
+            @media (max-width: $bp-xs) {
                 font-size: $font-xs;
             }
         }
@@ -149,23 +153,23 @@
     }
     // Bottom Section
     &__bottom {
-        @media (max-width: 768px) {
+        @media (max-width: $bp-sm) {
             margin: 0;
             padding: 0 75px;
         }
-        @media (max-width: 500px) {
+        @media (max-width: $bp-xs) {
             padding: 0 60px;
         }
         // Footer Navigation
         @at-root #{$parent}__nav {
             padding: 15px 0 0;
-            @media (max-width: 1200px) {
+            @media (max-width: $bp-lg) {
                 margin-bottom: 40px;
             }
             li {
                 list-style-type: none;
                 a {
-                    color: rgba($black, .5) !important;
+                    color: tint($black, 50%) !important;
                     font-size: $font-xs;
                     font-weight: 500;
                     letter-spacing: 1px;
@@ -176,7 +180,7 @@
         }
         // SEO Text
         @at-root #{$parent}__seo {
-            color: rgba($black, .5) !important; 
+            color: tint($black, 50%) !important; 
             line-height: 1.75;
             padding: 60px 0 0;
             @media (max-width: 768px) {
@@ -188,15 +192,15 @@
     &__end {
         margin-left: -15px;
         padding: 40px 0;
-        @media (max-width: 768px) {
+        @media (max-width: $bp-sm) {
             margin: 0;
             padding: 40px 75px;
         }
-        @media (max-width: 500px) {
+        @media (max-width: $bp-xs) {
             padding: 40px 60px;
         }
         &-links a {
-            color: rgba($black, .5) !important;
+            color: tint($black, 50%) !important;
             display: inline-block;
             position: relative;
             &:not(:last-child):after {

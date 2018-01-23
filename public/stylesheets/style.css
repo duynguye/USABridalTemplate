@@ -238,9 +238,6 @@ a:hover {
 .row--eq-height {
   display: flex; }
 
-body {
-  overflow-x: hidden; }
-
 .breadcrumbs {
   display: block;
   list-style-type: none;

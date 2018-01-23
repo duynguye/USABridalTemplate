@@ -1,5 +1,3 @@
-@import './variables';
-
 // -----------------------
 // Table of Contents
 // -----------------------
@@ -9,6 +7,10 @@
 // 2. Input Field Placeholder
 
 // 3. Input Range Thumb
+
+// 4. Shade
+
+// 5. Tint
 
 
 // -----------------------
@@ -68,19 +70,19 @@
 // Input Field Placeholder
 // -----------------------
 
-// @mixin placeholder {
-//     @each $prefix in -webkit-, -ms-, -moz-, -o- {
-//         &::#{$prefix}placeholder {
-//             @content;
-//         }
-//     }
-// }
-
 @mixin placeholder {
-  ::-webkit-input-placeholder {@content}
-  :-moz-placeholder           {@content}
-  ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}  
+    ::-webkit-input-placeholder {
+        @content;
+    }
+    :-moz-placeholder {
+        @content;
+    }
+    ::-moz-placeholder {
+        @content;
+    }
+    :-ms-input-placeholder {
+        @content;
+    }  
 }
 
 
@@ -95,4 +97,22 @@
             @content;
         }
     }
+}
+
+
+// -----------------------
+// Shade
+// -----------------------
+
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}
+
+
+// -----------------------
+// Tint
+// -----------------------
+
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
 }

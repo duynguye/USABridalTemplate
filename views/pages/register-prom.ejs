@@ -12,20 +12,24 @@
         description: 'Os excestrum et mod quis minvele ssernate ant lignatur aliquaes ipsantis corro occabor solorporatur sit quiate aditior secesto rporem et laborib usapit aut qui tem. Laccus, optas si sit et expe sinci doluptatur antem.'
     };
 
-    excerpt = {
+    image = {
+        hero: 'http://placehold.it/2000',
+        heroAlt: '',
+        heroSupport: 'http://placehold.it/2000' // Image below the fold
+    };
+
+    cta = {
         title: 'Chance to Win When Registering Your Prom',
         description: 'Get on our list! Special drawing to Win the Perfect Prom Dress or an iPad. Plus you will receive huge savings on your prom shoes & prom jewelry!'
     };
 %>
 <% include ../partials/header-trio  %>
 
-
 <!-- REGISTER PROM FORM -->
 <section class="container-fluid">
     <form action="" post="">
         <div class="row">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12 input__divide">
+            <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
                 <p class="input__label">
                     My Prom date is schedule for
                 </p>
@@ -35,21 +39,17 @@
                 </p>
                 <input type="date" class="input__calendar" placeholder="Year" /> 
             </div>
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
         </div>
         <div class="row">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12 input__divide">
+            <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
                 <p class="input__label">
                     The name of my school is
                 </p>
                 <input type="text" class="input__field" placeholder="School Name*" /> 
             </div>
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
         </div>
         <div class="row">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12 input__divide">
+            <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
                 <p class="input__label">
                     My name is
                 </p>
@@ -64,11 +64,9 @@
                     <option>The third option</option>
                 </select>
             </div>
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
         </div>
         <div class="row">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12 input__divide">
+            <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
                 <p class="input__label">
                     at
                 </p>
@@ -81,11 +79,9 @@
                 </select>
                 <input type="text" class="input__field" placeholder="Zip*" /> 
             </div>
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
         </div>
         <div class="row">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12 input__divide">
+            <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
                 <p class="input__label">
                     I can be best reached at
                 </p>
@@ -95,17 +91,14 @@
                 </p>
                 <input type="email" class="input__field input__extend" placeholder="Email*" /> 
             </div>
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
         </div>
         <div class="row">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12 input__divide">
+            <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
                 <p class="input__label">
                     Some Designers &amp; Styles I like are
                 </p>
-                <input type="tel" class="input__field input__extend" placeholder="Interests*" /> 
+                <textarea class="input__textarea input__extend" placeholder="Interests*"></textarea>
             </div>
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
         </div>
         <div class="row">
             <div class="col-xs-12">

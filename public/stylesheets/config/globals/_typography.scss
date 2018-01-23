@@ -1,10 +1,21 @@
-@import '../variables';
-@import '../mixins';
+// -----------------------
+// Table of Contents
+// -----------------------
+
+// 1. Headings
+
+// 2. Accent Lines
+
+// 3. Paragraphs
+
+
+// -----------------------
+// Headings
+// -----------------------
 
 // Large Line Underneath H1
 %underline {
     border-bottom: 10px solid $black;
-    display: block;
     margin-bottom: 40px;
     padding: 0 30px 20px 20px;
 }
@@ -12,6 +23,7 @@
 h1 {
     @extend %underline;
     @include heading($h1-size, .85, 900, $h2-size / 1.5); //heading size, heading line-height, heading weight, small size
+    display: inline-block;
 }
 
 h2 {
@@ -20,6 +32,9 @@ h2 {
 
 h3 {
     @include heading($h3-size, 1, 900); //size, line-height, weight
+    @media (max-width: $bp-xs) {
+        font-size: $h2-size / 2.5;
+    }
 }
 
 h4 {
@@ -28,40 +43,97 @@ h4 {
 
 h5 {
     @include heading($h5-size, 1, 900); //size, line-height, weight
+    position: relative;
+    &:before {
+        background: $black;
+        bottom: -10px;
+        content: '';
+        height: 2px;
+        left: -50%;
+        max-width: 215px;
+        position: absolute;
+        width: 100%;
+        @media screen and (max-width: $bp-lg) {
+            left: -9%;
+        }
+         @media screen and (max-width: $bp-md) {
+            left: -85px;
+        }
+    }
 }
 
 h6 {
     @include heading($h6-size, 1, 900); //size, line-height, weight
 }
 
-// Lines On Both Sides of Header
-%accent-line {
-    background: $black;
-    content: '';
-    height: 2px;
-    position: absolute;
-    width: 1680px;
-}
 
-.accent__lines {
-    display: block;
-    overflow: hidden;
-    text-align: center;
-    white-space: nowrap;
-    > span {
-        display: inline-block;
+// -----------------------
+// Accent Lines
+// -----------------------
+
+.accent {
+    // Lines On Both Sides of Header
+    &__lines {
+        display: block;
+        overflow: hidden;
+        text-align: center;
+        white-space: nowrap;
+        @at-root {
+            %accent-line {
+                background: $black;
+                content: '';
+                height: 2px;
+                position: absolute;
+                width: 1680px;
+            }
+        }
+        > span {
+            display: inline-block;
+            position: relative;
+            &:before {
+                @extend %accent-line;
+                bottom: 0;
+                margin-right: 15px;
+                right: 100%;
+            }
+            &:after {
+                @extend %accent-line;
+                bottom: 0;
+                left: 100%;
+                margin-left: 15px;
+            }
+        }
+    }
+    // Lines Offset Both Sides of Container
+    &__offset-lines {
         position: relative;
+        @at-root {
+            %offset-line {
+                background: $black;
+                content: '';
+                height: 2px;
+                max-width: 215px;
+                position: absolute;
+                width: 100%;
+            }
+        }
         &:before {
-            @extend %accent-line;
-            bottom: 0;
-            margin-right: 15px;
-            right: 100%;
+            @extend %offset-line;
+            left: -50%;
+            transform: translateX(100%);
+            top: 0;
+            @media (max-width: $bp-lg) {
+                display: none;
+            }
         }
         &:after {
-            @extend %accent-line;
+            @extend %offset-line;
             bottom: 0;
-            left: 100%;
-            margin-left: 15px;
+            transform: translateX(-100%);
+            right: -50%;
+            @media (max-width: $bp-lg) {
+                display: none;
+            }
         }
     }
 }
@@ -74,7 +146,6 @@ h6 {
         background: $black;
         bottom: -20px;
         content: '';
-        
         display: block;
         height: 2px;
         left: 0;
@@ -84,11 +155,33 @@ h6 {
     }
 }
 
+
+// -----------------------
+// Paragraphs
+// -----------------------
+
 p {
     @include paragraph($font-base + 2, 1.5, 400); //size, line-height, weight
     color: $black;
 }
 
 strong {
+    color: inherit;
     font-weight: 900;
+    text-transform: uppercase;
 }
+
+a:hover {
+    text-decoration: none;
+}
+<<<<<<< HEAD
+=======
+
+.h1-lead, h1-lead {
+    font-family: Muli,sans-serif;
+    font-weight: 200;
+    font-size: 46px;
+    letter-spacing: -2.1px;
+    color: #8e8e8e;
+}
+>>>>>>> 230faff5cdbfb459f5c88d6b84df27748345c259

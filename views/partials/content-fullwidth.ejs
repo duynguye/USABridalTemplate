@@ -1,4 +1,6 @@
-
-
-<h5 class="title-underline"><%= page.content[i].title %></h5>
-<p><%= page.content[i].body %></p>
+<h4 class="title__underline">
+    <%- page.content[i].title %>
+</h4>
+<p <% if (twoColumns) {%> class="txt__columns--2" <%}%>>
+    <%- page.content[i].body %>
+</p>

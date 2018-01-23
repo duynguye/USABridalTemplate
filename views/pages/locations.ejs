@@ -1,27 +1,69 @@
 <% include ../partials/head %>
 <% include ../partials/header %>
 
+// <%
+//     breadcrumb = {
+//         pageTitle: "Store Locations"
+//     };
+
+//     page = {
+//         largeTitle: "Many<br>Locations",
+//         smallTitle: "Visit One of Our",
+//         description: "We have 5 convenient locations. Please feel free to get in touch with us anytime as you go through your wedding planning process. Call or email your local store concerning Appointments, Orders, Layaway, Dress Availability, etc."
+//     };
+
+//     image = {
+//         hero: 'images/9250F.jpg',
+//         heroAlt: '',
+//         heroSupport: 'images/flowers-in-hands.jpg'
+//     }
+
+//     cta = {
+//         title: "Corporate Office",
+//         description: ''
+//     }
+//     // cta.description += '<div class="row" style="margin-left: 0;">';
+//     // cta.description += '<div class="col-sm-6">';
+//     // cta.description += '<ul style="list-style: none; padding: 0;">';
+//     // cta.description += '<li><strong>USA BRIDAL</strong></li>';
+//     // cta.description += '<li>1201 N Dixie Hwy Suite 112</li>';
+//     // cta.description += '<li>Elizabethtown, KY 42701</li>';
+//     // cta.description += '<li><strong>P: </strong>270.735.1201</li>';
+//     // cta.description += '<li><strong>F: </strong>270.765.5558</li>';
+//     // cta.description += '<li><strong>E: </strong>info@usabridal.com</li>';
+//     // cta.description += '</ul>';
+//     // cta.description += '</div>';
+//     // cta.description += '<div class="col-sm-6">';
+//     // cta.description += '<ul style="list-style: none; padding: 0;">';
+//     // cta.description += '<li><strong>ALL LOCATIONS HOURS</strong></li>';
+//     // cta.description += '<li>Mon - Thu: 10am - 8pm</li>';
+//     // cta.description += '<li>Friday: 10am - 7pm</li>';
+//     // cta.description += '<li>Saturday: 10am - 6pm</li>';
+//     // cta.description += '<li>Sunday: 1pm - 6pm</li>';
+//     // cta.description += '</ul>';
+//     // cta.description += '</div>';
+//     // cta.description += '</div>';
+// %>
+
 <%
-    breadcrumb = {
-        pageTitle: "Store Locations"
-    };
+    path = "locations" // Keep text lowercase. Seperate additional links with "/" and no spaces
 
     page = {
-        largeTitle: "Many<br>Locations",
-        smallTitle: "Visit One of Our",
-        description: "We have 5 convenient locations. Please feel free to get in touch with us anytime as you go through your wedding planning process. Call or email your local store concerning Appointments, Orders, Layaway, Dress Availability, etc."
+        smallTitle: 'Visit One of Our',
+        largeTitle: 'Many<br>Locations',
+        description: 'We have 5 convenient locations. Please feel free to get in touch with us anytime as you go through your wedding planning process. Call or email your local store concerning Appointments, Orders, Layaway, Dress Availability, etc.'
     };
-
-    cta = {
-        title: "Corporate Office",
-        description: ''
-    }
 
     image = {
         hero: 'images/9250F.jpg',
-        heroAlt: '',
-        heroSupport: 'images/flowers-in-hands.jpg'
-    }
+        heroAlt: '#',
+        heroSupport: 'images/flowers-in-hands.jpg' // Image below the fold
+    };
+
+    cta = {
+        title: 'Corporate Office',
+        description: ''
+    };
 
     cta.description += '<div class="row" style="margin-left: 0;">';
     cta.description += '<div class="col-sm-6">';
@@ -44,9 +86,9 @@
     cta.description += '</ul>';
     cta.description += '</div>';
     cta.description += '</div>';
+    
 %>
-
-<% include ../partials/header-trio %>
+<% include ../partials/header-trio  %>
 
 <div class="container-fluid">
     <div class="row map">

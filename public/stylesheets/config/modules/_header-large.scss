@@ -1,50 +1,75 @@
-
-.blog {
-    padding-top: 130px;
-    height: calc(100vh - 128px);
-    [class*="col-md-"]:first-of-type {
-        @extend .blog;
-        padding-top: 0;
-        z-index: 1;
+// Still working on this... not for use...yet
+%padding-sides {
+    padding-left: 25% !important;
+}
+%large-height {
+    height: calc(100vh - 500px) !important;
+    min-height: 600px;
+}
+.sub-hero {
+    $parent: &;
+    &__section--large {
+        // @extend %large-height;
+        margin: 94px 0 0;
+        padding: 0 60px;
+        .row {
+            position: relative;
+            .social__links {
+                height: 70vh;
+            }
+        }
     }
-    &__header {
-        .social {
-            
-            height: 100%;
-            width: 100%;
-            background: red;
+    &__arrow-accent--large {
+        align-items: center;
+        background: $tan;
+        content: '';
+        display: flex;
+        height: 30%;
+        min-height: 250px;
+        min-width: 250px;
+        left: 0;
+        top: 82vh;
+        position: absolute;
+        width: 30%;
+        z-index: 10;
+        &__container {
+            @extend .sub-hero__arrow-accent__container;
         }
-        &__box-1 {
-            padding: 100px;
-            background: $tan;
+        svg {
+            position: relative;
+            height: 70px;
+            width: 70px !important;
         }
-        &__box-2 {
-            background: $dk-blue;
-            padding: 50px 100px;
-            h2 {
-                @extend %underline;
-            }
-        }
-        &__image {
+    }
+    &__img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        &--large {
             max-width: 100%;
-            img {
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
-                width: 100%;
-            }
+            min-height: 130vh;
         }
-        &__title {
-            h1 {
-                span {
-                    font-family: $secondary-font;
-                    font-weight: 100;
-                    font-size: 43px;
-                    display: block;
-                    padding-bottom: 10px;
-                    letter-spacing: -0.1rem;
-                }
-            }
+    }
+    &__large-header {
+        @extend %padding-sides;
+        @at-root #{$parent}__large-body {
+            padding: 0 47px 0 20px;
+            margin-bottom: 80px; 
         }
+    }
+    &__cta--single {
+        background: $lt-blue;
+        padding: 60px 80px; // transform: translateY(-100px);
+        text-align: center;
+        margin-bottom: 80px;
+        h4 {
+            display: inline-block;
+        }
+    }
+    &__dropdowns {
+        @extend .sub-hero__large-body;
+        @extend %padding-sides;
+        margin-bottom: 0;
     }
 }

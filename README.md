@@ -13,6 +13,16 @@ Please read these instructions for getting the project started and troubleshooti
 4. For JavaScript run ```npm run watch``` 
     * If you have issues running this command try running this command below. 
     * ```npm install -g webpack``` 
+    
+### NPM Commands ###
+1. ```npm run start```
+    * This command will start the local server, it compiles your SCSS and EJS files.
+2. ```npm run watch```
+    * This command will run the webpack bundler, it compiles your JS files in the 'app/' folder and produces a 'bundle.js' and 'vendor.js' file.
+3. ```npm run build```
+    * This command will run webpack and build all the JS files for production. It minifies and mangles the source so that it produces the smallest file possible.
+4. ```npm run compile``` (Not Implemented)
+    * This command will compile EJS into HTML files.
 
 ### Who do I talk to? ###
 

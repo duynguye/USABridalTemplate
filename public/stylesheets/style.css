@@ -66,7 +66,7 @@ h4 {
   color: #282828;
   font-family: "Playfair Display", serif;
   font-size: 30.33333px;
-  line-height: 1;
+  line-height: 1.1;
   font-weight: 900; }
 
 h5 {
@@ -973,6 +973,8 @@ a:hover {
         display: block; }
         .footer__middle span:not(:last-child) {
           margin-bottom: 5px; } }
+    .footer__middle a {
+      font-size: inherit; }
     .footer__middle p {
       color: white;
       letter-spacing: 2px;
@@ -1035,6 +1037,8 @@ a:hover {
         content: '|';
         display: inline-block;
         margin: 0 10px; }
+    .footer__end a {
+      font-size: inherit; }
 
 .navbar {
   background: white;

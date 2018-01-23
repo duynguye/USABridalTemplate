@@ -131,6 +131,9 @@
                 }
             }
         }
+        a {
+            font-size: inherit;
+        }
         p {
             color: white;
             letter-spacing: 2px;
@@ -211,6 +214,9 @@
                 display: inline-block;
                 margin: 0 10px;
             }
+        }
+        a {
+            font-size: inherit;
         }
     }
 }

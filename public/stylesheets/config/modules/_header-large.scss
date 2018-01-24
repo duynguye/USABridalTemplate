@@ -1,75 +1,92 @@
-// Still working on this... not for use...yet
-%padding-sides {
-    padding-left: 25% !important;
-}
 %large-height {
     height: calc(100vh - 500px) !important;
     min-height: 600px;
 }
 .sub-hero {
-    $parent: &;
     &__section--large {
-        // @extend %large-height;
-        margin: 94px 0 0;
-        padding: 0 60px;
+        margin: 100px 0;
+        padding: 0 75px;
+        @media (max-width: $bp-lg) {
+            padding: 0;
+        }
         .row {
             position: relative;
-            .social__links {
-                height: 70vh;
+            .col-xs-9 {
+                height: 130vh;
             }
         }
-    }
-    &__arrow-accent--large {
-        align-items: center;
-        background: $tan;
-        content: '';
-        display: flex;
-        height: 30%;
-        min-height: 250px;
-        min-width: 250px;
-        left: 0;
-        top: 82vh;
-        position: absolute;
-        width: 30%;
-        z-index: 10;
-        &__container {
-            @extend .sub-hero__arrow-accent__container;
+        .social__links {
+            bottom: 54vh;
+            position: absolute;
         }
-        svg {
-            position: relative;
-            height: 70px;
-            width: 70px !important;
+        &-arrow-accent {
+            @extend .sub-hero__section--trio-arrow-accent;
+            min-height: 235px;
+            min-width: 235px;
+            position: relative !important;
+            &-container {
+                @extend .sub-hero__section--trio-arrow-accent-container;
+            }
+            svg {
+                position: relative;
+                height: 70px;
+                width: 70px !important;
+            }
         }
-    }
-    &__img {
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        width: 100%;
-        &--large {
-            max-width: 100%;
-            min-height: 130vh;
+        &-img {
+            height: 130vh;
+            min-height: 1000px;
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
         }
-    }
-    &__large-header {
-        @extend %padding-sides;
-        @at-root #{$parent}__large-body {
-            padding: 0 47px 0 20px;
-            margin-bottom: 80px; 
+        &-header {
+            padding-left: 10.5vw;
+            @media (max-width: $bp-lg) and (min-width: $bp-sm + 1px) {
+                padding-left: 5vw;
+            }
+            &-container {
+                align-items: flex-end;
+                display: flex;
+                height: calc(100vh - 185px) !important;
+                min-height: 587px;
+            }
         }
-    }
-    &__cta--single {
-        background: $lt-blue;
-        padding: 60px 80px; // transform: translateY(-100px);
-        text-align: center;
-        margin-bottom: 80px;
-        h4 {
-            display: inline-block;
+        &-body {
+            max-width: 550px;
+            padding: 0 50px 60px 20px;
+            @media (max-width: $bp-sm) {
+                padding: 0 50px 60px 0;
+            }
         }
-    }
-    &__dropdowns {
-        @extend .sub-hero__large-body;
-        @extend %padding-sides;
-        margin-bottom: 0;
+        &-cta {
+            background: $lt-blue;
+            padding: 80px 80px 60px 12vw;
+            @media (max-width: $bp-lg) {
+                padding: 80px 80px 60px 24vw;
+            }
+            @media (max-width: $bp-sm) {
+                padding: 60px;
+            }
+            h4 {
+                display: inline-block;
+            }
+            &-row {
+                bottom: 21vh;
+                margin: 0;
+                position: absolute !important;
+                width: calc(100vw - 120px);
+                z-index: 100;
+                @media (max-width: $bp-lg) {
+                    width: calc(100vw + 15px);
+                }
+            }
+        }
+        &-dropdowns {
+            @extend .sub-hero__section--large-body;
+            align-self: flex-end;
+            display: flex;
+            margin-bottom: 0;
+        }
     }
 }

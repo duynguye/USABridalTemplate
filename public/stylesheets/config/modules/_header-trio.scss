@@ -7,14 +7,14 @@
 	min-height: 600px;
 	@media (max-width: $bp-sm) {
 		height: calc(90vh - 185px) !important;
-		min-height: 525px;
+		min-height: 625px;
 	}
 }
 
 .sub-hero {
 	&__section--trio {
 		margin: 94px 0;
-		padding: 0 60px;
+		padding: 0 75px;
 		@media (max-width: $bp-md) {
 			padding: 0;
 		}
@@ -33,7 +33,10 @@
 			display: flex;
 			padding: 0 0 100px;
 			z-index: 100;
-			@media (max-width: $bp-sm) {
+			@media (max-width: $bp-md) {
+				padding: 0 0px 40px;
+			}
+			@media (max-width: $bp-sm - 1px) {
 				padding: 0 60px 40px;
 			}
 			.trio__header p {
@@ -43,72 +46,75 @@
 				@media (max-width: $bp-md) {
 					margin-left: 0px;
 					max-width: 600px;
-					width: 100%;
+					width: 55vw;
 				}
 				@media (max-width: $bp-sm) {
 					transform: translateY(-20px);
 				}
+				@media (max-width: $bp-xs) {
+					width: 45vw;
+				}
 			}
 		}
-	}
-	&__description {
-		padding-left: 20px;
-	}
-	&__img {
-		height: 100%;
-		object-fit: cover;
-		object-position: center;
-		width: 100%;
-		&-hero {
-			@extend %trio-height;
-			@extend .sub-hero__img;
+		&-description {
+			padding-left: 20px;
 		}
-	}
-	&__arrow-accent {
-		align-items: center;
-		background: $tan;
-		content: '';
-		display: flex;
-		height: 30%;
-		min-height: 250px;
-		min-width: 250px;
-		right: 0;
-		position: absolute;
-		top: 0;
-		width: 30%;
-		z-index: 10;
-		&__container {
-			margin: 0 auto;
-			position: relative;
-			&:after {
-				background: $black;
-				bottom: -20px;
-				content: '';
-				height: 5px;
-				left: 50%;
-				position: absolute;
-				transform: translateX(-50%);
-				width: 225%;
-			}
-		}
-		svg {
-			position: relative;
-			height: 70px;
-			width: 70px !important;
-		}
-	}
-	&__cta {
-		background: $lt-blue;
-		padding: 200px 80px 60px;
-		transform: translateY(-100px);
-		@media (max-width: $bp-md) {
-			padding: 100px 70px 60px;
-			transform: none;
+		&-img {
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
 			width: 100%;
+			&-hero {
+				@extend %trio-height;
+				@extend .sub-hero__section--trio-img;
+			}
 		}
-		@media (max-width: $bp-sm) {
-			padding: 60px;
-			transform: none;
+		&-arrow-accent {
+			align-items: center;
+			background: $tan;
+			content: '';
+			display: flex;
+			height: 30%;
+			min-height: 250px;
+			min-width: 250px;
+			right: 0;
+			position: absolute;
+			top: 0;
+			width: 30%;
+			z-index: 10;
+			&-container {
+				margin: 0 auto;
+				position: relative;
+				&:after {
+					background: $black;
+					bottom: -20px;
+					content: '';
+					height: 5px;
+					left: 50%;
+					position: absolute;
+					transform: translateX(-50%);
+					width: 225%;
+				}
+			}
+			svg {
+				position: relative;
+				height: 70px;
+				width: 70px !important;
+			}
+		}
+		&-cta {
+			background: $lt-blue;
+			padding: 200px 80px 60px;
+			transform: translateY(-100px);
+			@media (max-width: $bp-md) {
+				padding: 100px 70px 60px;
+				transform: none;
+				width: 100%;
+			}
+			@media (max-width: $bp-sm) {
+				padding: 60px;
+				transform: none;
+			}
 		}
 	}
 }

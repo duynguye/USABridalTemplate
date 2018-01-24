@@ -1,17 +1,29 @@
 .cta-full {
+    $parent: &;
     background: $lt-blue;
     padding-top: 40px;
-    //  Every other cta instance...
-    &:nth-of-type(2n + 1){
+    &:nth-of-type(2n + 1) {  //  Every EVEN SECTION...
         background: white;
+        padding-bottom: 40px; 
+        & .row [class*='col-md']:first-of-type {  // ..FIRST COL
+            @media (min-width: 992px) { // PUSH IMAGE RIGHT
+                left: 58.33333333%;
+            }
+        } 
+        & .row [class*='col-md']:nth-of-type(2) { // ..SECOND COL
+            @media (min-width: 992px) { // PULL TEXT LEFT
+                right: 41.66666667%;
+            }
+        }
     }
     .row {
         align-items: center;
         flex-flow: row wrap;
     }
+
     &__image {
         img {
-            width:100%;
+            width: 100%;
         }
     }
     &__btn {

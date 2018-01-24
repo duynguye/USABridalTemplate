@@ -134,6 +134,7 @@
 	// Large submit button
 	&__submit {
 		@include heading($font-base + 2px, 1, 900);
+		position: relative;
 		background: $black;
 		color: white;
 		display: block;
@@ -142,9 +143,26 @@
 		padding: 50px;
 		text-align: center;
 		width: 50vw;
+
 		&:hover {
 			color: white;
 			text-decoration: none;
+		}
+
+		span {
+			position: relative;
+		
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%) translateY(4px);
+				height: 3px;
+				width: calc(100% + 10px);
+				background-color: $white;
+			}
 		}
 	}
 }

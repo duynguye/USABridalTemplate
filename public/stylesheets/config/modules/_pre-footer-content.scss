@@ -1,0 +1,17 @@
+.pre-footer-content {
+    padding: 60px 49px 20px;
+    @media screen and (min-width:$bp-md) {
+        padding: 80px 60px 40px;
+    }
+    .row {
+        flex-flow: row wrap;
+        justify-content: space-around;
+        [class*='col-']:not(:last-child) {
+            margin-bottom:20px; 
+        }
+        @media screen and (min-width:$bp-md) {
+            flex-flow: row wrap;
+        }
+    }
+    
+}

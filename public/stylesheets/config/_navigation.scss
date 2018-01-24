@@ -18,7 +18,7 @@
 		padding-top: 40px;
 		height: 100%;
 
-		@media (max-width: 768px) {
+		@media (max-width: $bp-sm) {
 			padding-top: 12px;
 		}
 		img {
@@ -26,7 +26,7 @@
 			width: 230px;
 			max-width: 100%;
 
-			@media (max-width: 992px) {
+			@media (max-width: $bp-md) {
 				width: 185px;
 			}
 		}
@@ -35,7 +35,7 @@
 		padding-left: 45px;
 		padding-right: 45px;
 
-		@media (max-width: 1200px) {
+		@media (max-width: $bp-lg) {
 			padding-left: 15px;
 			padding-right: 15px;
 		}
@@ -48,10 +48,10 @@
 	.navbar-nav {
 		padding-top: 40px; // Remove padding on last navigation item
 		
-		@media (max-width: 992px) {
+		@media (max-width: $bp-md) {
 			padding-top: 30px;
 		}
-		@media (max-width: 768px) {
+		@media (max-width: $bp-sm) {
 			padding-top: 12px;
 		}
 		>.nav-item {
@@ -61,24 +61,24 @@
 			margin-right: 25px;
 			border: 1px solid $white;
 
-			@media (max-width: 992px) {
+			@media (max-width: $bp-md) {
 				margin-right: 10px;
 			}
 			>a {
 				color: inherit;
 
-				@media (max-width: 992px) {
+				@media (max-width: $bp-md) {
 					padding: 10px 7px;
 				}
 			}
 			&-last {
 				margin-right: 100px;
 
-				@media (max-width: 1200px) {
+				@media (max-width: $bp-lg) {
 					margin-right: 40px;
 				}
 			}
-			.dropdown-menu.show {
+			.dropdown-menu {
 				position: fixed;
 				top: 92px;
 				left: 0;
@@ -94,7 +94,7 @@
 					width: 100%;
 					padding: 35px 50px 0px 50px;
 
-					@media (max-width: 768px) {
+					@media (max-width: $bp-sm) {
 					    padding: 10px 25px 0px 25px;
 					}
 
@@ -104,7 +104,7 @@
 						padding-left: 82px;
 						vertical-align: top;
 
-						@media (max-width: 992px) {
+						@media (max-width: $bp-md) {
 							width: 100%;
 						}
 
@@ -126,7 +126,7 @@
 						width: 70%;
 						vertical-align: top;
 
-						@media (max-width: 992px) {
+						@media (max-width: $bp-md) {
 							width: 100%;
 						}
 
@@ -137,7 +137,7 @@
 							float: left;
 							padding-bottom: 35px;
 
-							@media (max-width: 768px) {
+							@media (max-width: $bp-sm) {
 								width: 100%;
 							}
 
@@ -199,7 +199,7 @@
 				}
 			}
 		}
-		.nav-item.show {
+		.nav-item.open {
 			border: 1px solid $lavender;
 
 			.dropdown-toggle {
@@ -211,14 +211,14 @@
 			padding-left: 0;
 			padding-right: 0;
 
-			@media (max-width: 768px) {
+			@media (max-width: $bp-sm) {
 				width: 42px;
 				display: inline-block;
 			}
 			>a {
 				color: $black;
 
-				@media (max-width: 992px) {
+				@media (max-width: $bp-md) {
 					padding: 10px 7px;
 				}
 

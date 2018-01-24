@@ -1,7 +1,7 @@
-%large-height {
-    height: calc(100vh - 500px) !important;
-    min-height: 600px;
-}
+//--------------------------
+// Section - Header Large 
+//--------------------------
+
 .sub-hero {
     &__section--large {
         margin: 100px 0;
@@ -19,6 +19,7 @@
             bottom: 54vh;
             position: absolute;
         }
+        // Arrow Box
         &-arrow-accent {
             @extend .sub-hero__section--trio-arrow-accent;
             min-height: 235px;
@@ -33,32 +34,7 @@
                 width: 70px !important;
             }
         }
-        &-img {
-            height: 130vh;
-            min-height: 1000px;
-            object-fit: cover;
-            object-position: center;
-            width: 100%;
-        }
-        &-header {
-            padding-left: 10.5vw;
-            @media (max-width: $bp-lg) and (min-width: $bp-sm + 1px) {
-                padding-left: 5vw;
-            }
-            &-container {
-                align-items: flex-end;
-                display: flex;
-                height: calc(100vh - 185px) !important;
-                min-height: 587px;
-            }
-        }
-        &-body {
-            max-width: 550px;
-            padding: 0 50px 60px 20px;
-            @media (max-width: $bp-sm) {
-                padding: 0 50px 60px 0;
-            }
-        }
+        // Call To Action
         &-cta {
             background: $lt-blue;
             padding: 80px 80px 60px 12vw;
@@ -82,6 +58,35 @@
                 }
             }
         }
+        // Hero Image
+        &-img {
+            height: 130vh;
+            min-height: 1000px;
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+        }
+        // Header Content
+        &-header {
+            padding-left: 10.5vw;
+            @media (max-width: $bp-lg) and (min-width: $bp-sm + 1px) {
+                padding-left: 5vw;
+            }
+            &-container {
+                align-items: flex-end;
+                display: flex;
+                height: calc(100vh - 185px) !important;
+                min-height: 587px;
+            }
+        }
+        &-body {
+            max-width: 550px;
+            padding: 0 50px 60px 20px;
+            @media (max-width: $bp-sm) {
+                padding: 0 50px 60px 0;
+            }
+        }
+        // Optional Dropdowns
         &-dropdowns {
             @extend .sub-hero__section--large-body;
             align-self: flex-end;

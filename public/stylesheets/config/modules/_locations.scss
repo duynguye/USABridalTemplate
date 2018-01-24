@@ -1,6 +1,9 @@
 .scrollmagic-pin-spacer {
     position: absolute !important;
     width: calc(100% - 100px) !important;
+    @media (max-width: $bp-sm) {
+        width: 100% !important;
+    }
 
     // &::before {
     //     content: '';
@@ -23,11 +26,19 @@
 
 .map {
     padding: 40px 0;
+    @media (max-width: $bp-sm) {
+        margin-top: -125px;
+        padding: 0;
+    }
 
     &__column {
         position: relative;
         padding: 0 50px;
         min-height: 700px;
+        @media (max-width: $bp-sm) {
+            min-height: 650px;
+            padding: 0;
+        }
 
         &--accent {
             position: absolute;
@@ -60,12 +71,18 @@
 
 .location {
     &__column {
+        @media (max-width: $bp-md) {
+            margin-bottom: 25px;
+        }
         &--node {
             cursor: pointer;
             margin: 0 0 0 40px;
             padding: 0 0 30px 20px;
             border-collapse: collapse;
             transition: all 175ms ease-in;
+            @media (max-width: $bp-sm) {
+                margin: 0 0 0 20px;
+            }
 
             h4 {
                 margin: 0;
@@ -103,11 +120,12 @@
             &:not(:last-child) {
                 border-bottom: 2px solid black;
             }
-
             &:hover {
-                margin-left: 0;
-                padding-left: 60px;
-                background-color: $lt-blue;
+                 @media (min-device-width: 1025px) {
+                    margin-left: 0;
+                    padding-left: 60px;
+                    background-color: $lt-blue;
+                 }
             }
         }
     }

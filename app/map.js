@@ -4,7 +4,7 @@ import ScrollToPlugin from 'gsap/ScrollToPlugin';
 
 let map, marker, controller, scene;
 let locations = document.querySelectorAll('.location__column--node');
-const MINIMUM_WIDTH = 767;
+const MINIMUM_WIDTH = 992;
 
 // let googleMapClient = GoogleMaps.createClient({
 //     key: 'AIzaSyCrARAoL8w7xRmzkslFHK979yEEQ_fQEtw'

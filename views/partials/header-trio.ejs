@@ -15,22 +15,21 @@
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
-        <div class="col-sm-6 col-md-7 col-sm-push-1 col-md-push-1">
+        <div class="col-xs-7 col-sm-6 col-md-7 col-sm-push-1 col-md-push-1">
             <div class="trio__header">
-                <% path = "locations/detail/blah/food/wedding" %>
                 <% include ./breadcrumb %>
                 <h1>
                     <small>
-                        <%- page.smallTitle %>
+                        <%= page.smallTitle %>
                     </small>
                     <%- page.largeTitle %>
                 </h1>
                 <p>
-                    <%= page.description %>
+                    <%- page.description %>
                 </p>
             </div>
         </div>
-        <div class="col-sm-6 col-md-5 col-lg-4 col-sm-pull-1 col-md-pull-1 hidden-xs">
+        <div class="col-xs-5 col-sm-6 col-md-5 col-lg-4 col-sm-pull-1 col-md-pull-1">
             <img class="sub-hero__img-hero" src="<%= image.hero %>" alt="<%= image.heroAlt %>" />
         </div>
         <div class="col-lg-2"></div>
@@ -43,11 +42,17 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-lg-5 sub-hero__cta">
+        <div class="col-sm-12 col-md-6 col-lg-5 sub-hero__cta">
             <h4 class="title__underline">
                 <%= cta.title %>
             </h4>
-            <p>
+            <%
+                className = ""
+                if (cta.columns) {
+                    className = "class=txt__columns--2";
+                }
+            %>
+            <p <%= className %>>
                 <%- cta.description %>
             </p>
         </div>

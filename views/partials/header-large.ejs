@@ -1,62 +1,67 @@
-<!-- ====================================
-** OPTIONAL: Input Dropdowns ***
-**
-** If you want to display dropdowns,  
-** dropdownsInHeader = true" in your ejs page 
-** before you include this partial!
-** 
-** OTHERWISE... set leave it set to False, to hide
-==================================== -->
-
 <!-- HEADER LARGE -->
 <section class="container-fluid sub-hero__section--large">
-    <!-- Header Title and body-->
+    <!-- CALL TO ACTIONS-->
     <div class="row">
-        <div class="social__links hidden-sm hidden-xs">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-pinterest"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+        <div class="social__links hidden-md hidden-sm hidden-xs">
+            <a href="#">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-pinterest"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
         </div>
-        <div class="col-md-1">
-            <!-- Gold Box -->
-            <div class="sub-hero__arrow-accent--large hidden-sm hidden-xs">
-                <div class="sub-hero__arrow-accent--large__container">
-                    <i class="fas fa-arrow-down"></i>
+        <div class="row sub-hero__section--large-cta-row">
+            <div class="col-lg-2">
+                <div class="sub-hero__section--large-arrow-accent hidden-md hidden-sm hidden-xs">
+                    <div class="sub-hero__section--large-arrow-accent-container">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- IMAGE -->
-        <div class="col-md-5">
-            <img class="sub-hero__img--large" src="http://placehold.it/2000" alt="" />
-        </div>
-        <!-- HEADER -->
-        <div class="col-md-6 col-md-pull-1 ">
-            <div class="sub-hero__large-header">
-                <ul class="breadcrumbs">
-                    <li class=" "><a href=" ">Home</a></li>
-                    <li class=" "><a href=" ">Blog</a></li>
-                </ul>
-                <div class="sub-hero__large-title ">
-                    <h1>
-                        <small>
-                            The Blog:
-                        </small> Bridal &amp; Prom
-                    </h1>
-                    <p class="sub-hero__large-body">
-                        Os excestrum et mod quis minvele ssernate ant lignatur aliquaes ipsantis corro occabor solorporatur sit quiate aditior secesto rporem et laborib usapit aut qui tem. Laccus, optas si sit et expe sinci doluptatur antem.
-                    </p>
-                </div>
-            </div>
-            <!--  CTA -->
-            <div class="sub-hero__cta--single">
+            <div class="sub-hero__section--large-cta col-xs-offset-2 col-md-offset-3 col-lg-offset-4 col-xs-10 col-md-9 col-lg-6">
                 <h4 class="title__underline">
                     It's All About You!
                 </h4>
             </div>
-            <% if(dropdownsInHeader) { %>            
-            <div class="sub-hero__dropdowns">
-                <!-- Categories -->
+        </div>
+        <!-- end CALL TO ACTIONS -->
+
+        <!-- IMAGE -->
+        <div class="col-xs-3 col-md-6 col-sm-offset-0 col-lg-offset-1 col-md-pull-1 col-lg-pull-0 col-lg-6">
+            <img class="sub-hero__section--large-img" src="http://placehold.it/2000" alt="" />
+        </div>
+        <!-- end IMAGE -->
+
+        <div class="col-xs-9 col-md-6 col-md-pull-1 col-lg-pull-1 col-lg-5">
+            <!-- CONTENT -->
+            <div class="sub-hero__section--large-header-container">
+                <div class="sub-hero__section--large-header ">
+                    <ul class="breadcrumbs">
+                        <li class=" "><a href=" ">Home</a></li>
+                        <li class=" "><a href=" ">Blog</a></li>
+                    </ul>
+                    <h1>
+                        <small>
+                            The Blog:
+                        </small> Bridal<br> 
+                        &amp; Prom
+                    </h1>
+                    <p class="sub-hero__section--large-body">
+                        Os excestrum et mod quis minvele ssernate ant lignatur aliquaes ipsantis corro occabor solorporatur sit quiate aditior secesto rporem et laborib usapit aut qui tem. Laccus, optas si sit et expe sinci doluptatur antem.
+                    </p>
+                </div>
+            </div>
+            <!-- end CONTENT -->
+
+            <!--  OPTIONAL CONTENT -->
+                     
+            <div class="sub-hero__section--large-dropdowns">
                 <select class="input__dropdown">
                     <option value=" " hidden>Categories</option>
                     <option value=" ">Category 1</option>
@@ -64,7 +69,6 @@
                     <option value=" ">Category 3</option>
                     <option value=" ">Category 4</option>
                 </select>
-                <!-- Tags -->
                 <select class="input__dropdown">
                     <option value=" " hidden>Tags</option>
                     <option value=" ">Tag 1</option>
@@ -74,8 +78,9 @@
                     <option value=" ">Tag 5</option>
                 </select>
             </div>
-            <% } %> 
+            
+            <!-- end OPTIONAL CONTENT -->
         </div>
     </div>
 </section>
-<!-- end of HEADER LARGE  -->
+<!-- end HEADER LARGE  -->

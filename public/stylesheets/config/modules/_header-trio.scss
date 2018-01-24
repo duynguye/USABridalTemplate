@@ -14,7 +14,7 @@
 .sub-hero {
 	&__section--trio {
 		margin: 94px 0;
-		padding: 0 60px;
+		padding: 0 75px;
 		@media (max-width: $bp-md) {
 			padding: 0;
 		}
@@ -56,65 +56,65 @@
 				}
 			}
 		}
-	}
-	&__description {
-		padding-left: 20px;
-	}
-	&__img {
-		height: 100%;
-		object-fit: cover;
-		object-position: center;
-		width: 100%;
-		&-hero {
-			@extend %trio-height;
-			@extend .sub-hero__img;
+		&-description {
+			padding-left: 20px;
 		}
-	}
-	&__arrow-accent {
-		align-items: center;
-		background: $tan;
-		content: '';
-		display: flex;
-		height: 30%;
-		min-height: 250px;
-		min-width: 250px;
-		right: 0;
-		position: absolute;
-		top: 0;
-		width: 30%;
-		z-index: 10;
-		&__container {
-			margin: 0 auto;
-			position: relative;
-			&:after {
-				background: $black;
-				bottom: -20px;
-				content: '';
-				height: 5px;
-				left: 50%;
-				position: absolute;
-				transform: translateX(-50%);
-				width: 225%;
+		&-img {
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			width: 100%;
+			&-hero {
+				@extend %trio-height;
+				@extend .sub-hero__section--trio-img;
 			}
 		}
-		svg {
-			position: relative;
-			height: 70px;
-			width: 70px !important;
+		&-arrow-accent {
+			align-items: center;
+			background: $tan;
+			content: '';
+			display: flex;
+			height: 30%;
+			min-height: 250px;
+			min-width: 250px;
+			right: 0;
+			position: absolute;
+			top: 0;
+			width: 30%;
+			z-index: 10;
+			&-container {
+				margin: 0 auto;
+				position: relative;
+				&:after {
+					background: $black;
+					bottom: -20px;
+					content: '';
+					height: 5px;
+					left: 50%;
+					position: absolute;
+					transform: translateX(-50%);
+					width: 225%;
+				}
+			}
+			svg {
+				position: relative;
+				height: 70px;
+				width: 70px !important;
+			}
 		}
-	}
-	&__cta {
-		background: $lt-blue;
-		padding: 200px 80px 60px;
-		transform: translateY(-100px);
-		@media (max-width: $bp-md) {
-			padding: 100px 70px 60px;
-			transform: none;
-			width: 100%;
-		}
-		@media (max-width: $bp-sm) {
-			padding: 60px;
-			transform: none;
+		&-cta {
+			background: $lt-blue;
+			padding: 200px 80px 60px;
+			transform: translateY(-100px);
+			@media (max-width: $bp-md) {
+				padding: 100px 70px 60px;
+				transform: none;
+				width: 100%;
+			}
+			@media (max-width: $bp-sm) {
+				padding: 60px;
+				transform: none;
+			}
 		}
 	}
 }

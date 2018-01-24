@@ -71,6 +71,7 @@
 
 .location {
     &__column {
+        margin-bottom: 100px;
         @media (max-width: $bp-md) {
             margin-bottom: 25px;
         }

@@ -1,9 +1,71 @@
 <% include ../partials/head %>
 <% include ../partials/header %>
 
-<div>
-    <!-- Your Content Goes Here -->
+<%
+    path = "contact-us" // Keep text lowercase. Seperate additional links with "/" and no spaces
 
+    page = {
+        smallTitle: 'Get In Touch.',
+        largeTitle: 'Contact<br>Us',
+        description: 'Os excestrum et mod quis minvele ssernate ant lignatur aliquaes ipsantis corro occabor solorporatur sit quiate aditior secesto rporem et laborib usapit aut qui tem. Laccus, optas si sit et expe sinci doluptatur antem.'
+    };
+
+    image = {
+        hero: 'images/9250F.jpg',
+        heroAlt: '#',
+        heroSupport: 'images/flowers-in-hands.jpg' // Image below the fold
+    };
+
+    cta = {
+        title: 'Looking To Plan Out Your Event?',
+        columns: false, // True for 2 columns, false for 1 column
+        description: ''
+    };
+
+    cta.description += '<a href="/appointment"><small>Schedule An Appointment</small></a><br>';
+    cta.description += '<a href="/register-your-wedding"><small>Register Your Wedding</small></a><br>';
+    cta.description += '<a href="/register-your-prom"><small>Register Your Prom</small></a>';
+    
+%>
+<% include ../partials/header-trio  %>
+
+<div class="container-fluid">
+    <form action="" post="">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
+                <p class="input__label">
+                    My name is
+                </p>
+                <input type="text" class="input__field" placeholder="First Name*" /> 
+                <input type="text" class="input__field" placeholder="Last Name*" /> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
+                <p class="input__label">
+                    I can be reached at
+                </p>
+                <input type="email" class="input__field" placeholder="Email*" /> 
+                <p class="input__label">
+                    I am interested in
+                </p>
+                <select class="input__dropdown">
+                    <option>Providing a Review</option>
+                    <option>The second option</option>
+                    <option>The third option</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <a href="#" class="input__submit">
+                    <span>submit</span>
+                </a>
+            </div>
+        </div>
+    </form>
 </div>
 
 <% include ../partials/footer %>

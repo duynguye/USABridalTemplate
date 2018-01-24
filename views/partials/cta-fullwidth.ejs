@@ -1,0 +1,38 @@
+
+<% for(i= 0; i < page.ctaArr.length; i++) {%>
+    <section class="cta-full">
+        <div class="container-fluid">
+            <div class="row row--eq-height">
+                <% if ( i % 2 === 0) { %>
+                    <% ctaAlternate = false; %>
+                <%}%>
+                <div <% if (ctaAlternate) {%> 
+                            class="col-md-5 col-md-push-7" 
+                    <% } else { %>
+                            class="col-md-5"
+                        <% } %>
+                >
+                    <div class="cta-full__image">
+                        <img class="img-responsive" src= "<%- page.ctaArr[0].imageURL -%>" alt="">
+                    </div>
+                </div>
+                <div <% if (ctaAlternate) { %> 
+                            class="col-md-4 col-md-offset-2 col-md-pull-5" 
+                    <%  } else { %>
+                            class="col-md-4 col-md-offset-2"
+                    <% } %>
+                >
+                    <div class="cta-full__btn">
+                        <a href='<%- page.ctaArr[0].ctaLink -%>'>
+                            <h2 class="accent__offset-lines">
+                                <%- page.ctaArr[0].cta -%>
+                            </h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <% ctaAlternate = true; %>
+<%}%>

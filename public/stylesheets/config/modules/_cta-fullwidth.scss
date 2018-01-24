@@ -1,0 +1,22 @@
+.cta-full {
+    background: $lt-blue;
+    padding-top: 40px;
+    //  Every other cta instance...
+    &:nth-of-type(2n + 1){
+        background: white;
+    }
+    .row {
+        align-items: center;
+        flex-flow: row wrap;
+    }
+    &__image {
+        img {
+            width:100%;
+        }
+    }
+    &__btn {
+        h2 {
+            padding: 20px 5px 20px 55px;
+        }
+    }
+}

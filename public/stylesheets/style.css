@@ -881,6 +881,19 @@ a:hover {
     padding-left: 60px;
     background-color: #c5eff7; }
 
+.cta-full {
+  background: #c5eff7;
+  padding-top: 40px; }
+  .cta-full:nth-of-type(2n + 1) {
+    background: white; }
+  .cta-full .row {
+    align-items: center;
+    flex-flow: row wrap; }
+  .cta-full__image img {
+    width: 100%; }
+  .cta-full__btn h2 {
+    padding: 20px 5px 20px 55px; }
+
 .footer {
   padding: 0 60px; }
   @media (max-width: 992px) {

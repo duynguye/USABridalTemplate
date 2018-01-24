@@ -1,30 +1,35 @@
+<!-- pages/categories -->
+
+<!-- SET VARIABLES -->
+<% let dropdownsInHeader = false; %>
+<% let ctaAlternate = true; %>
+<% 
+    page = {
+        ctaArr: [ 
+            {
+                "cta": 'Shop All Bridal Gowns',
+                "ctaLink": '#',
+                "imageURL": "http://placehold.it/600x350"
+            },
+            {
+                "cta": 'Shop All Bridal Gowns',
+                "ctaLink": '#',
+                "imageURL": "http://placehold.it/600x350"
+            },
+            {
+                "cta": 'Shop All Bridal Gowns',
+                "ctaLink": '#',
+                "imageURL": "http://placehold.it/600x350"
+            }
+        ]
+    }
+%>
+
+<!-- CONTENT -->
 <% include ../partials/head %>
     <% include ../partials/header %>
-        <% let dropdownsInHeader = false; %>
-            <% include ../partials/header-large %>
+    <% include ../partials/header-large %>
+    <% include ../partials/cta-fullwidth %>
 
-<div class="container-fluid">
-    <section class="categories">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row category">
-                    <div class="col-md-6">
-                        <div class="category__image">
-                            <img src="http://placehold.it/600x350" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="category__btn">
-                            <a href="">
-                                <h2 class="accent__offset-lines">Shop All Bridal Gowns</h2>
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-        </div>
-    </section>
-</div>
-
-                <% include ../partials/footer %>
+<% include ../partials/footer %>

@@ -1,0 +1,39 @@
+<!-- pages/categories -->
+
+<!-- SET VARIABLES -->
+<% let dropdownsInHeader = false; %>
+<% 
+    page = {
+        ctaArr: [ 
+            {
+                "cta": 'Shop All Bridal Gowns',
+                "ctaLink": '#',
+                "imageURL": "http://placehold.it/600x350"
+            },
+            {
+                "cta": 'Shop All Destination Gowns',
+                "ctaLink": '#',
+                "imageURL": "http://placehold.it/600x350"
+            },
+            {
+                "cta": 'Shop All Bridal Party Dresses',
+                "ctaLink": '#',
+                "imageURL": "http://placehold.it/600x350"
+            },
+            {
+                "cta": 'Shop All Flower Girl Dresses',
+                "ctaLink": '#',
+                "imageURL": "http://placehold.it/600x350"
+            }
+        ]
+    }
+%>
+
+<!-- CONTENT -->
+<% include ../partials/head %>
+    <% include ../partials/header %>
+    <% include ../partials/header-large %>
+    <% include ../partials/cta-fullwidth %>
+
+
+<% include ../partials/footer %>

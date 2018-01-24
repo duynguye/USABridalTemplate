@@ -26,8 +26,8 @@ router.get('/appointment', function (req, res) {
     res.render('pages/appointment', { title: 'Request Appointment' });
 });
 
-router.get('/register-wedding', function (req, res) {
-    res.render('pages/register-wedding', { title: 'Register Your Wedding' });
+router.get('/register-your-wedding', function (req, res) {
+    res.render('pages/register-your-wedding', { title: 'Register Your Wedding' });
 });
 
 router.get('/info', function (req, res) {
@@ -93,8 +93,8 @@ router.get('/testimonials', function (req, res) {
     res.render('pages/testimonials', { title: 'Testimonials' });
 });
 
-router.get('/register-prom', function (req, res) {
-    res.render('pages/register-prom', { title: 'Register Prom' });
+router.get('/register-your-prom', function (req, res) {
+    res.render('pages/register-your-prom', { title: 'Register Your Prom' });
 });
 
 router.get('/my-account', function (req, res) {

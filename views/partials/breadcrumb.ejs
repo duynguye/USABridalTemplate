@@ -17,6 +17,7 @@
             }
 
             modifiedString = modifiedString.charAt(0).toUpperCase() + modifiedString.slice(1);
+            modifiedString = modifiedString.replace(/-/g, ' ');
             newPath[i] = modifiedString;
         }
     %>

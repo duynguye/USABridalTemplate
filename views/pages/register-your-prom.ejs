@@ -2,46 +2,49 @@
 <% include ../partials/header %>
 
 <%
-    path = "register your wedding" // Keep text lowercase. Seperate additional links with "/" and no spaces
+    path = "register your prom" // Keep text lowercase. Seperate additional links with "/" and no spaces
 
     page = {
         smallTitle: 'Register Your',
-        largeTitle: 'Wedding',
+        largeTitle: 'Prom',
         description: 'Os excestrum et mod quis minvele ssernate ant lignatur aliquaes ipsantis corro occabor solorporatur sit quiate aditior secesto rporem et laborib usapit aut qui tem. Laccus, optas si sit et expe sinci doluptatur antem.'
     };
 
     image = {
         hero: 'http://placehold.it/2000',
-        heroAlt: '#',
+        heroAlt: '',
         heroSupport: 'http://placehold.it/2000' // Image below the fold
     };
 
     cta = {
-        title: 'Chance to Win When Registering Your Wedding',
+        title: 'Chance to Win When Registering Your Prom',
         columns: false, // True for 2 columns, false for 1 column
-        description: 'FREE Wedding Gown or Bridal Gown<br>Up to 5 Brides Maid Dresses<br>$300 Bridal Warehouse Gift Card<br>Plus receive sale announcements, show dates notifications & special email promotions!'
+        description: 'Get on our list! Special drawing to Win the Perfect Prom Dress or an iPad. Plus you will receive huge savings on your prom shoes & prom jewelry!'
     };
 %>
 <% include ../partials/header-trio  %>
 
-<!-- REGISTER WEDDING FORM -->
+<!-- REGISTER PROM FORM -->
 <section class="container-fluid">
     <form action="" post="">
         <div class="row">
             <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
                 <p class="input__label">
-                    My
+                    My Prom date is schedule for
                 </p>
-                <select class="input__dropdown">
-                    <option>Wedding</option>
-                    <option>Quinceanera</option>
-                    <option>Pageant</option>
-                    <option>Other</option>
-                </select>
+                <input type="date" class="input__calendar" placeholder="Date" /> 
                 <p class="input__label">
-                    date is scheduled for
+                    and I plan to graduate
                 </p>
-                <input type="date" class="input__calendar" placeholder="Date & Time" /> 
+                <input type="date" class="input__calendar" placeholder="Year" /> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
+                <p class="input__label">
+                    The name of my school is
+                </p>
+                <input type="text" class="input__field" placeholder="School Name*" /> 
             </div>
         </div>
         <div class="row">
@@ -88,34 +91,6 @@
                 <input type="email" class="input__field input__extend" placeholder="Email*" /> 
             </div>
         </div>
-        <!-- APPEARS WHEN WEDDING OPTION IS SELECTED -->
-        <div class="row">
-            <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
-                <p class="input__label">
-                    The Groom's Name  is
-                </p>
-                <input type="text" class="input__calendar" placeholder="Groom's Name*" /> 
-                <p class="input__label">
-                    and I wish to schedule an appointment for
-                </p>
-                <input type="date" class="input__calendar" placeholder="Date*" /> 
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
-                <p class="input__label">
-                    For my event, I expect
-                </p>
-                <input type="tel" class="input__field input__extend" placeholder="# of Bridesmaids*" /> 
-                <p class="input__label">
-                    bridesmaids plus
-                </p>
-                <input type="tel" class="input__field input__extend" placeholder="# of Groomsmen*" /> 
-                <p class="input__label">
-                    groomsmen.
-                </p>
-            </div>
-        </div>
         <div class="row">
             <div class="col-md-offset-1 col-md-10 col-sm-12 input__divide">
                 <p class="input__label">
@@ -124,16 +99,15 @@
                 <textarea class="input__textarea input__extend" placeholder="Interests*"></textarea>
             </div>
         </div>
-        <!-- end APPEARS WHEN WEDDING OPTION IS SELECTED -->
         <div class="row">
             <div class="col-xs-12">
                 <a href="#" class="input__submit">
-                    schedule appointment
+                    <span>register your prom</span>
                 </a>
             </div>
         </div>
     </form>
 </section>
-<!-- end REGISTER WEDDING FORM -->
+<!-- end REGISTER PROM FORM -->
 
 <% include ../partials/footer %>

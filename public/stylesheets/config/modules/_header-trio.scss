@@ -7,7 +7,7 @@
 	min-height: 600px;
 	@media (max-width: $bp-sm) {
 		height: calc(90vh - 185px) !important;
-		min-height: 525px;
+		min-height: 625px;
 	}
 }
 
@@ -33,7 +33,10 @@
 			display: flex;
 			padding: 0 0 100px;
 			z-index: 100;
-			@media (max-width: $bp-sm) {
+			@media (max-width: $bp-md) {
+				padding: 0 0px 40px;
+			}
+			@media (max-width: $bp-sm - 1px) {
 				padding: 0 60px 40px;
 			}
 			.trio__header p {
@@ -43,10 +46,13 @@
 				@media (max-width: $bp-md) {
 					margin-left: 0px;
 					max-width: 600px;
-					width: 100%;
+					width: 55vw;
 				}
 				@media (max-width: $bp-sm) {
 					transform: translateY(-20px);
+				}
+				@media (max-width: $bp-xs) {
+					width: 45vw;
 				}
 			}
 		}

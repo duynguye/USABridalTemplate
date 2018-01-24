@@ -2,10 +2,8 @@
 
 <!-- SET VARIABLES -->
 <% let dropdownsInHeader = false; %>
-<% let ctaAlternate = true; %>
-<% let contentButton = true; %>
-<% let twoColumns = false; %>
-<% 
+<% let preFooterColumns = 3; %>   
+<%   
     page = {
         ctaArr: [ 
             {
@@ -24,7 +22,7 @@
                 "imageURL": "http://placehold.it/600x350"
             }
         ],
-        content: [
+        preFooter: [
             {
                 "title": 'Appointment',
                 "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
@@ -34,13 +32,21 @@
                 }
             },
             {
-                "title": 'Appointment',
+                "title": 'Register Wedding',
                 "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
                 "btn": {
                     btnLink: '#' ,
-                    btnTxt: 'schedule today'
+                    btnTxt: 'register today'
                 }
             },
+            {
+                "title": 'Register Prom',
+                "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
+                "btn": {
+                    btnLink: '#' ,
+                    btnTxt: 'register today'
+                }
+            }
             
         ]
     }
@@ -50,5 +56,5 @@
     <% include ../partials/header %>
     <% include ../partials/header-large %>
     <% include ../partials/cta-fullwidth %>
-    <% include ../partials/content-fullwidth %>
+    <% include ../partials/pre-footer-content %>
 <% include ../partials/footer %>

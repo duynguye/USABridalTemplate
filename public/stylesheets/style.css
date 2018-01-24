@@ -901,6 +901,20 @@ a:hover {
   .cta-full__btn h2 {
     padding: 20px 5px 20px 55px; }
 
+.pre-footer-content {
+  padding: 60px 49px 20px; }
+  @media screen and (min-width: 992px) {
+    .pre-footer-content {
+      padding: 80px 60px 40px; } }
+  .pre-footer-content .row {
+    flex-flow: row wrap;
+    justify-content: space-around; }
+    .pre-footer-content .row [class*='col-']:not(:last-child) {
+      margin-bottom: 20px; }
+    @media screen and (min-width: 992px) {
+      .pre-footer-content .row {
+        flex-flow: row wrap; } }
+
 .footer {
   padding: 0 60px; }
   @media (max-width: 992px) {

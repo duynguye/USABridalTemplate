@@ -2,31 +2,50 @@
 
 <!-- SET VARIABLES -->
 <% let dropdownsInHeader = false; %>
+<% let preFooterColumns = 2; %>
 <% 
-    page = {
-        ctaArr: [ 
-            {
-                "cta": 'Shop All Bridal Gowns',
-                "ctaLink": '#',
-                "imageURL": "http://placehold.it/600x350"
-            },
-            {
-                "cta": 'Shop All Destination Gowns',
-                "ctaLink": '#',
-                "imageURL": "http://placehold.it/600x350"
-            },
-            {
-                "cta": 'Shop All Bridal Party Dresses',
-                "ctaLink": '#',
-                "imageURL": "http://placehold.it/600x350"
-            },
-            {
-                "cta": 'Shop All Flower Girl Dresses',
-                "ctaLink": '#',
-                "imageURL": "http://placehold.it/600x350"
+
+    ctaFullwidth = [ 
+        {
+            "cta": 'Shop All</br>Bridal Gowns',
+            "ctaLink": '#',
+            "imageURL": "http://placehold.it/600x350"
+        },
+        {
+            "cta": 'Shop All</br>Destination Gowns',
+            "ctaLink": '#',
+            "imageURL": "http://placehold.it/600x350"
+        },
+        {
+            "cta": 'Shop All</br>Bridal Party Dresses',
+            "ctaLink": '#',
+            "imageURL": "http://placehold.it/600x350"
+        },
+        {
+            "cta": 'Shop All</br>Flower Girl Dresses',
+            "ctaLink": '#',
+            "imageURL": "http://placehold.it/600x350"
+        }
+    ];
+    
+    preFooter = [
+        {
+            "title": 'Request Appointment',
+            "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
+            "btn": {
+                btnLink: '#' ,
+                btnTxt: 'schedule today'
             }
-        ]
-    }
+        },
+        {
+            "title": 'Register Your Wedding',
+            "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
+            "btn": {
+                btnLink: '#' ,
+                btnTxt: 'register today'
+            }
+        }
+    ];
 %>
 
 <!-- CONTENT -->
@@ -34,6 +53,7 @@
     <% include ../partials/header %>
     <% include ../partials/header-large %>
     <% include ../partials/cta-fullwidth %>
+    <% include ../partials/pre-footer-content %>
 
 
 <% include ../partials/footer %>

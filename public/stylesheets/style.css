@@ -1,16 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Muli:200,400,600,900|Playfair+Display:400,400i,700,700i,900,900i");
-h1, .blog__post-snippet__title {
-  border-bottom: 10px solid #282828;
-  margin-bottom: 40px;
-  padding: 0 30px 20px 20px; }
-
 h1 {
-  color: #282828;
   font-family: "Playfair Display", serif;
   font-size: 120px;
   line-height: 0.9;
   font-weight: 900;
   display: inline-block;
+  margin-bottom: 40px;
+  padding: 0 30px 20px 20px;
+  position: relative;
   white-space: nowrap; }
   h1 small {
     color: inherit;
@@ -36,9 +33,16 @@ h1 {
       h1 small {
         font-size: 23.18841px;
         letter-spacing: -1px; } }
+  h1:after {
+    background: #282828;
+    bottom: -10px;
+    content: '';
+    height: 10px;
+    left: 0;
+    position: absolute;
+    width: 0; }
 
 h2 {
-  color: #282828;
   font-family: "Playfair Display", serif;
   font-size: 80px;
   line-height: 1;
@@ -53,7 +57,6 @@ h2 {
     line-height: 1; }
 
 h3 {
-  color: #282828;
   font-family: "Playfair Display", serif;
   font-size: 53.33333px;
   line-height: 1;
@@ -63,14 +66,12 @@ h3 {
       font-size: 32px; } }
 
 h4 {
-  color: #282828;
   font-family: "Playfair Display", serif;
   font-size: 34.66667px;
   line-height: 1.1;
   font-weight: 900; }
 
 h5 {
-  color: #282828;
   font-family: "Playfair Display", serif;
   font-size: 26.66667px;
   line-height: 1;
@@ -93,7 +94,6 @@ h5 {
         left: -85px; } }
 
 h6 {
-  color: #282828;
   font-family: "Playfair Display", serif;
   font-size: 21.66667px;
   line-height: 1;
@@ -164,7 +164,6 @@ p,
 ul,
 li,
 a {
-  color: #282828;
   font-family: "Muli", sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -204,6 +203,109 @@ a:hover {
       .txt__columns--2 strong:not(:first-child) {
         display: block;
         margin: 20px 0 -20px; } }
+
+.animation-txt--reveal:before, .animation-img--reveal:before {
+  animation: blinds 1s forwards;
+  animation-delay: .5s;
+  background: #282828;
+  content: '';
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  z-index: 1; }
+
+.animation-txt--reveal {
+  animation: color-shift .5s forwards;
+  animation-delay: 1s;
+  color: white;
+  position: relative; }
+
+.animation-img--reveal {
+  position: relative; }
+  .animation-img--reveal img {
+    animation: reveal .5s forwards;
+    animation-delay: 1s;
+    opacity: 0; }
+  .animation-img--reveal:before {
+    animation-direction: reverse;
+    animation-delay: .5s; }
+
+.animation-object--fade-up, .animation-object--fade-right:after {
+  opacity: 0;
+  transition: transform .5s ease-in; }
+  .row .animation-object--fade-up:nth-child(2), .row .animation-object--fade-right:nth-child(2):after {
+    animation-delay: 1.75s; }
+  .row .animation-object--fade-up:nth-child(3), .row .animation-object--fade-right:nth-child(3):after {
+    animation-delay: 2s; }
+  .row .animation-object--fade-up:nth-child(4), .row .animation-object--fade-right:nth-child(4):after {
+    animation-delay: 2.25s; }
+  .row .animation-object--fade-up:nth-child(5), .row .animation-object--fade-right:nth-child(5):after {
+    animation-delay: 2.5s; }
+
+.animation-object--fade-up {
+  animation: fade-Y .5s both;
+  animation-delay: 1.5s; }
+
+.animation-object--fade-right:after {
+  animation: fade-X .5s both;
+  animation-delay: 1s; }
+
+.animation-object--extend:after {
+  animation: full-width .5s forwards;
+  animation-delay: .5s;
+  width: 0; }
+
+@keyframes color-shift {
+  0% {
+    color: #282828; }
+  100% {
+    color: #282828; } }
+
+@keyframes reveal {
+  0% {
+    opacity: 0; }
+  45% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@keyframes blinds {
+  0% {
+    opacity: 1;
+    right: 100%; }
+  50% {
+    left: 0;
+    right: 0; }
+  100% {
+    opacity: 1;
+    left: 100%; } }
+
+@keyframes fade-Y {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-X {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  75% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@keyframes full-width {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
 
 body {
   overflow-x: hidden; }
@@ -285,7 +387,8 @@ body {
       margin-right: 0; } }
 
 .row--eq-height {
-  display: flex; }
+  display: flex;
+  z-index: 2; }
 
 .breadcrumbs {
   display: block;
@@ -299,27 +402,34 @@ body {
   .breadcrumbs li {
     display: inline-block; }
     .breadcrumbs li a {
-      color: #282828;
       font-family: "Playfair Display", serif;
       font-size: 16px;
       line-height: 1;
       font-weight: 400;
-      border-bottom: 2px solid #282828;
       padding-bottom: 6px;
+      position: relative;
       text-transform: capitalize; }
       @media (max-width: 500px) {
         .breadcrumbs li a {
           font-size: 14px; } }
       .breadcrumbs li:last-child a {
-        border: none;
         cursor: default;
         pointer-events: none; }
+        .breadcrumbs li:last-child a:after {
+          display: none; }
       .breadcrumbs li a:hover {
         text-decoration: none; }
+      .breadcrumbs li a:after {
+        background: #282828;
+        bottom: -2px;
+        content: '';
+        height: 2px;
+        left: 0;
+        position: absolute;
+        width: 0; }
     .breadcrumbs li:not(:last-child) {
       margin-right: 5px; }
       .breadcrumbs li:not(:last-child):after {
-        color: #282828;
         font-family: "Playfair Display", serif;
         font-size: 16px;
         line-height: 1;
@@ -330,7 +440,6 @@ body {
         margin-left: 5px; }
 
 .btn__outline {
-  color: #282828;
   font-family: "Playfair Display", serif;
   font-size: 20px;
   line-height: 1;
@@ -360,7 +469,6 @@ body {
   white-space: nowrap; }
 
 .input__field, .input__dropdown, .input__calendar, .input__textarea {
-  color: #282828;
   font-family: "Playfair Display", serif;
   font-size: 34.66667px;
   line-height: 1.5;
@@ -374,7 +482,6 @@ body {
   padding-bottom: 10px;
   width: 100%; }
   .input__field--on-bg {
-    color: #282828;
     font-family: "Playfair Display", serif;
     font-size: 16px;
     line-height: 1;
@@ -438,7 +545,6 @@ body {
   .input__range--container {
     position: relative; }
   .rangeValues {
-    color: #282828;
     font-family: "Muli", sans-serif;
     font-size: 34.66667px;
     line-height: 1;
@@ -456,7 +562,6 @@ body {
   width: 200%; }
 
 .input__submit {
-  color: #282828;
   font-family: "Playfair Display", serif;
   font-size: 18px;
   line-height: 1;
@@ -511,7 +616,6 @@ body {
   .pagination__links li {
     display: inline-block; }
   .pagination__links a {
-    color: #282828;
     font-family: "Muli", sans-serif;
     font-size: 16px;
     line-height: 1;
@@ -558,7 +662,7 @@ body {
     .sub-hero__section--large .row .col-xs-9 {
       height: 130vh; }
   .sub-hero__section--large .social__links {
-    bottom: 54vh;
+    bottom: 64vh;
     position: absolute; }
   .sub-hero__section--large-arrow-accent {
     min-height: 235px;
@@ -580,7 +684,7 @@ body {
     .sub-hero__section--large-cta h4 {
       display: inline-block; }
     .sub-hero__section--large-cta-row {
-      bottom: 21vh;
+      bottom: 31vh;
       margin: 0;
       position: absolute !important;
       width: calc(100vw - 120px);
@@ -589,7 +693,7 @@ body {
         .sub-hero__section--large-cta-row {
           width: calc(100vw + 15px); } }
   .sub-hero__section--large-img {
-    height: 130vh;
+    height: 140vh;
     min-height: 1000px;
     object-fit: cover;
     object-position: center;
@@ -616,7 +720,7 @@ body {
     margin-bottom: 0; }
 
 .sub-hero__section--trio .col-md-7, .sub-hero__section--trio-img-hero {
-  height: calc(100vh - 185px) !important;
+  height: calc(100vh - 165px) !important;
   min-height: 600px; }
   @media (max-width: 768px) {
     .sub-hero__section--trio .col-md-7, .sub-hero__section--trio-img-hero {
@@ -655,10 +759,11 @@ body {
         .sub-hero__section--trio .col-md-7 .trio__header p {
           margin-left: 0px;
           max-width: 600px;
-          width: 55vw; } }
+          width: 40vw; } }
       @media (max-width: 768px) {
         .sub-hero__section--trio .col-md-7 .trio__header p {
-          transform: translateY(-20px); } }
+          transform: translateY(-20px);
+          width: 55vw; } }
       @media (max-width: 500px) {
         .sub-hero__section--trio .col-md-7 .trio__header p {
           width: 45vw; } }

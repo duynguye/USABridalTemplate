@@ -13,17 +13,19 @@
 // Headings
 // -----------------------
 
-// Large Line Underneath H1
-%underline {
-    border-bottom: 10px solid $black;
-    margin-bottom: 40px;
-    padding: 0 30px 20px 20px;
-}
+// // Large Line Underneath H1
+// %underline {
+//     border-bottom: 10px solid $black;
+    
+// }
 
 h1 {
-    @extend %underline;
+    // @extend %underline;
     @include heading($h1-size, .9, 900, $h2-size / 1.5); //heading size, heading line-height, heading weight, small size
     display: inline-block;
+    margin-bottom: 40px;
+    padding: 0 30px 20px 20px;
+    position: relative;
     white-space: nowrap;
     @media (max-width: $bp-md) {
         margin-left: -20px;
@@ -42,6 +44,15 @@ h1 {
             font-size: $h5-size / 1.15;
             letter-spacing: -1px;
         }
+    }
+    &:after {
+        background: $black;
+        bottom: -10px;
+        content: '';
+        height: 10px;
+        left: 0;
+        position: absolute;
+        width: 0;
     }
 }
 

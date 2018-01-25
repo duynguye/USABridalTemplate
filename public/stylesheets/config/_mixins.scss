@@ -19,7 +19,6 @@
 
 // Heading
 @mixin heading($size: false, $line-height: false, $weight: false, $subscript-size: false) {
-    color: $black;
     font-family: $primary-font;
 
     @if $size {
@@ -49,7 +48,6 @@
 
 // Paragraph
 @mixin paragraph($size: false, $line-height: false, $weight: false) {
-    color: $black;
     font-family: $secondary-font;
 
     @if $size {

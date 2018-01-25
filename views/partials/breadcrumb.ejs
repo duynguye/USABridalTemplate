@@ -23,6 +23,10 @@
     %>
 
     <% for (let i = 0; i < newPath.length; i++) { %>
-        <li><a href="<%= pathURL[i] %>"><%= newPath[i] %></a></li>
+        <li class="animation-object--fade-right">
+            <a class="animation-txt--reveal animation-object--extend" href="<%= pathURL[i] %>">
+                <%= newPath[i] %>
+            </a>
+        </li>
     <% } %>
 </ul>

@@ -1,0 +1,26 @@
+<% include ../partials/head %>
+<% include ../partials/header %>
+
+<%
+    path = "my info" // Keep text lowercase. Seperate additional links with "/" and no spaces
+
+    page = {
+        smallTitle: 'Online Account',
+        largeTitle: 'Access',
+        description: 'All USA BRIDAL customers are provided an on-line account access to view purchase information. It is easy just enter your <strong>customer web key</strong> in the form below. You will find your unique web key on your receipt located to the right of your name. The web key is 10 characters long.'
+    };
+
+    image = {
+        hero: 'images/pexels-photo-341372.jpg',
+        heroAlt: '',
+        heroSupport: 'images/pexels-photo-617967.jpg' // Image below the fold
+    };
+
+    cta = {
+        title: 'Thank you for choosing USA Bridal & Tuxedo Avenue.',
+        description: 'A member of our professional bridal consultant staff will contact you within 48 hours to confirm your appointment.'
+    };
+%>
+<% include ../partials/header-trio  %>
+
+<% include ../partials/footer %>

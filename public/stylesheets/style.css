@@ -29,7 +29,8 @@ h1 {
   @media (max-width: 499px) {
     h1 {
       border-width: 6px;
-      font-size: 53.33333px; }
+      font-size: 53.33333px;
+      padding: 0 20px 20px 20px; }
       h1 small {
         font-size: 23.18841px;
         letter-spacing: -1px; } }
@@ -41,6 +42,13 @@ h1 {
     left: 0;
     position: absolute;
     width: 0; }
+    @media (max-width: 768px) {
+      h1:after {
+        bottom: 0;
+        height: 8px; } }
+    @media (max-width: 499px) {
+      h1:after {
+        height: 6px; } }
 
 h2 {
   font-family: "Playfair Display", serif;
@@ -77,7 +85,7 @@ h5 {
   line-height: 1;
   font-weight: 900;
   position: relative; }
-  h5:before {
+  h5:after {
     background: #282828;
     bottom: -10px;
     content: '';
@@ -87,10 +95,10 @@ h5 {
     position: absolute;
     width: 100%; }
     @media screen and (max-width: 1200px) {
-      h5:before {
+      h5:after {
         left: -9%; } }
     @media screen and (max-width: 992px) {
-      h5:before {
+      h5:after {
         left: -85px; } }
 
 h6 {
@@ -230,28 +238,33 @@ a:hover {
     animation-delay: 1s;
     opacity: 0; }
   .animation-img--reveal:before {
-    animation-direction: reverse;
-    animation-delay: .5s; }
+    animation-direction: reverse; }
 
-.animation-object--fade-up, .animation-object--fade-right:after {
+.animation-object--fade-up, .animation-object--fade-down, .animation-object--fade-right:after, .animation-object--fade-left:after {
   opacity: 0;
   transition: transform .5s ease-in; }
-  .row .animation-object--fade-up:nth-child(2), .row .animation-object--fade-right:nth-child(2):after {
+  .row .animation-object--fade-up:nth-child(2), .row .animation-object--fade-down:nth-child(2), .row .animation-object--fade-right:nth-child(2):after, .row .animation-object--fade-left:nth-child(2):after {
+    animation-delay: 1.65s; }
+  .row .animation-object--fade-up:nth-child(3), .row .animation-object--fade-down:nth-child(3), .row .animation-object--fade-right:nth-child(3):after, .row .animation-object--fade-left:nth-child(3):after {
     animation-delay: 1.75s; }
-  .row .animation-object--fade-up:nth-child(3), .row .animation-object--fade-right:nth-child(3):after {
-    animation-delay: 2s; }
-  .row .animation-object--fade-up:nth-child(4), .row .animation-object--fade-right:nth-child(4):after {
-    animation-delay: 2.25s; }
-  .row .animation-object--fade-up:nth-child(5), .row .animation-object--fade-right:nth-child(5):after {
-    animation-delay: 2.5s; }
+  .row .animation-object--fade-up:nth-child(4), .row .animation-object--fade-down:nth-child(4), .row .animation-object--fade-right:nth-child(4):after, .row .animation-object--fade-left:nth-child(4):after {
+    animation-delay: 1.85s; }
+  .row .animation-object--fade-up:nth-child(5), .row .animation-object--fade-down:nth-child(5), .row .animation-object--fade-right:nth-child(5):after, .row .animation-object--fade-left:nth-child(5):after {
+    animation-delay: 1.95s; }
 
-.animation-object--fade-up {
+.animation-object--fade-up, .animation-object--fade-down {
   animation: fade-Y .5s both;
   animation-delay: 1.5s; }
 
-.animation-object--fade-right:after {
+.animation-object--fade-down {
+  animation-direction: reverse; }
+
+.animation-object--fade-right:after, .animation-object--fade-left:after {
   animation: fade-X .5s both;
   animation-delay: 1s; }
+
+.animation-object--fade-left {
+  animation-direction: reverse; }
 
 .animation-object--extend:after {
   animation: full-width .5s forwards;
@@ -696,7 +709,7 @@ body {
     .sub-hero__section--large .row .col-xs-9 {
       height: 130vh; }
   .sub-hero__section--large .social__links {
-    bottom: 64vh;
+    bottom: 59vh;
     position: absolute; }
   .sub-hero__section--large-arrow-accent {
     min-height: 235px;
@@ -712,13 +725,16 @@ body {
     @media (max-width: 1200px) {
       .sub-hero__section--large-cta {
         padding: 80px 80px 60px 24vw; } }
+    @media (max-width: 992px) {
+      .sub-hero__section--large-cta {
+        padding: 60px 60px 60px 15.5vw; } }
     @media (max-width: 768px) {
       .sub-hero__section--large-cta {
         padding: 60px; } }
     .sub-hero__section--large-cta h4 {
       display: inline-block; }
     .sub-hero__section--large-cta-row {
-      bottom: 31vh;
+      bottom: 26vh;
       margin: 0;
       position: absolute !important;
       width: calc(100vw - 120px);
@@ -727,7 +743,7 @@ body {
         .sub-hero__section--large-cta-row {
           width: calc(100vw + 15px); } }
   .sub-hero__section--large-img {
-    height: 140vh;
+    height: 135vh;
     min-height: 1000px;
     object-fit: cover;
     object-position: center;
@@ -742,16 +758,32 @@ body {
       display: flex;
       height: calc(100vh - 185px) !important;
       min-height: 587px; }
-  .sub-hero__section--large-body, .sub-hero__section--large-dropdowns {
+  .sub-hero__section--large-body {
     max-width: 550px;
     padding: 0 50px 60px 20px; }
     @media (max-width: 768px) {
-      .sub-hero__section--large-body, .sub-hero__section--large-dropdowns {
+      .sub-hero__section--large-body {
         padding: 0 50px 60px 0; } }
   .sub-hero__section--large-dropdowns {
-    align-self: flex-end;
+    align-items: flex-end;
     display: flex;
-    margin-bottom: 0; }
+    flex-direction: column;
+    height: 43%;
+    justify-content: flex-end;
+    margin-bottom: 0;
+    min-height: 412px;
+    padding-left: calc(10.5vw + 20px); }
+    @media (max-width: 1200px) and (min-width: 769px) {
+      .sub-hero__section--large-dropdowns {
+        padding-left: calc(5vw + 20px); } }
+    @media (max-width: 992px) {
+      .sub-hero__section--large-dropdowns {
+        padding-right: 10.5vw; } }
+    @media (max-width: 768px) {
+      .sub-hero__section--large-dropdowns {
+        padding-left: 10.5vw; } }
+    .sub-hero__section--large-dropdowns > *:not(:last-child) {
+      margin-bottom: 20px; }
 
 .sub-hero__section--trio .col-md-7, .sub-hero__section--trio-img-hero {
   height: calc(100vh - 165px) !important;

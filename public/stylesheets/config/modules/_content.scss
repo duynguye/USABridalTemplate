@@ -32,8 +32,13 @@
         @extend .content;
         .row {
             [class*='col-'] {
+                
                 p {
                     column-gap: 4em;
+                    max-width: 590px;
+                }
+                .txt__columns--2 {
+                    max-width: unset;
                 }
             }
         }

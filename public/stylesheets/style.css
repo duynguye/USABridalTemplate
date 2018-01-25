@@ -1059,7 +1059,11 @@ body {
       padding: 100px 60px; } }
 
 .content--full .row [class*='col-'] p {
-  column-gap: 4em; }
+  column-gap: 4em;
+  max-width: 590px; }
+
+.content--full .row [class*='col-'] .txt__columns--2 {
+  max-width: unset; }
 
 .content--pre-footer .row [class*='col-']:nth-of-type(2n) {
   margin-left: 0; }

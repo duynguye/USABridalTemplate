@@ -10,7 +10,7 @@
         bottom: 0;
     }
     &__title {
-        @extend %underline;
+        // @extend %underline;
         padding: 0 30px;
         @media screen and (min-width: 768px) {
             margin-bottom: 60px;

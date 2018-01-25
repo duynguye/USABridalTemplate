@@ -1,16 +1,10 @@
 
-<% for(i= 0; i < page.content.length; i++) {%>
+<% for(i= 0; i < contentFullwidth.length; i++) {%>
     <h4 class="title__underline">
-        <%- page.content[i].title %>
+        <%- contentFullwidth[i].title %>
     </h4>
     <p <% if (twoColumns) {%> class="txt__columns--2" <%}%>>
-        <%- page.content[i].body %>
+        <%- contentFullwidth[i].body %>
     </p>
-    <% if (contentButton) { %>
-        <div>
-            <a href='<%- page.content[i].btn.btnLink -%>' 
-               class="btn__outline"><%- page.content[i].btn.btnTxt -%></a>
-        </div>
-    <% } %>
 <%} %>
  

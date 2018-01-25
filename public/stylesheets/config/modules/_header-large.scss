@@ -16,7 +16,7 @@
             }
         }
         .social__links {
-            bottom: 54vh;
+            bottom: 64vh;
             position: absolute;
         }
         // Arrow Box
@@ -48,7 +48,7 @@
                 display: inline-block;
             }
             &-row {
-                bottom: 21vh;
+                bottom: 31vh;
                 margin: 0;
                 position: absolute !important;
                 width: calc(100vw - 120px);
@@ -60,7 +60,7 @@
         }
         // Hero Image
         &-img {
-            height: 130vh;
+            height: 140vh;
             min-height: 1000px;
             object-fit: cover;
             object-position: center;

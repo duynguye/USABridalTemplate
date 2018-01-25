@@ -25,4 +25,5 @@ body {
 // Equal height columns
 .row--eq-height {
 	display: flex;
+	z-index: 2;
 }

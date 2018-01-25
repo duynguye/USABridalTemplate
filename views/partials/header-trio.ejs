@@ -3,47 +3,46 @@
     <div class="row">
          <div class="social__links hidden-sm hidden-xs">
             <a href="#">
-                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-facebook-f animation-object--fade-up"></i>
             </a>
             <a href="#">
-                <i class="fab fa-twitter"></i>
+                <i class="fab fa-twitter animation-object--fade-up"></i>
             </a>
             <a href="#">
-                <i class="fab fa-pinterest"></i>
+                <i class="fab fa-pinterest animation-object--fade-up"></i>
             </a>
             <a href="#">
-                <i class="fab fa-instagram"></i>
+                <i class="fab fa-instagram animation-object--fade-up"></i>
             </a>
         </div>
-        <div class="col-xs-8 col-sm-8 col-md-7 col-sm-push-1 col-md-push-1">
+        <div class="col-xs-8 col-sm-6 col-md-7 col-sm-push-1 col-md-push-1">
             <div class="trio__header">
                 <% include ./breadcrumb %>
-                <h1>
+                <h1 class="animation-txt--reveal animation-object--extend">
                     <small>
                         <%= page.smallTitle %>
                     </small>
                     <%- page.largeTitle %>
                 </h1>
-                <p>
+                <p class="animation-txt--reveal">
                     <%- page.description %>
                 </p>
             </div>
         </div>
-        <div class="col-xs-5 col-sm-6 col-md-5 col-lg-4 col-sm-pull-1 col-md-pull-1" data-enigma-speed="-0.2" data-enigma-offset="100" style="transition: all 1.5s cubic-bezier(.18,1,.21,1);">
+        <div class="col-xs-4 col-sm-6 col-md-5 col-lg-4 col-md-pull-1 animation-img--reveal">
             <img class="sub-hero__section--trio-img-hero" src="<%= image.hero %>" alt="<%= image.heroAlt %>" />
-
         </div>
         <div class="col-lg-2"></div>
     </div>
     <div class="row row--eq-height">
-        <div class="col-md-6 col-lg-7" style="background: url('<%= image.heroSupport %>') center no-repeat; background-size: cover;" data-enigma-speed="0.05" data-enigma-offset="-55" style="transition: all 1.5s cubic-bezier(.18,1,.21,1);">
-            <div class="sub-hero__section--trio-arrow-accent hidden-sm hidden-xs" data-enigma-speed="-0.25" data-enigma-offset="0" style="transition: all 1.5s cubic-bezier(.18,1,.21,1);">
+        <div class="col-md-6 col-lg-7 animation-object--fade-up" style="background: url('<%= image.heroSupport %>') center no-repeat; background-size: cover; transform: translateY(0);">
+            <div class="sub-hero__section--trio-arrow-accent hidden-sm hidden-xs">
                 <div class="sub-hero__section--trio-arrow-accent-container">
                     <i class="fas fa-arrow-down"></i>
                 </div>
             </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-5 sub-hero__section--trio-cta" data-enigma-speed="-0.1" data-enigma-offset="0" style="transition: all 1.5s cubic-bezier(.18,1,.21,1);">
+        <div class="col-sm-12 col-md-6 col-lg-5 sub-hero__section--trio-cta animation-object--fade-up">
             <h4 class="title__underline">
                 <%= cta.title %>
             </h4>

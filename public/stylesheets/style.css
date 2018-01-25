@@ -646,6 +646,40 @@ body {
     .social__links a:hover {
       color: #5b5b5b; }
 
+.img-caption__text, .img-caption__text-top, .img-caption__text-top--right, .img-caption__text-top--right-long, .img-caption__text-right, .img-caption__text-right--long, .img-caption__text--long {
+  background: #282828;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 0;
+  padding: 10px 1em;
+  position: absolute;
+  bottom: 0; }
+
+.img-caption__text-top--right-long, .img-caption__text-right--long, .img-caption__text--long {
+  width: 300px;
+  max-width: 300px; }
+
+.img-caption__text-top, .img-caption__text-top--right, .img-caption__text-top--right-long {
+  top: 0;
+  bottom: unset; }
+
+.img-caption__text-top--right, .img-caption__text-right {
+  left: unset;
+  right: -3em; }
+  @media screen and (max-width: 992px) {
+    .img-caption__text-top--right, .img-caption__text-right {
+      right: 0; } }
+
+.img-caption__text-top {
+  right: unset;
+  left: -3em; }
+  @media screen and (max-width: 992px) {
+    .img-caption__text-top {
+      left: 0; } }
+
 *, *::before, *::after {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -1419,7 +1453,7 @@ __navigation .navigation-block {
     .post__content--right {
       margin-left: 4em; }
   .post img {
-    max-width: 100%;
+    width: 100%;
     object-fit: cover;
     height: 500px; }
   .post__nav, .post__related {

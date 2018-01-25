@@ -1,12 +1,30 @@
 <!-- views/pages/post.ejs -->
 <% include ../partials/head %>
     <% include ../partials/header %>
+        <%
+            images = [
+                {
+                    id: 0,
+                    title: 'maggie',
+                    alt: '',
+                    imgURL: 'http://placehold.it/1000',
+                    caption: 'Maggie Sottero Dahlia'
+                },
+                {
+                    id: 1,
+                    title: 'maddison',
+                    alt: '',
+                    imgURL: 'http://placehold.it/1000',
+                    caption: 'Madison James MJ116'
+                }
+            ]
+        %>
         <!-- INSERT HEADER TRIO HERE -->
-        <section class="header-trio"></section>
+         <% include ../partials/header-trio %>
         <!-- CONTENT-LEFT -->
         <section class="post">
             <div class="container">
-                <div class="row">
+                <div class="row ">
                     <div class="col-md-8">
                         <div class="post__content post__content--left">
                             <p>
@@ -19,7 +37,9 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <img src="http://placehold.it/1000" alt="">
+                            <img class="post__image" src="<%-images[0].imgURL-%>" alt="">
+                            <figcaption class="img-caption__text-top--right">
+                            <%-images[0].caption-%></figcaption>
                     </div>
                 </div>
                 <!-- IMG SLIDER -->
@@ -27,7 +47,9 @@
                 <!-- CONTENT-RIGHT -->
                 <div class="row">
                     <div class="col-md-4">
-                        <img class="post__image" src="http://placehold.it/1000" alt="">
+                       <img class="post__image" src="<%-images[1].imgURL-%>" alt="">
+                            <figcaption class="img-caption__text-right">
+                            <%-images[1].caption-%></figcaption>
                     </div>
                     <div class="col-md-8">
                         <div class="post__content post__content--right">

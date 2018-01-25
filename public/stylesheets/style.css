@@ -1058,7 +1058,7 @@ body {
     .content, .content--full, .content--pre-footer {
       padding: 100px 60px; } }
 
-.content--full [class*='col-'] p {
+.content--full .row [class*='col-'] p {
   column-gap: 4em; }
 
 .content--pre-footer .row [class*='col-']:nth-of-type(2n) {

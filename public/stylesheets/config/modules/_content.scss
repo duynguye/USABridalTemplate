@@ -30,9 +30,11 @@
     }
     &--full {
         @extend .content;
-        [class*='col-'] {
-            p {
-                column-gap: 4em;
+        .row {
+            [class*='col-'] {
+                p {
+                    column-gap: 4em;
+                }
             }
         }
     }

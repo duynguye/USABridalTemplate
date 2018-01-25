@@ -839,6 +839,14 @@ body {
         padding-left: 60px;
         background-color: #c5eff7; } }
 
+.cta-full__btn h2:before, .cta-full__btn h2:after {
+  /* These transition properties apply on "mouseout" */
+  transition: all .4s ease-out .2s; }
+
+.cta-full__btn h2:hover::after, .cta-full__btn h2:hover::before {
+  /* These transition properties apply on hover */
+  transition: all .1s ease-out 0s; }
+
 .cta-full {
   background: #c5eff7;
   padding-top: 40px; }
@@ -863,18 +871,12 @@ body {
   .cta-full__btn h2 {
     padding: 30px 0; }
     .cta-full__btn h2:hover::after, .cta-full__btn h2:hover::before {
-      /* These transition properties apply on hover */
-      transition: all .1s ease-out 0s;
       max-width: 455px;
       height: 12px; }
     .cta-full__btn h2:before {
-      left: -38%;
-      /* These transition properties apply on "mouseout" */
-      transition: all .4s ease-out .2s; }
+      left: -38%; }
     .cta-full__btn h2:after {
-      right: -21%;
-      /* These transition properties apply on "mouseout" */
-      transition: all .4s ease-out .2s; }
+      right: -21%; }
 
 .pre-footer-content {
   padding: 5% 40px; }

@@ -112,8 +112,13 @@ router.get('/cart', function (req, res) {
 router.get('/my-wishlist', function (req, res) {
     res.render('pages/my-wishlist', { title: 'My Wishlist' });
 });
+
 router.get('/categories', function (req, res) {
     res.render('pages/categories', { title: 'Categories' });
+});
+
+router.get('/my-info', function (req, res) {
+    res.render('pages/my-info', { title: 'Online Account Access' });
 });
 
 // your-bridal

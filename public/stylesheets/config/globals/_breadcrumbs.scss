@@ -16,7 +16,6 @@
 		display: inline-block;
 		a {
 			@include heading($font-base, 1, 400);
-			// border-bottom: 2px solid $black;
 			padding-bottom: 6px;
 			position: relative;
 			text-transform: capitalize;

@@ -43,9 +43,7 @@
         }
         &:before {
             @extend %blinds;
-            //background: #5fc6cb;
             animation-direction: reverse;
-            animation-delay: .5s;
         }
     }
     &-object {
@@ -54,16 +52,16 @@
                 opacity: 0;
                 transition: transform .5s ease-in;
                 @at-root .row &:nth-child(2) {
-                    animation-delay: 1.75s;
+                    animation-delay: 1.65s;
                 }
                 @at-root .row &:nth-child(3) {
-                    animation-delay: 2s;
+                    animation-delay: 1.75s;
                 }
                 @at-root .row &:nth-child(4) {
-                    animation-delay: 2.25s;
+                    animation-delay: 1.85s;
                 }
                 @at-root .row &:nth-child(5) {
-                    animation-delay: 2.5s;
+                    animation-delay: 1.95s;
                 }
             }
             &-up { // .animation-object--fade-up
@@ -71,10 +69,18 @@
                 animation: fade-Y .5s both;
                 animation-delay: 1.5s;
             }
+            &-down { // .animation-object--fade-down
+                @extend .animation-object--fade-up;
+                animation-direction: reverse;
+            }
             &-right:after { // .animation-object--fade-right
                 @extend %fade;
                 animation: fade-X .5s both;
                 animation-delay: 1s;
+            }
+            &-left { // .animation-object--fade-left
+                @extend .animation-object--fade-right;
+                animation-direction: reverse;
             }
         }
         &--extend:after { // .animation-object--extend

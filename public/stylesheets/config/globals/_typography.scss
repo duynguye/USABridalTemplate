@@ -40,6 +40,7 @@ h1 {
     @media (max-width: $bp-xs - 1px) {
         border-width: 6px;
         font-size: $h2-size / 1.5;
+        padding: 0 20px 20px 20px;
         small {
             font-size: $h5-size / 1.15;
             letter-spacing: -1px;
@@ -53,6 +54,13 @@ h1 {
         left: 0;
         position: absolute;
         width: 0;
+        @media (max-width: $bp-sm) {
+            bottom: 0;
+            height: 8px;
+        }
+        @media (max-width: $bp-xs - 1px) {
+            height: 6px;
+        }
     }
 }
 
@@ -74,7 +82,7 @@ h4 {
 h5 {
     @include heading($h5-size, 1, 900); //size, line-height, weight
     position: relative;
-    &:before {
+    &:after {
         background: $black;
         bottom: -10px;
         content: '';

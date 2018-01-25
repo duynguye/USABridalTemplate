@@ -16,21 +16,33 @@
 		display: inline-block;
 		a {
 			@include heading($font-base, 1, 400);
-			border-bottom: 2px solid $black;
+			// border-bottom: 2px solid $black;
 			padding-bottom: 6px;
+			position: relative;
 			text-transform: capitalize;
 			@media (max-width: $bp-xs) {
 				font-size: $font-base - 2px;
 			}
 			@at-root {
 	            #{$parent} li:last-child a {
-					border: none;
 	                cursor: default;
 					pointer-events: none;
+					&:after {
+						display: none;
+					}
 	            }
 	        }
 	        &:hover {
 				text-decoration: none;
+			}
+			&:after {
+				background: $black;
+				bottom: -2px;
+				content: '';
+				height: 2px;
+				left: 0;
+				position: absolute;
+				width: 0;
 			}
 		}
 		&:not(:last-child) {

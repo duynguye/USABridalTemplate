@@ -3,7 +3,7 @@
 //--------------------------
 
 %trio-height {
-	height: calc(100vh - 185px) !important;
+	height: calc(100vh - 165px) !important;
 	min-height: 600px;
 	@media (max-width: $bp-sm) {
 		height: calc(90vh - 185px) !important;
@@ -46,10 +46,11 @@
 				@media (max-width: $bp-md) {
 					margin-left: 0px;
 					max-width: 600px;
-					width: 55vw;
+					width: 40vw;
 				}
 				@media (max-width: $bp-sm) {
 					transform: translateY(-20px);
+					width: 55vw;
 				}
 				@media (max-width: $bp-xs) {
 					width: 45vw;

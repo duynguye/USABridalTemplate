@@ -6,11 +6,5 @@
     <p <% if (twoColumns) {%> class="txt__columns--2" <%}%>>
         <%- page.content[i].body %>
     </p>
-    <% if (contentButton) { %>
-        <div>
-            <a href='<%- page.content[i].btn.btnLink -%>' 
-               class="btn__outline"><%- page.content[i].btn.btnTxt -%></a>
-        </div>
-    <% } %>
 <%} %>
  

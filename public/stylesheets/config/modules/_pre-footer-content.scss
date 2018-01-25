@@ -1,17 +1,23 @@
 .pre-footer-content {
     // padding: 60px 49px 20px;
-    padding: 5% 40px;
+    padding: 100px 40px;
     @media screen and (min-width:$bp-md) {
         // padding: 80px 60px 40px;
-        padding: 2% 60px;
+        padding: 100px 60px;
     }
     .row {
         flex-flow: row wrap;
         justify-content: center;
         [class*='col-']{
             padding-right: 5%;
+            @media (min-width: 992px) {
+                margin-left: 8.33333333%;
+            }
+            &:nth-of-type(2n) {
+                margin-left: 0;
+            }
             &:not(:last-child) {
-                margin-bottom:4%; 
+                margin-bottom:60px; 
             }
         }
         @media screen and (min-width:$bp-md) {

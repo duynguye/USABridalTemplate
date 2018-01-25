@@ -839,14 +839,6 @@ body {
         padding-left: 60px;
         background-color: #c5eff7; } }
 
-.cta-full__btn h2:before, .cta-full__btn h2:after {
-  /* These transition properties apply on "mouseout" */
-  transition: all .4s ease-out .2s; }
-
-.cta-full__btn h2:hover::after, .cta-full__btn h2:hover::before {
-  /* These transition properties apply on hover */
-  transition: all .1s ease-out 0s; }
-
 .cta-full {
   background: #c5eff7;
   padding-top: 40px; }
@@ -870,29 +862,106 @@ body {
     width: 100%; }
   .cta-full__btn h2 {
     padding: 30px 0; }
-    .cta-full__btn h2:hover::after, .cta-full__btn h2:hover::before {
-      max-width: 455px;
-      height: 12px; }
     .cta-full__btn h2:before {
       left: -38%; }
     .cta-full__btn h2:after {
       right: -21%; }
 
 .pre-footer-content {
-  padding: 5% 40px; }
+  padding: 100px 40px; }
   @media screen and (min-width: 992px) {
     .pre-footer-content {
-      padding: 2% 60px; } }
+      padding: 100px 60px; } }
   .pre-footer-content .row {
     flex-flow: row wrap;
     justify-content: center; }
     .pre-footer-content .row [class*='col-'] {
       padding-right: 5%; }
+      @media (min-width: 992px) {
+        .pre-footer-content .row [class*='col-'] {
+          margin-left: 8.33333333%; } }
+      .pre-footer-content .row [class*='col-']:nth-of-type(2n) {
+        margin-left: 0; }
       .pre-footer-content .row [class*='col-']:not(:last-child) {
-        margin-bottom: 4%; }
+        margin-bottom: 60px; }
     @media screen and (min-width: 992px) {
       .pre-footer-content .row {
         flex-flow: row wrap; } }
+
+.slider-products__section-container-1 {
+  min-width: 100%; }
+  @media screen and (min-width: 768px) {
+    .slider-products__section-container-1 {
+      min-width: 0; } }
+
+.slider-products__container {
+  width: 100%; }
+
+.slider-products__wrapper {
+  text-align: center; }
+
+.slider-products__pagination-fraction {
+  text-align: right;
+  margin-bottom: 60px; }
+
+.slider-products__slide {
+  width: 100%; }
+
+.slider-products__product {
+  display: inline-block;
+  width: 100%;
+  max-width: 250px;
+  margin-bottom: 30px; }
+  .slider-products__product:first-of-type {
+    padding-left: 0; }
+  .slider-products__product:last-of-type, .slider-products__product:nth-of-type(2) {
+    padding-right: 0; }
+  .slider-products__product-image {
+    height: 350px;
+    margin-bottom: 35px; }
+    .slider-products__product-image img {
+      max-width: 100%; }
+  .slider-products__product-content {
+    text-align: left; }
+    .slider-products__product-content__price {
+      margin-right: 5px; }
+    .slider-products__product-content__retail {
+      text-decoration: line-through;
+      color: #949494; }
+  @media screen and (min-width: 768px) {
+    .slider-products__product {
+      padding-right: 60px; }
+      .slider-products__product:nth-of-type(2) {
+        padding-right: 0px; } }
+  @media screen and (min-width: 992px) {
+    .slider-products__product {
+      width: 211px; }
+      .slider-products__product, .slider-products__product:nth-of-type(2) {
+        padding-right: 21px; } }
+  @media screen and (min-width: 1200px) {
+    .slider-products__product {
+      width: 100%; }
+      .slider-products__product, .slider-products__product:nth-of-type(2) {
+        padding-right: 49px; } }
+  @media screen and (min-width: 1441px) {
+    .slider-products__product, .slider-products__product:nth-of-type(2) {
+      padding-right: 129px; } }
+
+__navigation .navigation-block {
+  display: inline-block;
+  background: #fff; }
+  __navigation .navigation-block span {
+    padding: 0 11px; }
+  __navigation .navigation-block .product-button-prev,
+  __navigation .navigation-block .swiper-button-prev,
+  __navigation .navigation-block .product-button-next,
+  __navigation .navigation-block .swiper-button-next {
+    background-image: none;
+    position: initial;
+    cursor: pointer; }
+
+#home-your-bridal {
+  position: relative; }
 
 .footer {
   padding: 0 60px; }

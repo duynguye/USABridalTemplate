@@ -1,9 +1,64 @@
 <% include ../partials/head %>
 <% include ../partials/header %>
+<%
+    path = "employment" // Keep text lowercase. Seperate additional links with "/" and no spaces
 
-<div>
-    <!-- Your Content Goes Here -->
+    page = {
+        smallTitle: 'Join Our Team ',
+        largeTitle: 'View<br/>Openings',
+        description: 'Os excestrum et mod quis minvele ssernate ant lignatur aliquaes ipsantis corro occabor solorporatur sit quiate aditior secesto rporem et laborib usapit aut qui tem. Laccus, optas si sit et expe sinci doluptatur antem.'
+    };
 
-</div>
+    image = {
+        hero: 'images/2621_094.jpg',
+        heroAlt: '#',
+        heroSupport: 'images/00092747-bride.jpg' // Image below the fold
+    };
+
+    cta = {
+        title: 'to apply for a position:',
+        columns: false, // True for 2 columns, false for 1 column
+        description: 'Send your resume to the home offce via <b>"apply now"</b><br/>Fax: 270-765-5558<br/>or Mail to: 1201 N Dixie Ave Suite 112,<br/> Elizabethtown KY 42701<br/><br/>Sales Consultants & Seamstresses may apply in person at your local store. <b>Managers & Supervisors please apply via the below apply button, fax or address.</b>'
+    };
+    
+    let preFooterColumns = 2;
+    preFooter = [
+        {
+            "title": 'Managers & Key-Holders',
+            "body":'Do you have retail management experience? If so, we may have the management position you\'re looking for . You must be able to develop a trained/motivated staff and meet or exceed sales goals. Excellent salary, benefts and bonus plan.',
+            "btn": {
+                btnLink: '#' ,
+                btnTxt: 'apply now'
+            }
+        },
+        {
+            "title": 'Supervisor',
+            "body":'Do you have bridal alterations experience? Can you manage a staff of seamstresses?  If so, we are currently looking for professional Alteration Supervisors. You must be able to develop a trained/motivated staff and meet or exceed sales goals. Excellent salary and benefts',
+            "btn": {
+                btnLink: '#' ,
+                btnTxt: 'apply now'
+            }
+        },
+        {
+            "title": 'Bridal Consultants &amp; Tuxedo Consultants',
+            "body":'If you have a desire for working with people, making their dreams a reality, and have retail sales experience, we may have a position for you. Bridal Warehouse is sales and service oriented. You will be trained to become a professional sales associate, not a sales clerk. Sales Associate positions offer growth potential, excellent pay opportunities and benefts. Prior retail sales experience, professional appearance and a friendly personality are a plus. Full and part time positions are available.',
+            "btn": {
+                btnLink: '#' ,
+                btnTxt: 'apply now'
+            }
+        },
+        {
+            "title": 'Seamstresses',
+            "body":'Do you have alterations experience? Bridal Warehouse is looking for professional bridal alterations people. Our alteration staff are important members of our team and can be the reason the customer makes their fnal decision to purchase. Previous alteration experience is required, previous bridal alteration experience is a defnite plus. Excellent salary and benefts. Full and part time positions are available.',
+            "btn": {
+                btnLink: '#' ,
+                btnTxt: 'apply now'
+            }
+        }
+    ]
+%>
+<% include ../partials/header-trio  %>
+<% include ../partials/pre-footer-content  %>
+
 
 <% include ../partials/footer %>

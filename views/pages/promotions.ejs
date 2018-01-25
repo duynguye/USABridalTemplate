@@ -4,52 +4,53 @@
 <% let dropdownsInHeader = false; %>
 <% let preFooterColumns = 3; %>   
 <%   
-    page = {
-        ctaArr: [ 
-            {
-                "cta": 'Blue Tag Site-wide Sale',
-                "ctaLink": '#',
-                "imageURL": "http://placehold.it/600x350"
-            },
-            {
-                "cta": '20% of Invitations Site-wide Sale',
-                "ctaLink": '#',
-                "imageURL": "http://placehold.it/600x350"
-            },
-            {
-                "cta": 'Enter To Win Rewards',
-                "ctaLink": '#',
-                "imageURL": "http://placehold.it/600x350"
+
+    ctaFullwidth = [ 
+        {
+            "cta": 'Blue Tag Site-wide Sale',
+            "ctaLink": '#',
+            "imageURL": "http://placehold.it/600x350"
+        },
+        {
+            "cta": '20% of Invitations Site-wide Sale',
+            "ctaLink": '#',
+            "imageURL": "http://placehold.it/600x350"
+        },
+        {
+            "cta": 'Enter To Win Rewards',
+            "ctaLink": '#',
+            "imageURL": "http://placehold.it/600x350"
+        }
+    ];
+    
+    preFooter = [
+        {
+            "title": 'Appointment',
+            "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
+            "btn": {
+                btnLink: '#' ,
+                btnTxt: 'schedule today'
             }
-        ],
-        preFooter: [
-            {
-                "title": 'Appointment',
-                "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
-                "btn": {
-                    btnLink: '#' ,
-                    btnTxt: 'schedule today'
-                }
-            },
-            {
-                "title": 'Register Wedding',
-                "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
-                "btn": {
-                    btnLink: '#' ,
-                    btnTxt: 'register today'
-                }
-            },
-            {
-                "title": 'Register Prom',
-                "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
-                "btn": {
-                    btnLink: '#' ,
-                    btnTxt: 'register today'
-                }
+        },
+        {
+            "title": 'Register Wedding',
+            "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
+            "btn": {
+                btnLink: '#' ,
+                btnTxt: 'register today'
             }
-            
-        ]
-    }
+        },
+        {
+            "title": 'Register Prom',
+            "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
+            "btn": {
+                btnLink: '#' ,
+                btnTxt: 'register today'
+            }
+        }
+        
+    ];
+    
 %>
 <!-- CONTENT -->
 <% include ../partials/head %>

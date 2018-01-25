@@ -2,23 +2,24 @@
 
 <% let columns = (12 / preFooterColumns) - 1 %>
 
+
 <section class="pre-footer-content">
     <div class="container-fluid">
         <div class="row row--eq-height">
-            <% for(i= 0; i < page.preFooter.length; i++) {%>
+            <% for(i= 0; i < preFooter.length; i++) {%>
             <div class="col-xs-12 col-md-<%=columns%>">
-                    <h4 class="title__underline">
-                         <%- page.preFooter[i].title -%>
-                    </h4>
-                    <p>
-                        <%- page.preFooter[i].body -%>
-                    </p>
-                    <div>
-                        <a href='<%- page.preFooter[i].btn.btnLink -%>' class="btn__outline">
-                            <%- page.preFooter[i].btn.btnTxt -%>
-                        </a>
-                    </div>
+                <h4 class="title__underline">
+                        <%- preFooter[i].title -%>
+                </h4>
+                <p>
+                    <%- preFooter[i].body -%>
+                </p>
+                <div>
+                    <a href='<%- preFooter[i].btn.btnLink -%>' class="btn__outline">
+                        <%- preFooter[i].btn.btnTxt -%>
+                    </a>
                 </div>
+            </div>
             <%}%>
         </div>
     </div>

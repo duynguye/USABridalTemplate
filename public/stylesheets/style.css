@@ -659,6 +659,40 @@ body {
     .social__links a:hover {
       color: #5b5b5b; }
 
+.img-caption__text, .img-caption__text-top, .img-caption__text-top--right, .img-caption__text-top--right-long, .img-caption__text-right, .img-caption__text-right--long, .img-caption__text--long {
+  background: #282828;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 0;
+  padding: 10px 1em;
+  position: absolute;
+  bottom: 0; }
+
+.img-caption__text-top--right-long, .img-caption__text-right--long, .img-caption__text--long {
+  width: 300px;
+  max-width: 300px; }
+
+.img-caption__text-top, .img-caption__text-top--right, .img-caption__text-top--right-long {
+  top: 0;
+  bottom: unset; }
+
+.img-caption__text-top--right, .img-caption__text-right {
+  left: unset;
+  right: -3em; }
+  @media screen and (max-width: 992px) {
+    .img-caption__text-top--right, .img-caption__text-right {
+      right: 0; } }
+
+.img-caption__text-top {
+  right: unset;
+  left: -3em; }
+  @media screen and (max-width: 992px) {
+    .img-caption__text-top {
+      left: 0; } }
+
 *, *::before, *::after {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -999,35 +1033,115 @@ body {
     width: 100%; }
   .cta-full__btn h2 {
     padding: 30px 0; }
-    .cta-full__btn h2:hover::after, .cta-full__btn h2:hover::before {
-      /* These transition properties apply on hover */
-      transition: all .1s ease-out 0s;
-      max-width: 455px;
-      height: 12px; }
     .cta-full__btn h2:before {
-      left: -38%;
-      /* These transition properties apply on "mouseout" */
-      transition: all .4s ease-out .2s; }
+      left: -38%; }
     .cta-full__btn h2:after {
-      right: -21%;
-      /* These transition properties apply on "mouseout" */
-      transition: all .4s ease-out .2s; }
+      right: -21%; }
 
-.pre-footer-content {
-  padding: 5% 40px; }
+.content .row, .content--full .row, .content--pre-footer .row {
+  flex-flow: row wrap;
+  justify-content: center; }
+  .content .row [class*='col-'], .content--full .row [class*='col-'], .content--pre-footer .row [class*='col-'] {
+    padding-right: 5%; }
+    @media (min-width: 992px) {
+      .content .row [class*='col-'], .content--full .row [class*='col-'], .content--pre-footer .row [class*='col-'] {
+        margin-left: 8.33333333%; } }
+    .content .row [class*='col-']:not(:last-child), .content--full .row [class*='col-']:not(:last-child), .content--pre-footer .row [class*='col-']:not(:last-child) {
+      margin-bottom: 60px; }
   @media screen and (min-width: 992px) {
-    .pre-footer-content {
-      padding: 2% 60px; } }
-  .pre-footer-content .row {
-    flex-flow: row wrap;
-    justify-content: center; }
-    .pre-footer-content .row [class*='col-'] {
-      padding-right: 5%; }
-      .pre-footer-content .row [class*='col-']:not(:last-child) {
-        margin-bottom: 4%; }
-    @media screen and (min-width: 992px) {
-      .pre-footer-content .row {
-        flex-flow: row wrap; } }
+    .content .row, .content--full .row, .content--pre-footer .row {
+      flex-flow: row wrap; } }
+
+.content, .content--full, .content--pre-footer {
+  padding: 100px 40px; }
+  @media screen and (min-width: 992px) {
+    .content, .content--full, .content--pre-footer {
+      padding: 100px 60px; } }
+
+.content--full .row [class*='col-'] p {
+  column-gap: 4em;
+  max-width: 590px; }
+
+.content--full .row [class*='col-'] .txt__columns--2 {
+  max-width: unset; }
+
+.content--pre-footer .row [class*='col-']:nth-of-type(2n) {
+  margin-left: 0; }
+
+.slider-products__section-container-1 {
+  min-width: 100%; }
+  @media screen and (min-width: 768px) {
+    .slider-products__section-container-1 {
+      min-width: 0; } }
+
+.slider-products__container {
+  width: 100%; }
+
+.slider-products__wrapper {
+  text-align: center; }
+
+.slider-products__pagination-fraction {
+  text-align: right;
+  margin-bottom: 60px; }
+
+.slider-products__slide {
+  width: 100%; }
+
+.slider-products__product {
+  display: inline-block;
+  width: 100%;
+  max-width: 250px;
+  margin-bottom: 30px; }
+  .slider-products__product:first-of-type {
+    padding-left: 0; }
+  .slider-products__product:last-of-type, .slider-products__product:nth-of-type(2) {
+    padding-right: 0; }
+  .slider-products__product-image {
+    height: 350px;
+    margin-bottom: 35px; }
+    .slider-products__product-image img {
+      max-width: 100%; }
+  .slider-products__product-content {
+    text-align: left; }
+    .slider-products__product-content__price {
+      margin-right: 5px; }
+    .slider-products__product-content__retail {
+      text-decoration: line-through;
+      color: #949494; }
+  @media screen and (min-width: 768px) {
+    .slider-products__product {
+      padding-right: 60px; }
+      .slider-products__product:nth-of-type(2) {
+        padding-right: 0px; } }
+  @media screen and (min-width: 992px) {
+    .slider-products__product {
+      width: 211px; }
+      .slider-products__product, .slider-products__product:nth-of-type(2) {
+        padding-right: 21px; } }
+  @media screen and (min-width: 1200px) {
+    .slider-products__product {
+      width: 100%; }
+      .slider-products__product, .slider-products__product:nth-of-type(2) {
+        padding-right: 49px; } }
+  @media screen and (min-width: 1441px) {
+    .slider-products__product, .slider-products__product:nth-of-type(2) {
+      padding-right: 129px; } }
+
+__navigation .navigation-block {
+  display: inline-block;
+  background: #fff; }
+  __navigation .navigation-block span {
+    padding: 0 11px; }
+  __navigation .navigation-block .product-button-prev,
+  __navigation .navigation-block .swiper-button-prev,
+  __navigation .navigation-block .product-button-next,
+  __navigation .navigation-block .swiper-button-next {
+    background-image: none;
+    position: initial;
+    cursor: pointer; }
+
+#home-your-bridal {
+  position: relative; }
 
 .footer {
   padding: 0 60px; }
@@ -1380,7 +1494,7 @@ body {
     .post__content--right {
       margin-left: 4em; }
   .post img {
-    max-width: 100%;
+    width: 100%;
     object-fit: cover;
     height: 500px; }
   .post__nav, .post__related {

@@ -4,6 +4,11 @@ import 'popper.js';
 import 'bootstrap';
 const $ = jQuery;
 
+//  Swiper Sliders
+import Swiper from 'swiper';
+import {sliderProductParams} from "./sliders";
+var yourBridalSlider = new Swiper('#home-slider-your-bridal', sliderProductParams);
+
 // Google Maps
 import initializeMap from './map';
 

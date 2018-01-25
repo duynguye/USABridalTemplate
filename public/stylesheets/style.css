@@ -862,10 +862,19 @@ body {
     width: 100%; }
   .cta-full__btn h2 {
     padding: 30px 0; }
+    .cta-full__btn h2:hover::after, .cta-full__btn h2:hover::before {
+      /* These transition properties apply on hover */
+      transition: all .1s ease-out 0s;
+      max-width: 455px;
+      height: 12px; }
     .cta-full__btn h2:before {
-      left: -38%; }
+      left: -38%;
+      /* These transition properties apply on "mouseout" */
+      transition: all .4s ease-out .2s; }
     .cta-full__btn h2:after {
-      right: -21%; }
+      right: -21%;
+      /* These transition properties apply on "mouseout" */
+      transition: all .4s ease-out .2s; }
 
 .pre-footer-content {
   padding: 5% 40px; }

@@ -4,10 +4,16 @@ import 'popper.js';
 import 'bootstrap';
 const $ = jQuery;
 
-//  Swiper Sliders
+// Import Swiper Slider & Params
 import Swiper from 'swiper';
-import {sliderProductParams} from "./sliders";
-var yourBridalSlider = new Swiper('#home-slider-your-bridal', sliderProductParams);
+import {sliderBridalParams} from "./sliders";
+import {sliderPromParams} from "./sliders";
+import {sliderQuinceaneraParams} from "./sliders";
+
+// Initialize Swiper Sliders
+var homeBridalSlider = new Swiper('.slider-bridal', sliderBridalParams);
+var homePromSlider = new Swiper('.slider-prom', sliderPromParams);
+var homeQuinceaneraSlider = new Swiper('.slider-quinceanera',sliderQuinceaneraParams);
 
 // Google Maps
 import initializeMap from './map';

@@ -1,49 +1,7 @@
 <!-- views/pages/index.ejs -->
 <% include ../partials/head %>
 <% include ../partials/header %>
-<% 
-    slider = {
-        header: 'Your Bridal',
-        products: [
-            {
-                title: 'Dress Name',
-                salePrice: '359',
-                retailPrice: '399',
-                imageURL: '/images/9000F.jpg' ,
-                saleTag: '',
-                inStock: false,
-                shipsToday: false
-            },
-            {
-                title: 'Dress Name',
-                salePrice: '359',
-                retailPrice: '399',
-                imageURL: '/images/9000F.jpg' ,
-                saleTag: '',
-                inStock: false,
-                shipsToday: false
-            },
-            {
-                title: 'Dress Name',
-                salePrice: '359',
-                retailPrice: '399',
-                imageURL: '/images/9000F.jpg' ,
-                saleTag: '',
-                inStock: false,
-                shipsToday: false
-            },
-            {
-                title: 'Dress Name',
-                salePrice: '359',
-                retailPrice: '399',
-                imageURL: '/images/9000F.jpg' ,
-                saleTag: '',
-                inStock: false,
-                shipsToday: false
-            }
-        ]
-    }
-%>
+
 
 <main>
     <div class="jumbotron">
@@ -77,6 +35,118 @@
         <p><strong>USA BRIDAL</strong></p>
     </div>
 </main>
+<% productSliders = [{
+        sectionId: 'home-bridal',
+        sliderClass: 'slider-bridal',
+        header: 'Your Bridal',
+        products: [
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9000F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/107_0009.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9215F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9250F.jpg' ,
+            }
+        ]
+    },
+    {
+        sectionId: 'home-prom',
+        sliderClass: 'slider-prom',
+        header: 'Your Prom',
+        products: [
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9000F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/107_0009.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9215F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9250F.jpg' ,
+            }
+        ]
+    },
+    {
+        sectionId: 'home-quinceanera',
+        sliderClass: 'slider-quinceanera',
+        header: 'Your Quinceanera',
+        products: [
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9000F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/107_0009.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9215F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9215F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9215F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9215F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9250F.jpg' ,
+            }
+        ]
+    }
+] %>
 
 <% include ../partials/product-slider%>
 

@@ -1,7 +1,7 @@
 // Put your slider parameters here, stored as a variable, then export.. (import into index.js)
 
 // Product Slider Params
-export let sliderProductParams = {
+let sliderProductParams = {
     slidesPerGroup: 4,
     slidesPerView: 4,
     spaceBetween: 129,
@@ -37,23 +37,6 @@ export let sliderProductParams = {
             spaceBetween: 100
         }
     },
-    pagination: {
-        el: '.swiper-pagination-fraction',
-        type: 'fraction',
-        clickable: true,
-        renderFraction: function(currentClass, totalClass) {
-            return '<div class="product-pagination">' +
-                '<span class="small">Page </span>' +
-                '<span class="small ' + currentClass + '"></span>' +
-                '<span class="small"> of </span>' +
-                '<span class="small ' + totalClass + '"></span>' +
-                '</div>';
-        }
-    },
-    navigation: {
-        prevEl: '.product-button-prev',
-        nextEl: '.product-button-next',
-    },
     on: { // for debugging purposes
         init: function () {
           console.log('swiper initialized');
@@ -63,4 +46,53 @@ export let sliderProductParams = {
             console.log(currentIndex);
         },
       }
+}
+
+export let sliderBridalParams = {
+    ...sliderProductParams,
+    pagination: {
+        el: '.slider-bridal-pagination',
+        type: 'fraction',
+        clickable: true,
+        renderFraction: function(currentClass, totalClass) {
+            return "<span>Page </span><span class='" +currentClass+ "'></span>" + "<span> of </span><span class='" +totalClass+
+            "'></span>" ;
+        }
+    },
+    navigation: {
+        prevEl: '.slider-bridal-prev',
+        nextEl: '.slider-bridal-next',
+    },
+}
+export let sliderPromParams = {
+    ...sliderProductParams,
+    pagination: {
+        el: '.slider-prom-pagination',
+        type: 'fraction',
+        clickable: true,
+        renderFraction: function(currentClass, totalClass) {
+            return "<span>Page </span><span class='" +currentClass+ "'></span>" + "<span> of </span><span class='" +totalClass+
+            "'></span>" ;
+        }
+    },
+    navigation: {
+        prevEl: '.slider-prom-prev',
+        nextEl: '.slider-prom-next',
+    },
+}
+export let sliderQuinceaneraParams = {
+    ...sliderProductParams,
+    pagination: {
+        el: '.slider-quinceanera-pagination',
+        type: 'fraction',
+        clickable: true,
+        renderFraction: function(currentClass, totalClass) {
+            return "<span>Page </span><span class='" +currentClass+ "'></span>" + "<span> of </span><span class='" +totalClass+
+            "'></span>" ;
+        }
+    },
+    navigation: {
+        prevEl: '.slider-quinceanera-prev',
+        nextEl: '.slider-quinceanera-next',
+    },
 }

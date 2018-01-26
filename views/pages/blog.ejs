@@ -3,7 +3,7 @@
 <% include ../partials/header %>
 
 <%
-    path = "blog" // Keep text lowercase. Seperate additional links with "/" and no spaces
+    path = "blog"; // Keep text lowercase. Seperate additional links with "/" and no spaces
 
     page = {
         smallTitle: 'The Blog:',
@@ -22,22 +22,64 @@
 
     optional = {
         dropdowns: true
-    }
+    };
     
 %>
 <% include ../partials/header-large  %>
-<div class="container">
+<div class="container-fluid blog__post">
+
+    <!-- BLOG ARTICLES -->
+    <%
+        posts = [
+            {
+                smallTitle: 'Illusion Backs, Elegant Sleeves, Romantic Necklines',
+                largeTitle: 'Stunning Gown Trends for Spring',
+                excerpt: 'Os excestrum et mod quis minvele ssernate ant lignatur aliquaes ipsantis corro occabor solorporatur sit quiate aditior secesto rporem et laborib usapit aut qui tem. Laccus, optas si sit et expe sinci doluptatur antem. Laborepe nonsequia dem conecep taspelicil et erum que nestiur? Tionsectur rentio. Ciet, sit ut latur? Occabo. Cerciist, sit doluptat molorerferum quasi to con et officillesti ad quaerae dolupti usaperiatias eroribus et ipsandelis nonet volecum laboreiciet volor re et, omnit, comnisim fugia doluptasped quae sequatur aliquiamus. Ri dolut ut as restion sersperume dolut esequi te ne excest, consequam ipsam, odionsed maxim adi ullorum eos moditium conem nissum enda sim harum quo ipiet vollibus susciducil',
+                link: '#'
+            },
+            {
+                smallTitle: 'Amazing Wedding Gown Designs',
+                largeTitle: 'Whats Trending for Spring 2015',
+                excerpt: 'Os excestrum et mod quis minvele ssernate ant lignatur aliquaes ipsantis corro occabor solorporatur sit quiate aditior secesto rporem et laborib usapit aut qui tem. Laccus, optas si sit et expe sinci doluptatur antem. Laborepe nonsequia dem conecep taspelicil et erum que nestiur? Tionsectur rentio. Ciet, sit ut latur? Occabo. Cerciist, sit doluptat molorerferum quasi to con et officillesti ad quaerae dolupti usaperiatias eroribus et ipsandelis nonet volecum laboreiciet volor re et, omnit, comnisim fugia doluptasped quae sequatur aliquiamus. Ri dolut ut as restion sersperume dolut esequi te ne excest, consequam ipsam, odionsed maxim adi ullorum eos moditium conem nissum enda sim harum quo ipiet vollibus susciducil',
+                link: '#'
+            },
+            {
+                smallTitle: 'How to Save on Your Wedding',
+                largeTitle: 'Here Comes the Bill!',
+                excerpt: 'Os excestrum et mod quis minvele ssernate ant lignatur aliquaes ipsantis corro occabor solorporatur sit quiate aditior secesto rporem et laborib usapit aut qui tem. Laccus, optas si sit et expe sinci doluptatur antem. Laborepe nonsequia dem conecep taspelicil et erum que nestiur? Tionsectur rentio. Ciet, sit ut latur? Occabo. Cerciist, sit doluptat molorerferum quasi to con et officillesti ad quaerae dolupti usaperiatias eroribus et ipsandelis nonet volecum laboreiciet volor re et, omnit, comnisim fugia doluptasped quae sequatur aliquiamus. Ri dolut ut as restion sersperume dolut esequi te ne excest, consequam ipsam, odionsed maxim adi ullorum eos moditium conem nissum enda sim harum quo ipiet vollibus susciducil',
+                link: '#'
+            },
+            {
+                smallTitle: 'From Wedding Dress To Wedding Day',
+                largeTitle: 'Social Media Goes Bridal!',
+                excerpt: 'Os excestrum et mod quis minvele ssernate ant lignatur aliquaes ipsantis corro occabor solorporatur sit quiate aditior secesto rporem et laborib usapit aut qui tem. Laccus, optas si sit et expe sinci doluptatur antem. Laborepe nonsequia dem conecep taspelicil et erum que nestiur? Tionsectur rentio. Ciet, sit ut latur? Occabo. Cerciist, sit doluptat molorerferum quasi to con et officillesti ad quaerae dolupti usaperiatias eroribus et ipsandelis nonet volecum laboreiciet volor re et, omnit, comnisim fugia doluptasped quae sequatur aliquiamus. Ri dolut ut as restion sersperume dolut esequi te ne excest, consequam ipsam, odionsed maxim adi ullorum eos moditium conem nissum enda sim harum quo ipiet vollibus susciducil',
+                link: '#'
+            }
+        ];
+    %>
+
+    <% posts.forEach(function (post) { %>
     <div class="row">
-        <div class="col-lg-12">
-            <div class="list-group">
-                <!-- List of Blog Post Snippets Here -->
-                <% for(var i=0; i<4; i++) { %>
-                    <% include ../partials/post-snippet.ejs %>
-                <% } %>
-                <!-- End list-->
+        <div class="col-xs-10 blog__post-snippet animation-object--extend">
+            <div class="blog__post-snippet__title header__title">
+                <h1 class="animation-txt--reveal animation-object--extend">
+                    <small><%- post.smallTitle %>:</small>
+                    <%- post.largeTitle %>
+                </h1>
             </div>
+            <div class="blog__post-snippet__content">
+                <p class="animation-txt--reveal txt__columns--2">
+                    <%- post.excerpt %>
+                </p>
+                <div class="blog__post-snippet__button animation-object--fade-up">
+                    <a href="<%= post.link %>" class="btn__outline">
+                        read article
+                    </a>
+                </div>
+            </div> 
         </div>
     </div>
+<<<<<<< HEAD
     <div class="row">
         <div class="pagination">
             <div class="col-md-4 col-md-offset-1">
@@ -61,7 +103,42 @@
         </div>
     </div>
 </div>
+=======
+    <% }); %>
+    <!-- end BLOG ARTICLES-->
 
+    <div class="row">
+        <!-- PAGINATION -->
+        <div class="col-md-4 col-md-offset-1">
+            <div class="pagination__prev">
+                <a href="" class="btn__outline">
+                    older entries
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="pagination__links">
+                <h4 class="title__underline animation-txt--reveal animation-object--extend">
+                    Blog Navigation
+                </h4>
+                <li class="animation-object--fade-right">
+                    <a class="selected animation-txt--reveal" href="#">1</a>
+                </li>
+                <li class="animation-object--fade-right">
+                    <a class="animation-txt--reveal" href="#">2</a>
+                </li>
+                <li class="animation-object--fade-right">
+                    <a class="animation-txt--reveal" href="#">3</a>
+                </li>
+                <li class="animation-object--fade-right">
+                    <a class="animation-txt--reveal" href="#">4</a>
+                </li>
+            </div>
+        </div>
+        <!-- end PAGINATION -->
+>>>>>>> bee04850f03a19fc4cf4abcace68c507b50a6ffc
+
+    </div>
 </div>
 
 <% include ../partials/footer.ejs %>

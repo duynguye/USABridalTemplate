@@ -2,6 +2,25 @@
 <% include ../partials/head %>
     <% include ../partials/header %>
         <%
+            path = ' /blog/Spring Bridal Gown Trends',
+            
+            page = {
+                smallTitle: 'Spring Bridal Gown Trends',
+                largeTitle: 'Sleeves,<br/> Back &amp;<br/> Neckline!',
+                description: '',
+            };
+            
+            cta = {
+                categories: 'Category 1',
+                tags: 'Tag 1, Tag 2, Tag 3,' 
+            }
+            
+            image = {
+                hero: 'images/2621_094.jpg',
+                heroAlt: '#',
+                heroSupport: 'images/00092747-bride.jpg' // Image below the fold
+            };
+    
             images = [
                 {
                     id: 0,
@@ -19,82 +38,86 @@
                 }
             ]
         %>
-        <!-- INSERT HEADER TRIO HERE -->
-         <% include ../partials/header-trio %>
-        <!-- CONTENT-LEFT -->
-        <section class="post">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-md-8">
-                        <div class="post__content post__content--left">
-                            <p>
-                                The Spring 2015 wedding gowns are in the stores and brides are loving the new looks! What do they like? How about the backs, the necklines and the sleeves. Brides have never had more options for their wedding dress than they do now and part of the reason
-                                is our designers have chosen to give brides a multitude of options with sleeve styles, back treatments and necklines.<br/><br/>Let's start with the sleeves. Strapless gowns are still in style
-                                and will be for awhile but sleeves are big! If you are a bride who thinks that a long-sleeved wedding dress implies a conservative, cautious attitude, think again. Check out Dahlia a Desiree Hartsock wedding gown by Maggie
-                                Sottero. This lace sheath gown is perfect for either the garden or church wedding and speaks to the free-spirited bride inspired by nature. The gown features long sleeves, that is accented with three dimensional foral embellishments
-                                and Swarovski crystals. How about Mori Lee style 2710 a bridal gown perfect for all venues. This ft and fare gown with Venice Lace Appliques on Net is stunning with the romantic long sleeves, that cover the arms with elegance.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                            <img class="post__image" src="<%-images[0].imgURL-%>" alt="">
-                            <figcaption class="img-caption__text-top--right">
-                            <%-images[0].caption-%></figcaption>
-                    </div>
-                </div>
-                <!-- IMG SLIDER -->
-
-                <!-- CONTENT-RIGHT -->
-                <div class="row">
-                    <div class="col-md-4">
-                       <img class="post__image" src="<%-images[1].imgURL-%>" alt="">
-                            <figcaption class="img-caption__text-right">
-                            <%-images[1].caption-%></figcaption>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="post__content post__content--right">
-                            <p>
-                                The Spring 2015 wedding gowns are in the stores and brides are loving the new looks! What do they like? How about the backs, the necklines and the sleeves. Brides have never had more options for their wedding dress than they do now and part of the reason
-                                is our designers have chosen to give brides a multitude of options with sleeve styles, back treatments and necklines.<br/><br/>Let's start with the sleeves. Strapless gowns are still in style
-                                and will be for awhile but sleeves are big! If you are a bride who thinks that a long-sleeved wedding dress implies a conservative, cautious attitude, think again. Check out Dahlia a Desiree Hartsock wedding gown by Maggie
-                                Sottero. This lace sheath gown is perfect for either the garden or church wedding and speaks to the free-spirited bride inspired by nature. The gown features long sleeves, that is accented with three dimensional foral embellishments
-                                and Swarovski crystals. How about Mori Lee style 2710 a bridal gown perfect for all venues. This ft and fare gown with Venice Lace Appliques on Net is stunning with the romantic long sleeves, that cover the arms with elegance.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End of container -->
-            <!-- BLOG NAVIGATION ROW -->
-            <div class="post__nav">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-4" aria-label="...">
-                            <a href="#">
-                                <div class="post__pager--prev">
-                                    <a href="#" class="previous disabled btn__outline">prev article</a>
+            <!-- INSERT HEADER TRIO HERE -->
+            <% include ../partials/header-trio %>
+                <!-- CONTENT-LEFT -->
+                <section class="post">
+                    <div class="container">
+                        <div class="row ">
+                            <div class="col-md-8">
+                                <div class="post__content post__content--left">
+                                    <p>
+                                        The Spring 2015 wedding gowns are in the stores and brides are loving the new looks! What do they like? How about the backs, the necklines and the sleeves. Brides have never had more options for their wedding dress than they do now and part of the reason
+                                        is our designers have chosen to give brides a multitude of options with sleeve styles, back treatments and necklines.<br/><br/>Let's start with the sleeves. Strapless gowns
+                                        are still in style and will be for awhile but sleeves are big! If you are a bride who thinks that a long-sleeved wedding dress implies a conservative, cautious attitude, think again. Check out Dahlia a Desiree Hartsock
+                                        wedding gown by Maggie Sottero. This lace sheath gown is perfect for either the garden or church wedding and speaks to the free-spirited bride inspired by nature. The gown features long sleeves, that is accented
+                                        with three dimensional foral embellishments and Swarovski crystals. How about Mori Lee style 2710 a bridal gown perfect for all venues. This ft and fare gown with Venice Lace Appliques on Net is stunning with the
+                                        romantic long sleeves, that cover the arms with elegance.
+                                    </p>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="post__related active">
-                                <a href="#">
-                                    <h5 class="post__related-title title__underline">Related Blog Article 1</h5>
-                                    <p class="post__related-body">Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...</p>
-                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <img class="post__image" src="<%-images[0].imgURL-%>" alt="">
+                                <figcaption class="img-caption__text-top--right">
+                                    <%-images[0].caption-%>
+                                </figcaption>
                             </div>
                         </div>
-                        <div class=" col-md-4">
-                            <div class="post__related active">
-                                <a href="#">
-                                    <h5 class="post__related-title title__underline">Related Blog Article 1</h5>
-                                    <p class="post__related-body">Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...</p>
-                                </a>
-                            </div>
-                        </div>
+                        <!-- IMG SLIDER -->
 
+                        <!-- CONTENT-RIGHT -->
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img class="post__image" src="<%-images[1].imgURL-%>" alt="">
+                                <figcaption class="img-caption__text-right">
+                                    <%-images[1].caption-%>
+                                </figcaption>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="post__content post__content--right">
+                                    <p>
+                                        The Spring 2015 wedding gowns are in the stores and brides are loving the new looks! What do they like? How about the backs, the necklines and the sleeves. Brides have never had more options for their wedding dress than they do now and part of the reason
+                                        is our designers have chosen to give brides a multitude of options with sleeve styles, back treatments and necklines.<br/><br/>Let's start with the sleeves. Strapless gowns
+                                        are still in style and will be for awhile but sleeves are big! If you are a bride who thinks that a long-sleeved wedding dress implies a conservative, cautious attitude, think again. Check out Dahlia a Desiree Hartsock
+                                        wedding gown by Maggie Sottero. This lace sheath gown is perfect for either the garden or church wedding and speaks to the free-spirited bride inspired by nature. The gown features long sleeves, that is accented
+                                        with three dimensional foral embellishments and Swarovski crystals. How about Mori Lee style 2710 a bridal gown perfect for all venues. This ft and fare gown with Venice Lace Appliques on Net is stunning with the
+                                        romantic long sleeves, that cover the arms with elegance.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <% include ../partials/footer.ejs %>
+                    <!-- End of container -->
+                    <!-- BLOG NAVIGATION ROW -->
+                    <div class="post__nav">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-4" aria-label="...">
+                                    <a href="#">
+                                        <div class="post__pager--prev">
+                                            <a href="#" class="previous disabled btn__outline">prev article</a>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="post__related active">
+                                        <a href="#">
+                                            <h5 class="post__related-title title__underline">Related Blog Article 1</h5>
+                                            <p class="post__related-body">Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class=" col-md-4">
+                                    <div class="post__related active">
+                                        <a href="#">
+                                            <h5 class="post__related-title title__underline">Related Blog Article 1</h5>
+                                            <p class="post__related-body">Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <% include ../partials/footer.ejs %>

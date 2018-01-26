@@ -882,6 +882,8 @@ body {
       .sub-hero__section--trio-cta {
         padding: 60px;
         transform: none; } }
+    .sub-hero__section--trio-cta p {
+      display: inline-block; }
 
 .blog__post-snippet {
   border: none;

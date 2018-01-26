@@ -116,6 +116,9 @@
 				padding: 60px;
 				transform: none;
 			}
+			p {
+				display: inline-block; // put categories and tags on same line
+			}
 		}
 	}
 }

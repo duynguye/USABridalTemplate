@@ -2,23 +2,59 @@
 // 2. HOME - products slider
 // -------------------------------------------
 // General Product Slider Styles
+// $parent: &;
+
+%fontSmall {
+    font-family: $secondary-font;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
 .slider-products {
-    &__section-container-1 {
-        min-width: 100%;
-        @media screen and(min-width: $bp-sm ) {
-            min-width: 0;
+    &__section{
+        margin-bottom: 60px;
+        @at-root.section-slider {
+            &__container {
+                min-width: 100%;
+                overflow: hidden;
+                -webkit-overflow-scrolling: touch;
+                @media screen and(min-width: $bp-sm) {
+                    min-width: 0;
+                }
+            }
+            &__header {
+                h2 {
+                    font-size: 35px;
+                    @media screen and(min-width: $bp-xs) {
+                        font-size: 70px;
+                    }
+                    @media screen and(min-width: $bp-lg) {
+                        font-size: $h2-size;
+                    }
+                }
+            }
+            &__pagination-fraction {
+                &.swiper-pagination-fraction {
+                    @extend %fontSmall;
+                    font-size: 10px;
+                    margin-bottom: 60px;
+                    text-align: right;
+                    @media screen and (max-width: $bp-sm) {
+                        margin-bottom: 30px;
+                        text-align: center;
+                    }
+                }
+            }
         }
     }
+    
     &__container {
         width: 100%; // margin-bottom: 10px;
     }
 
     &__wrapper {
         text-align: center; // centers the products witin the slide
-    }
-    &__pagination-fraction {
-        text-align: right;
-        margin-bottom: 60px;
     }
     &__slide {
         width: 100%;
@@ -27,7 +63,7 @@
     &__product {
         display: inline-block;
         width: 100%;
-        max-width: 250px; // padding: 0;
+        max-width: 250px; 
         margin-bottom: 30px;
         &:first-of-type {
             padding-left: 0;
@@ -37,7 +73,7 @@
             padding-right: 0;
         }
         &-image {
-            height: 350px;
+            max-height: 350px;
             margin-bottom: 35px;
             img {
                 max-width: 100%;
@@ -45,12 +81,19 @@
         }
         &-content {
             text-align: left;
-            &__title {
+            h6 {
+                margin-bottom: 0;
+                &::after {
+                    display: none;
+                }
             }
             &__price {
+                @extend %fontSmall;
                 margin-right: 5px;
             }
             &__retail {
+                @extend %fontSmall;
+                font-size: 10px;
                 text-decoration: line-through;
                 color: tint($black, 50%);
             }
@@ -86,26 +129,24 @@
             }
         }
     }
-}
-//  BOTTOM
-&__navigation {
-    .navigation-block {
-        display: inline-block;
-        background: #fff;
-        span {
-            padding: 0 11px;
-        }
-        .product-button-prev,
-        .swiper-button-prev,
-        .product-button-next,
-        .swiper-button-next {
-            background-image: none;
-            position: initial;
-            cursor: pointer;
+    //  BOTTOM
+    &__navigation {
+        .navigation-block {
+            .product-button-prev,
+            .product-button-next {
+                @extend %fontSmall;
+                background-image: none;
+                cursor: pointer;
+                display: inline-block;
+                font-weight: 900;
+                height: unset;
+                letter-spacing: 0.3rem;
+                margin-bottom: 0;
+                padding: 0 11px;
+                position: initial;
+                text-transform: uppercase;
+                width: unset;
+            }
         }
     }
-}
-
-#home-your-bridal {
-    position: relative;
 }

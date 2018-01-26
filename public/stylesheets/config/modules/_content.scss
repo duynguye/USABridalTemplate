@@ -34,8 +34,13 @@
         @extend %row-spacing-align-footer;
     }
     &--full {
+        @extend .content;
         .row {
+            @extend %row-spacing-align-footer;
             [class*='col-'] {
+                @media (min-width: $bp-md) {
+                    margin-left: 8.33333333%;
+                }
                 p {
                     column-gap: 4em;
                     max-width: 590px;

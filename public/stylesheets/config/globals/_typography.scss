@@ -180,7 +180,7 @@ h6 {
 .title__underline {
     margin-bottom: 50px;
     position: relative;
-    &:before {
+    &:after {
         background: $black;
         bottom: -20px;
         content: '';

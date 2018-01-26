@@ -27,3 +27,14 @@ body {
 	display: flex;
 	z-index: 2;
 }
+
+//  Vertical Align
+.flex-center {
+	&--vertical {
+		align-items: center;
+	}
+	&--horizontal {
+		justify-content: center;
+	}
+	
+}

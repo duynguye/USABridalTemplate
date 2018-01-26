@@ -1,12 +1,24 @@
 <!-- pages/categories -->
 
-<!-- SET VARIABLES -->
-<% let dropdownsInHeader = false; %>
-<% let preFooterColumns = 2; %>
-<% 
-
-    ctaFullwidth = [ 
-        {
+<!-- CONTENT -->
+<% include ../partials/head %>
+    <% include ../partials/header %>
+    <%  path = '/The Wedding Party',
+        page = {
+            smallTitle: 'Spring Bridal Gown Trends',
+            largeTitle: 'The<br/>Wedding<br/>Party',
+            description: 'Idenduciunt eatis volora dolore ped mos pe voluptatiam quunt quis sum enissi occus, que sit ma sin et etur? Omnimus moluptate od et acitini conse eveni andit utatur rerum consequiae aute accabore laborestia dolendes autatia ndandae omni occum rentem facideb itaquatia quo',
+        };
+        cta = {
+            title: 'Also view our designers',
+        };
+        image = {
+            hero: 'images/2621_094.jpg',
+            heroAlt: '#',
+            heroSupport: 'images/00092747-bride.jpg' // Image below the fold
+    };%>
+    <% include ../partials/header-large %>
+    <%  ctaFullwidth = [{
             "cta": 'Shop All</br>Bridal Gowns',
             "ctaLink": '#',
             "imageURL": "http://placehold.it/600x350"
@@ -26,10 +38,11 @@
             "ctaLink": '#',
             "imageURL": "http://placehold.it/600x350"
         }
-    ];
+    ];%>
+    <% include ../partials/cta-fullwidth %>
     
-    preFooter = [
-        {
+    <%  let preFooterColumns = 2;  
+        preFooter = [{
             "title": 'Request Appointment',
             "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
             "btn": {
@@ -45,15 +58,12 @@
                 btnTxt: 'register today'
             }
         }
-    ];
-%>
-
-<!-- CONTENT -->
-<% include ../partials/head %>
-    <% include ../partials/header %>
-    <% include ../partials/header-large %>
-    <% include ../partials/cta-fullwidth %>
-    <% include ../partials/pre-footer-content %>
+    ];%>
+    <section class="content container-fluid">
+        <div class="row">
+            <% include ../partials/pre-footer-content %>
+        </div>
+    </section>
 
 
 <% include ../partials/footer %>

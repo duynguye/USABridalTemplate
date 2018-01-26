@@ -17,17 +17,17 @@
         height: 500px;   
     }
     &__nav {
-        padding: 30px;
+        // padding: 30px;
         @at-root #{$parent}__pager--prev {
-            background: $tan;
-            padding: 80px 70px;
-            max-width: 100%;
-            margin: 30px;
-            text-align: center;
-            vertical-align: middle;
+            // background: $tan;
+            // padding: 80px 70px;
+            // max-width: 100%;
+            // // margin: 30px;
+            // text-align: center;
+            // vertical-align: middle;
         }
         @at-root #{$parent}__related {
-            @extend .post__nav;
+            // @extend .post__nav;
             &:last-child {
                 margin-right: 0;
             } 

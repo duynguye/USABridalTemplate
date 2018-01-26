@@ -1,12 +1,27 @@
-<!-- pages/categories -->
+<!-- pages/promotions -->
 
-<!-- SET VARIABLES -->
-<% let dropdownsInHeader = false; %>
-<% let preFooterColumns = 3; %>   
-<%   
-
-    ctaFullwidth = [ 
-        {
+<!-- CONTENT -->
+<% include ../partials/head %>
+    <% include ../partials/header %>
+    
+    <!-- Header Large -->
+    <%  path = '/Promotions',
+        page = {
+            smallTitle: '',
+            largeTitle: 'Sales &amp;<br/>Promos',
+            description: 'Idenduciunt eatis volora dolore ped mos pe voluptatiam quunt quis sum enissi occus, que sit ma sin et etur? Omnimus moluptate od et acitini conse eveni andit utatur rerum consequiae aute accabore laborestia dolendes autatia ndandae omni occum rentem facideb itaquatia quo',
+        };
+        cta = {
+            title: 'Git ut raeptas eume laut',
+        };
+        image = {
+            hero: 'images/pexels-photo-237432.jpeg',
+            heroAlt: '#',
+    };%>
+    <% include ../partials/header-large %>
+    
+    <!-- CTA Fullwidth -->
+    <%  ctaFullwidth = [{
             "cta": 'Blue Tag Site-wide Sale',
             "ctaLink": '#',
             "imageURL": "http://placehold.it/600x350"
@@ -21,41 +36,40 @@
             "ctaLink": '#',
             "imageURL": "http://placehold.it/600x350"
         }
-    ];
-    
-    preFooter = [
-        {
-            "title": 'Appointment',
-            "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
-            "btn": {
-                btnLink: '#' ,
-                btnTxt: 'schedule today'
-            }
-        },
-        {
-            "title": 'Register Wedding',
-            "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
-            "btn": {
-                btnLink: '#' ,
-                btnTxt: 'register today'
-            }
-        },
-        {
-            "title": 'Register Prom',
-            "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
-            "btn": {
-                btnLink: '#' ,
-                btnTxt: 'register today'
-            }
-        }
-        
-    ];
-    
-%>
-<!-- CONTENT -->
-<% include ../partials/head %>
-    <% include ../partials/header %>
-    <% include ../partials/header-large %>
+    ]%>
     <% include ../partials/cta-fullwidth %>
-    <% include ../partials/pre-footer-content %>
+    
+    <!-- Pre-Footer Content -->
+    <section class="content container-fluid">
+        <div class="row">
+            <%  preFooterColumns = 3;   
+                preFooter = [{
+                    "title": 'Appointment',
+                    "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
+                    "btn": {
+                        btnLink: '#' ,
+                        btnTxt: 'schedule today'
+                    }
+                },
+                {
+                    "title": 'Register Wedding',
+                    "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
+                    "btn": {
+                        btnLink: '#' ,
+                        btnTxt: 'register today'
+                    }
+                },
+                {
+                    "title": 'Register Prom',
+                    "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
+                    "btn": {
+                        btnLink: '#' ,
+                        btnTxt: 'register today'
+                    }
+                }
+            ]%>
+            <% include ../partials/pre-footer-content %>
+        </div>
+    </section>
+
 <% include ../partials/footer %>

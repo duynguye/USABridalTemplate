@@ -1,5 +1,42 @@
+<!-- pages/promotions -->
+
+
+<!-- CONTENT -->
 <% include ../partials/head %>
 <% include ../partials/header %>
+<% include ../partials/header %>
+    <%  path = '/Contests',
+        page = {
+            smallTitle: 'Register Today and',
+            largeTitle: 'You May<br/>Win',
+            description: 'Ugiaspera vendam velluptas qui offciist, ommollaut laccum quidel mo blandit labo. Itas et, suntur, quia diatibus dendion peligent possi core et aceatatios eum es eatureprem utatias adi conem faccust veruptibus et fuga. De con nones idene essita cone voluptatur rerupta ectatus.Axim et quoditatesto to qui rerum rerit alic te nonempo riorati orerovi ditaes quo dolorem aut eat.',
+        };
+        cta = {
+            title: 'View Our Rules Below',
+        };
+        image = {
+            hero: 'images/pexels-photo-256737.jpeg',
+            heroAlt: '#',
+            position: 'right'
+    };%>
+    <% include ../partials/header-large %>
+    <%  ctaFullwidth = [{
+            "cta": 'Blue Tag Site-wide Sale',
+            "ctaLink": '#',
+            "imageURL": "http://placehold.it/600x350"
+        },
+        {
+            "cta": '20% of Invitations Site-wide Sale',
+            "ctaLink": '#',
+            "imageURL": "http://placehold.it/600x350"
+        },
+        {
+            "cta": 'Enter To Win Rewards',
+            "ctaLink": '#',
+            "imageURL": "http://placehold.it/600x350"
+        }
+    ]%>
+    <% include ../partials/cta-fullwidth %>
 
 <div>
     <!-- Your Content Goes Here -->

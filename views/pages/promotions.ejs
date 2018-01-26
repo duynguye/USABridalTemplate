@@ -1,9 +1,21 @@
-<!-- pages/categories -->
+<!-- pages/promotions -->
 
 <!-- CONTENT -->
 <% include ../partials/head %>
     <% include ../partials/header %>
-    <% let dropdownsInHeader = false; %>
+    <%  path = '/Promotions',
+        page = {
+            smallTitle: '',
+            largeTitle: 'Sales &amp;<br/>Promos',
+            description: 'Idenduciunt eatis volora dolore ped mos pe voluptatiam quunt quis sum enissi occus, que sit ma sin et etur? Omnimus moluptate od et acitini conse eveni andit utatur rerum consequiae aute accabore laborestia dolendes autatia ndandae omni occum rentem facideb itaquatia quo',
+        };
+        cta = {
+            title: 'Git ut raeptas eume laut',
+        };
+        image = {
+            hero: 'images/pexels-photo-237432.jpeg',
+            heroAlt: '#',
+    };%>
     <% include ../partials/header-large %>
     <%  ctaFullwidth = [{
             "cta": 'Blue Tag Site-wide Sale',

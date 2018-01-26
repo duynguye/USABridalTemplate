@@ -3,7 +3,20 @@
 <!-- CONTENT -->
 <% include ../partials/head %>
     <% include ../partials/header %>
-    <% let dropdownsInHeader = false; %>
+    <%  path = '/The Wedding Party',
+        page = {
+            smallTitle: 'Spring Bridal Gown Trends',
+            largeTitle: 'The<br/>Wedding<br/>Party',
+            description: 'Idenduciunt eatis volora dolore ped mos pe voluptatiam quunt quis sum enissi occus, que sit ma sin et etur? Omnimus moluptate od et acitini conse eveni andit utatur rerum consequiae aute accabore laborestia dolendes autatia ndandae omni occum rentem facideb itaquatia quo',
+        };
+        cta = {
+            title: 'Also view our designers',
+        };
+        image = {
+            hero: 'images/2621_094.jpg',
+            heroAlt: '#',
+            heroSupport: 'images/00092747-bride.jpg' // Image below the fold
+    };%>
     <% include ../partials/header-large %>
     <%  ctaFullwidth = [{
             "cta": 'Shop All</br>Bridal Gowns',

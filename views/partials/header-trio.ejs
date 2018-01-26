@@ -1,20 +1,12 @@
 <!-- HEADER TRIO -->
 <section class="container-fluid sub-hero__section--trio">
     <div class="row">
-         <div class="social__links hidden-sm hidden-xs">
-            <a class="animation-object--fade-up" href="#">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a class="animation-object--fade-up" href="#">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a class="animation-object--fade-up" href="#">
-                <i class="fab fa-pinterest"></i>
-            </a>
-            <a class="animation-object--fade-up" href="#">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
+
+        <!-- SOCIAL LINKS -->
+        <% include ../partials/social-links %>
+        <!-- end SOCIAL LINKS -->
+
+        <!-- CONTENT -->
         <div class="col-xs-8 col-sm-6 col-md-7 col-sm-push-1 col-md-push-1">
             <div class="trio__header">
                 <% include ./breadcrumb %>
@@ -29,12 +21,18 @@
                 </p>
             </div>
         </div>
+        <!-- end CONTENT -->
+
+        <!-- IMAGE -->
         <div class="col-xs-4 col-sm-6 col-md-5 col-lg-4 col-md-pull-1 animation-img--reveal">
             <img class="sub-hero__section--trio-img-hero" src="<%= image.hero %>" alt="<%= image.heroAlt %>" />
         </div>
-        <div class="col-lg-2"></div>
+        <!-- end IMAGE -->
+
     </div>
     <div class="row row--eq-height">
+
+        <!-- ACCENT ARROW -->
         <div class="col-md-6 col-lg-7 animation-object--fade-up" style="background: url('<%= image.heroSupport %>') center no-repeat; background-size: cover; transform: translateY(0);">
             <div class="sub-hero__section--trio-arrow-accent hidden-sm hidden-xs">
                 <div class="sub-hero__section--trio-arrow-accent-container">
@@ -42,6 +40,9 @@
                 </div>
             </div>
         </div>
+        <!-- end ACCENT ARROW -->
+
+        <!-- CALL TO ACTION -->
         <div class="col-sm-12 col-md-6 col-lg-5 sub-hero__section--trio-cta animation-object--fade-up">
             <h4 class="title__underline">
                 <%= cta.title %>
@@ -56,6 +57,8 @@
                 <%- cta.description %>
             </p>
         </div>
+        <!-- end CALL TO ACTION -->
+
     </div>
 </section>
 <!-- end HEADER TRIO -->

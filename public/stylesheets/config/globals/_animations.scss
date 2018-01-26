@@ -1,13 +1,5 @@
 // -----------------------
-// Table of Contents
-// -----------------------
-
-// 1. Animations
-
-// 2. Keyframes
-
-// -----------------------
-// Animations
+// Animations & Keyframes
 // -----------------------
 
 %blinds {
@@ -32,6 +24,32 @@
         position: relative;
         &:before {
             @extend %blinds;
+            @at-root {
+                @keyframes blinds {
+                    0% {
+                        opacity: 1;
+                        right: 100%;
+                    }
+                    50% {
+                        left: 0;
+                        right: 0;
+                    }
+                    100% {
+                        opacity: 1;
+                        left: 100%;
+                    }
+                }
+            }
+        }
+        @at-root {
+            @keyframes color-shift {
+                0% {
+                    color: $black;
+                }
+                100% {
+                    color: $black;
+                }
+            }
         }
     }
     &-img--reveal { // .animation-img--reveal
@@ -40,6 +58,19 @@
             animation: reveal .5s forwards;
             animation-delay: 1s;
             opacity: 0;
+            @at-root {
+                @keyframes reveal {
+                    0% {
+                        opacity: 0;
+                    }
+                    45% {
+                        opacity: 1;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
+                }
+            }
         }
         &:before {
             @extend %blinds;
@@ -48,6 +79,32 @@
     }
     &-object {
         &--fade {
+            @at-root {
+                @keyframes fade-Y {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(100px);
+                    }
+                    50% {
+                        opacity: 1;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
+                }
+                @keyframes fade-X {
+                    0% {
+                        opacity: 0;
+                        transform: translateX(-100px);
+                    }
+                    75% {
+                        opacity: 1;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
+                }
+            }
             @at-root %fade {
                 opacity: 0;
                 transition: transform .5s ease-in;
@@ -87,88 +144,175 @@
             animation: full-width .5s forwards;
             animation-delay: .5s;
             width: 0;
+            @at-root {
+                @keyframes full-width {
+                    0% {
+                        width: 0;
+                    }
+                    100% {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }
 
 
+
 // -----------------------
-// Keyframes
+// Animations & Keyframes
 // -----------------------
 
-// Text Color Change
-@keyframes color-shift {
-    0% {
-        color: $black;
-    }
-    100% {
-        color: $black;
-    }
-}
+// %blinds {
+//     animation: blinds 1s forwards;
+//     animation-delay: .5s;
+//     background: $black;
+//     content: '';
+//     bottom: 0;
+//     left: 0;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     opacity: 0;
+//     z-index: 1;
+// }
 
-// Text Visbilitity Change
-@keyframes reveal {
-    0% {
-            opacity: 0;
-    }
-    45% {
-            opacity: 1;
-    }
-    100% {
-            opacity: 1;
-    }
-}
-
-// Box Cover Animation
-@keyframes blinds {
-    0% {
-        opacity: 1;
-        right: 100%;
-    }
-    50% {
-        left: 0;
-        right: 0;
-    }
-    100% {
-        opacity: 1;
-        left: 100%;
-    }
-}
-
-// Object Fade Y Axis
-@keyframes fade-Y {
-    0% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-// Object Fade X Axis
-@keyframes fade-X {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    75% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-// Full-width
-@keyframes full-width {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
-}
+// .animation {
+//     &-txt--reveal { // .animation-txt--reveal
+//         animation: color-shift .5s forwards;
+//         animation-delay: 1s;
+//         color: white;
+//         position: relative;
+//         &:before {
+//             @extend %blinds;
+//             @at-root {
+//                 @keyframes blinds {
+//                     0% {
+//                         opacity: 1;
+//                         right: 100%;
+//                     }
+//                     50% {
+//                         left: 0;
+//                         right: 0;
+//                     }
+//                     100% {
+//                         opacity: 1;
+//                         left: 100%;
+//                     }
+//                 }
+//             }
+//         }
+//         @at-root {
+//             @keyframes color-shift {
+//                 0% {
+//                     color: $black;
+//                 }
+//                 100% {
+//                     color: $black;
+//                 }
+//             }
+//         }
+//     }
+//     &-img--reveal { // .animation-img--reveal
+//         position: relative;
+//         img {
+//             animation: reveal .5s forwards;
+//             animation-delay: 1s;
+//             opacity: 0;
+//             @at-root {
+//                 @keyframes reveal {
+//                     0% {
+//                         opacity: 0;
+//                     }
+//                     45% {
+//                         opacity: 1;
+//                     }
+//                     100% {
+//                         opacity: 1;
+//                     }
+//                 }
+//             }
+//         }
+//         &:before {
+//             @extend %blinds;
+//             animation-direction: reverse;
+//         }
+//     }
+//     &-object {
+//         &--fade {
+//             @at-root {
+//                 @keyframes fade-Y {
+//                     0% {
+//                         opacity: 0;
+//                         transform: translateY(100px);
+//                     }
+//                     75% {
+//                         opacity: 0;
+//                         transform: translateY(100px);
+//                     }
+//                     90% {
+//                         opacity: 1;
+//                     }
+//                     100% {
+//                         opacity: 1;
+//                     }
+//                 }
+//                 @keyframes fade-X {
+//                     0% {
+//                         opacity: 0;
+//                         transform: translateX(-100px);
+//                     }
+//                     75% {
+//                         opacity: 1;
+//                     }
+//                     100% {
+//                         opacity: 1;
+//                     }
+//                 }
+//             }
+//             @at-root %fade {
+//                 opacity: 0;
+//                 transition: transform .5s ease-in;
+//                 @for $i from 1 to 10 {
+//                     @at-root .row &:nth-child(#{$i}) { 
+//                         animation-delay: $i * .1s + .05; 
+//                     }
+//                 }
+//             }
+//             &-up { // .animation-object--fade-up
+//                 @extend %fade;
+//                 animation: fade-Y 1.25s both;
+//                 animation-delay: 1.5s;
+//             }
+//             &-down { // .animation-object--fade-down
+//                 @extend .animation-object--fade-up;
+//                 animation-direction: reverse;
+//             }
+//             &-right:after { // .animation-object--fade-right
+//                 @extend %fade;
+//                 animation: fade-X .5s both;
+//                 animation-delay: 1s;
+//             }
+//             &-left { // .animation-object--fade-left
+//                 @extend .animation-object--fade-right;
+//                 animation-direction: reverse;
+//             }
+//         }
+//         &--extend:after { // .animation-object--extend
+//             animation: full-width .5s forwards;
+//             animation-delay: .5s;
+//             width: 0;
+//             @at-root {
+//                 @keyframes full-width {
+//                     0% {
+//                         width: 0;
+//                     }
+//                     100% {
+//                         width: 100%;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

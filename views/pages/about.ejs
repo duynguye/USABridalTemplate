@@ -2,30 +2,16 @@
 <% include ../partials/head %>
 <% include ../partials/header %>
 
+<% path = "about" %>
+
 <main class="sub-hero__section--about">
     <div class="row">
             <!-- Add Social Icons -->
-            <div class="social__links hidden-sm hidden-xs">
-                <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-pinterest"></i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
+            <% include ../partials/social-links %>
             <div class="col-xs-1 col-lg-4 col-sm-push-1 col-md-push-1 sub-hero__section--about-txt">
             <div class="trio__header">
-                <ul class="breadcrumbs">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about/">About Us</a></li>    
-                </ul>
-                <h1>
+                <% include ../partials/breadcrumb %>
+                <h1 class="animation-txt--reveal animation-object--extend">
                     <small>
                         About Us &amp;
                     </small>
@@ -33,19 +19,19 @@
                 </h1>
             </div>
         </div>
-          <div class="col-xs-11 col-lg-7 col-sm-pull-1 col-md-pull-1 sub-hero__img-hero-container">
+          <div class="col-xs-11 col-lg-7 col-sm-pull-1 col-md-pull-1 sub-hero__img-hero-container animation-object--fade-up">
             <img class="sub-hero__img-hero" src="/images/usa-bridal_about.png" alt="">
         </div>
         <div class="col-lg-2"></div>
             <!-- Promo Bar -->
-            <div class="about-main-section-btn text-center">
-                <a href="#">learn more</a>
+            <div class="about-main-section-btn text-center animation-object--fade-up">
+                <a href="#info">learn more</a>
             </div>
     </div>
 </main>
 
 <!-- Start LP Content Module BTF -->
-<section class="section btf__section--lp">
+<section class="section btf__section--lp animation-object--fade-up">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 btf__section--lp__img">
@@ -63,7 +49,7 @@
 </section>
 <!-- End LP Content Module BTF -->
 
-<section class="section btf__section--lp-row2">
+<section class="section btf__section--lp-row2" id="info">
     <div class="container">
         <div class="row">
             <div class="col-md-6 btf__section--lp-row2__content">

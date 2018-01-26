@@ -1,10 +1,10 @@
-<!-- pages/promotions -->
-
+<!-- pages/contests -->
 
 <!-- CONTENT -->
 <% include ../partials/head %>
 <% include ../partials/header %>
-<% include ../partials/header %>
+
+    <!-- Header Large -->
     <%  path = '/Contests',
         page = {
             smallTitle: 'Register Today and',
@@ -18,29 +18,48 @@
             hero: 'images/pexels-photo-256737.jpeg',
             heroAlt: '#',
             position: 'right'
-    };%>
+        };
+    %>
     <% include ../partials/header-large %>
+    
+    <!-- CTA Fullwidth -->
     <%  ctaFullwidth = [{
-            "cta": 'Blue Tag Site-wide Sale',
+            "cta": 'FREE Wedding<br/>Gown Plus Up to 5 FREE<br/>Bridesmaid Dresses',
             "ctaLink": '#',
-            "imageURL": "http://placehold.it/600x350"
+            "imageURL": "images/2621_094.jpg"
         },
         {
-            "cta": '20% of Invitations Site-wide Sale',
+            "cta": 'FREE Prom Gown',
             "ctaLink": '#',
-            "imageURL": "http://placehold.it/600x350"
+            "imageURL": "images/487834632.jpg"
         },
         {
-            "cta": 'Enter To Win Rewards',
+            "cta": 'FREE<br/>Quinceanera<br/>Gown',
             "ctaLink": '#',
-            "imageURL": "http://placehold.it/600x350"
+            "imageURL": "images/5104F.jpg"
+        },
+        {
+            "cta": 'Grooms Tux Rental<br/>FREE Plus Up to<br/>5 Additional Free<br/>Rentals',
+            "ctaLink": '#',
+            "imageURL": "images/pexels-photo-177328.jpeg"
         }
     ]%>
     <% include ../partials/cta-fullwidth %>
 
-<div>
-    <!-- Your Content Goes Here -->
+    <!-- Pre-Footer Content -->
+    <% contentFullwidth = [{
+            "title": "Registration Rules",
+            "body": 'WIN YOUR BRIDAL GOWN:<br/>A purchase is not necessary and does not improve your chance of winning. Void where prohibited. One winner will be selected each quarter and will receive one of the giveaways that follow. Bridal Warehouse / USA Bridal will choose the item being given for the quarter. Possible items are: Free bridal gown valued at $1000 or less, up to 5 free bridesmaid dresses valued individually at $150 or less or a Bridal Warehouse $300 gift card.<br/><br/>ENTERING DRAWING:Go to www.usabridal.com and fll out the online entry form. All entries become property of Bridal Warehouse and entry will not be acknowledged or returned. Proof of submission will not be deemed to be proof of receipt. Entrants are granting Bridal Warehouse/Tuxedo Avenue the right to market to them via mail, phone, email and other legitimate marketing tools. By entering each entrant is bound by the these rules. One entry per participant, multiple entries per participant will be discarded. Excessive entries by an entrant will be deleted and the entrant will not be allowed to participate in the contest. What determines excessive will be determined by Bridal Warehouse.<br/><br/>       ELIGIBILITY:Open to all legal residents of the United States, 18 years or older at the time of entry. Employees or immediate family members of Bridal Warehouse or Tuxedo Avenue employees are not eligible.<br/><br/>WINNERS:One winner will be selected each quarter from all available qualifying entries. A reasonable effort will be made to contact the winner. The winner must respond with in 7 days or Bridal Warehouse may choose to select another winner from the list of qualifying entries voiding the original winners entry.<br/><br/>PRIZES:Prizes may change without notice. The winner is responsible for all taxes, alterations, shipping or any other miscellaneous cost. Prizes are not redeemable for cash, cannot be substituted for other items and cannot be transferred to Tuxedo Avenue. Prizes cannot be transferred to another individual.  Winner must redeem prize within 60 days of notifcation of winning.<br/><br/>MISCELLANEOUS:The \'Chance to Win\' starts June 1, 2011. Valid for legal U.S. residents only. First drawing will occur September 30, 2011 with a new drawing each quarter until cancelled by Bridal Warehouse. Cancellation may occur at anytime and without notice to participants. Contest is void where prohibited',
+            twoColumns: true,
+        },
+    ]%>
 
+<div class="content--full container-fluid">
+    <div class="row">
+    <% include ../partials/content-fullwidth %>
+    </div>
 </div>
-
+ 
+ 
+ 
 <% include ../partials/footer %>

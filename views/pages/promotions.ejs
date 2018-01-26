@@ -3,6 +3,8 @@
 <!-- CONTENT -->
 <% include ../partials/head %>
     <% include ../partials/header %>
+    
+    <!-- Header Large -->
     <%  path = '/Promotions',
         page = {
             smallTitle: '',
@@ -17,6 +19,8 @@
             heroAlt: '#',
     };%>
     <% include ../partials/header-large %>
+    
+    <!-- CTA Fullwidth -->
     <%  ctaFullwidth = [{
             "cta": 'Blue Tag Site-wide Sale',
             "ctaLink": '#',
@@ -35,36 +39,37 @@
     ]%>
     <% include ../partials/cta-fullwidth %>
     
-<section class="content container-fluid">
-    <div class="row">
-        <%  preFooterColumns = 3;   
-            preFooter = [{
-                "title": 'Appointment',
-                "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
-                "btn": {
-                    btnLink: '#' ,
-                    btnTxt: 'schedule today'
+    <!-- Pre-Footer Content -->
+    <section class="content container-fluid">
+        <div class="row">
+            <%  preFooterColumns = 3;   
+                preFooter = [{
+                    "title": 'Appointment',
+                    "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
+                    "btn": {
+                        btnLink: '#' ,
+                        btnTxt: 'schedule today'
+                    }
+                },
+                {
+                    "title": 'Register Wedding',
+                    "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
+                    "btn": {
+                        btnLink: '#' ,
+                        btnTxt: 'register today'
+                    }
+                },
+                {
+                    "title": 'Register Prom',
+                    "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
+                    "btn": {
+                        btnLink: '#' ,
+                        btnTxt: 'register today'
+                    }
                 }
-            },
-            {
-                "title": 'Register Wedding',
-                "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
-                "btn": {
-                    btnLink: '#' ,
-                    btnTxt: 'register today'
-                }
-            },
-            {
-                "title": 'Register Prom',
-                "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
-                "btn": {
-                    btnLink: '#' ,
-                    btnTxt: 'register today'
-                }
-            }
-        ]%>
-        <% include ../partials/pre-footer-content %>
-    </div>
-</section>
+            ]%>
+            <% include ../partials/pre-footer-content %>
+        </div>
+    </section>
 
 <% include ../partials/footer %>

@@ -1039,14 +1039,23 @@ body {
   .cta-full .row {
     align-items: center;
     flex-flow: row wrap; }
-  .cta-full__image img {
-    width: 100%; }
+    .cta-full .row [class*='col-']:first-of-type {
+      overflow: hidden; }
+    .cta-full .row [class*='col-']:nth-of-type(2n) {
+      padding-left: 45px; }
+  .cta-full__image {
+    object-fit: cover;
+    width: 100%;
+    max-height: 570px;
+    object-position: top;
+    transform: scale(1.1); }
+  .cta-full__btn:before {
+    left: -40%; }
+  .cta-full__btn:after {
+    right: -20%; }
   .cta-full__btn h2 {
+    display: inline-block;
     padding: 30px 0; }
-    .cta-full__btn h2:before {
-      left: -38%; }
-    .cta-full__btn h2:after {
-      right: -21%; }
 
 .content .row [class*='col-']:not(:last-child), .content--full .row [class*='col-']:not(:last-child), .content--pre-footer .row [class*='col-']:not(:last-child) {
   margin-bottom: 60px; }

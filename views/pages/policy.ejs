@@ -3,21 +3,75 @@
 <% let dropdownsInHeader = false; %>
 <% include ../partials/header-large %>
 <% 
-    let i = 0;
-    let twoColumns = true;
     contentFullwidth = [
         {
             "title": "Terms &amp; Conditions",
-            "body": 'Due to the nature of the items ordered and the nature of the formal wear industry, <b>ALL SALES ARE FINAL. Bridal Warehouse does not accept returns, issue refunds or allow exchanges.</b> It is important to note, formal wear designers will not allow orders to be canceled, modifed, or allow Bridal Warehouse to return an ordered item. <b>ALL SALES ARE FINAL, NO EXCHANGES, NO REFUNDS, NO CANCELLATIONS, and NO EXCEPTIONS.<br/><br/></b>A small insurance fee based on the dollar value of your order will be added to your order total.You will not be notifed of the fee before your credit card is charged. Click here to see the amount to be added to your order total. Insurance Fee.<br/><br/>Checking the box that you accept these terms and conditions you are taking the equivalent action of signing a sales contract and the equivalent action of signing your credit card receipt.'
+            "body": 'Due to the nature of the items ordered and the nature of the formal wear industry, <b>ALL SALES ARE FINAL. Bridal Warehouse does not accept returns, issue refunds or allow exchanges.</b> It is important to note, formal wear designers will not allow orders to be canceled, modifed, or allow Bridal Warehouse to return an ordered item. <b>ALL SALES ARE FINAL, NO EXCHANGES, NO REFUNDS, NO CANCELLATIONS, and NO EXCEPTIONS.<br/><br/></b>A small insurance fee based on the dollar value of your order will be added to your order total.You will not be notifed of the fee before your credit card is charged. Click here to see the amount to be added to your order total. Insurance Fee.<br/><br/>Checking the box that you accept these terms and conditions you are taking the equivalent action of signing a sales contract and the equivalent action of signing your credit card receipt.',
+            twoColumns: true,
+            
+        },
+        {
+            "title": "Order Processing",
+            "body": 'Processing of your order will begin immediately upon receipt. Payment will not occur until Bridal Warehouse verifies we can meet your wear date. When your wear date is verified your credit card payment will be processed. If we cannot meet your wear date for any reason your credit card will not be charged and you will be notified via email or phone that your order will not be processed.You will receive an order confirmation within 72 hours giving you the estimated date your item will ship. This ship date is an estimate and can vary one to two weeks from the actual ship date. Designers will not give exact ship dates only estimates. Our ordering department is in continual contact with the designers to ensure you receive your order at the earliest possible date.Once your item is shipped, you will be receive an email notification that your item has shipped.',
+            twoColumns: true,
+            
+        },
+        {
+            "title": "Additional Charges",
+            "body": 'If for any reason an addition charge is required to process your order, you will be notified via email and/or phone of the additional charge before your order is processed. The exception being required sales tax. <br/><br/><b>Reasons for additional charges:</b><br/><b><em>Rush Fee</em></b> - Some designers offer a rush fee to get an item shipped early. If your order requires a rush fee to meet your wear date we will notify you. <b><em>Extra Length or Hollow to Hem</em></b> - These are custom design fees that designers charge us. If you have requested an extra length or hollow to hem additional charges will be required. You will be notified of the cost.<br/><b><em>Pricing Errors</em></b> - Every effort is made to ensure information and prices on our web site is correct. In case of a rare pricing error we reserve the right to correct the error before your order is processed. You will be notified of the error, and must give the go ahead before your order is processed and your credit card is billed.',
+            twoColumns: true,
+            
+        },
+        {
+            "title": "Sales Tax",
+            "body": 'Sales tax is only charged ON ORDERS SHIPPED TO STATES WHERE WE HAVE PHYSICAL STORES. KENTUCKY ORDERS WILL BE CHARGED 6%,  TENNESSE ORDERS WILL BE CHARGED 9.25%, INDIANA ORDERES WILL BE CHARGED 7%.These charges are applied to your order without prior notification. <b>YOU WILL NOT BE NOTIFIED OF THIS ADDITIONAL CHARGE.</b>',
+            twoColumns: true,
+            
+        },
+        {
+            "title": "Insurance",
+            "body": 'A small insurance fee based on the dollar value of your order will be added to your order total. You will not be notified of the fee before your credit card is charged',
+            twoColumns: false,
+            
+        },
+        {
+            "title": "Shipping",
+            "body": '<b><em>Shipping is Free</em></b> to anywhere in the continental United States. Hawaii and Alaska will require a small shipping fee that will be automatically added to your total. We ship UPS ground. Other shipping including next day and overnight is available, at an extra cost. If special shipping is requested we will notify you of the additional cost. <b><em>International Shipping</em></b>. We do ship to select international destinations. After you place your order you will be emailed the cost of shipping your order. You must respond to the email with an authorization for the additional shipping charge. If you do not respond your order will not be processed.',
+            twoColumns: true,
+            
+        },
+        {
+            "title": "Sizes and Colors",
+            "body": '<b><em>Size Selection</em></b> - Size selection is the total responsibility of the purchaser. Refer to the designer\'s size chart listed with the item you are purchasing. Each chart is different so look carefully when choosing your size. Compare your measurements to the correct size chart, remembering you are choosing the closest size to your measurements. Most gowns/dresses will require some alterations. Designers do not offer custom sizing. We cannot make any accommodations for changes in your size. Bridal Warehouse will not allow for refunds or exchanges due to sizing errors. <b><em>Color Selection</em></b> - Actual colors may be different than those displayed on your computer monitor. Make sure you order the correct color. Refer to designer\'s swatches if possible. Bridal Warehouse does not have swatches to send to you. The purchaser is responsible for the color that is ordered.',
+            twoColumns: true,
+            
+        },
+        {
+            "title": "Privacy and Security",
+            "body": 'Your privacy and your information security are important to us. All order transactions are handled via a secure connection and the information is encrypted. Your private information is removed from the server as soon as we process your order.',
+            twoColumns: true,
+            
+        },
+        {
+            "title": "Shipping",
+            "body": '<b><em>Shipping is Free </em></b>&nbsp;to anywhere in the continental United States. Hawaii and Alaska will require a small shipping fee that will be automatically added to your total. We ship UPS ground. Other shipping including next day and overnight is available, at an extra cost. If special shipping is requested we will notify you of the additional cost. <b><em>International Shipping</em></b>. We do ship to select international destinations. After you place your order you will be emailed the cost of shipping your order. You must respond to the email with an authorization for the additional shipping charge. If you do not respond your order will not be processed.',
+            twoColumns: true,
+            
+        },
+        {
+            "title": "Sizes and Colors",
+            "body": '<b><em>Size Selection</em></b> - Size selection is the total responsibility of the purchaser. Refer to the designer\'s size chart listed with the item you are purchasing. Each chart is different so look carefully when choosing your size. Compare your measurements to the correct size chart, remembering you are choosing the closest size to your measurements. Most gowns/dresses will require some alterations. Designers do not offer custom sizing. We cannot make any accommodations for changes in your size. Bridal Warehouse will not allow for refunds or exchanges due to sizing errors.<b><em>Color Selection</em></b> - Actual colors may be different than those displayed on your computer monitor. Make sure you order the correct color. Refer to designer\'s swatches if possible. Bridal Warehouse does not have swatches to send to you. The purchaser is responsible for the color that is ordered',
+            twoColumns: true,
+            
+        },
+        {
+            "title": "Privacy and Security",
+            "body": 'Your privacy and your information security are important to us. All order transactions are handled via a secure connection and the information is encrypted. Your private information is removed from the server as soon as we process your order.',
+            twoColumns: false,
+            
         },
     ];
 %>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <% include ../partials/content-fullwidth %>
-        </div>
-    </div>
-</div>
+<% include ../partials/content-fullwidth %>
 <% include ../partials/footer %>

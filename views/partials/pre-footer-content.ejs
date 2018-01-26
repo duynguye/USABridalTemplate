@@ -1,25 +1,28 @@
 <%# ../partials/pre-footer-content %>
 
 <% let columns = (12 / preFooterColumns) - 1 %>
+<% let offset = "col-md-offset-1" %>
+<% let odd = false%>
+// <% let preFooterLength = preFooter.length + 1 %>
 
 
-<section class="pre-footer-content">
+<section class="content--pre-footer">
     <div class="container-fluid">
         <div class="row row--eq-height">
-            <% for(i= 0; i < preFooter.length; i++) {%>
-            <div class="col-xs-12 col-md-<%=columns%>">
-                <h4 class="title__underline">
-                        <%- preFooter[i].title -%>
-                </h4>
-                <p>
-                    <%- preFooter[i].body -%>
-                </p>
-                <div>
-                    <a href='<%- preFooter[i].btn.btnLink -%>' class="btn__outline">
-                        <%- preFooter[i].btn.btnTxt -%>
-                    </a>
+            <% for(let i= 0; i < preFooter.length; i++) {%>
+                <div class="col-xs-12 col-md-<%=columns%>">
+                    <h4 class="title__underline">
+                            <%- preFooter[i].title -%>
+                    </h4>
+                    <p>
+                        <%- preFooter[i].body -%>
+                    </p>
+                    <div>
+                        <a href='<%- preFooter[i].btn.btnLink -%>' class="btn__outline">
+                            <%- preFooter[i].btn.btnTxt -%>
+                        </a>
+                    </div>
                 </div>
-            </div>
             <%}%>
         </div>
     </div>

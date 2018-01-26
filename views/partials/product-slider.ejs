@@ -1,0 +1,66 @@
+<% for (let i = 0; i < productSliders.length; i++) {%>
+<section id="<%-productSliders[i].sectionId %>" class="slider-products__section">
+        <div class="container section-slider__container">
+            <!-- ROW: Header -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-slider__header">
+                        <h2 class="accent__lines"><span><%-productSliders[i].header %></span></h2>
+                    </div>
+                    <!-- Fraction pagination -->
+                    <div class="section-slider__pagination-fraction <%-productSliders[i].sliderClass %>-pagination"></div>
+                </div>
+            </div>
+            <!-- ROW: Slider -->
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Slider main container -->
+                    <div class="<%-productSliders[i].sliderClass %>" class="swiper-container slider-products__container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper slider-products__wrapper">
+                            <% for (j = 0; j < productSliders[i].products.length; j++) {%>
+                            <!-- Slides -->
+                            <div class="swiper-slide slider-products__slide">
+                                <div class="slider-products__product">
+                                    <div class="slider-products__product-image">
+                                        <img class="" src="<%-productSliders[i].products[j].imageURL%>" alt="Prom Dress" />
+                                    </div>
+                                    <div class="slider-products__product-content swiper-slide">
+                                        <h6 class="slider-products__product-content__title">Dress Name</h6>
+                                        <span class="slider-products__product-content__price"><i class="fas fa-dollar-sign"></i>359</span>
+                                        <span class="slider-products__product-content__retail"><i class="fas fa-dollar-sign"></i>399</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+
+
+                        </div>
+                        <!-- Section: Swiper Bottom Navigation -->
+                        <div class="slider-products__navigation col-md-12">
+                            <div class="">
+                                <!-- If we need navigation buttons -->
+                                <div class="navigation-block accent__lines">
+                                    <span>
+                                        <p class="product-button-prev swiper-button-prev <%-productSliders[i].sliderClass %>-prev">prev</p>
+                                        <i class="fas fa-exchange-alt fa-2x"></i>
+                                        <p class="product-button-next swiper-button-next <%-productSliders[i].sliderClass %>-next">next</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                       
+
+                    </div>
+                </div>
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+<% } %>

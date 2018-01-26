@@ -2,6 +2,7 @@
 <% include ../partials/head %>
 <% include ../partials/header %>
 
+
 <main>
     <div class="jumbotron">
         <h1><small style="color: #888;">Discover your</small>Perfect<br>Look</h1>
@@ -30,9 +31,123 @@
         <h3>Announcements</h3>
         <h4>Casablanca</h4>
         <h5>Customer Service</h5>
-        <p>You have embarked on a very important<br>journey that you, all of your friends & family</p>
+        <p>You have embarked on a very important<br>journey that you, all of your friends &amp; family</p>
         <p><strong>USA BRIDAL</strong></p>
     </div>
 </main>
+<% productSliders = [{
+        sectionId: 'home-bridal',
+        sliderClass: 'slider-bridal',
+        header: 'Your Bridal',
+        products: [
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9000F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/107_0009.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9215F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9250F.jpg' ,
+            }
+        ]
+    },
+    {
+        sectionId: 'home-prom',
+        sliderClass: 'slider-prom',
+        header: 'Your Prom',
+        products: [
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9000F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/107_0009.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9215F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9250F.jpg' ,
+            }
+        ]
+    },
+    {
+        sectionId: 'home-quinceanera',
+        sliderClass: 'slider-quinceanera',
+        header: 'Your Quinceanera',
+        products: [
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9000F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/107_0009.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9215F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9215F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9215F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9215F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9250F.jpg' ,
+            }
+        ]
+    }
+] %>
+
+<% include ../partials/product-slider%>
 
 <% include ../partials/footer %>

@@ -1,12 +1,11 @@
 <!-- pages/categories -->
 
-<!-- SET VARIABLES -->
-<% let dropdownsInHeader = false; %>
-<% let preFooterColumns = 3; %>   
-<%   
-
-    ctaFullwidth = [ 
-        {
+<!-- CONTENT -->
+<% include ../partials/head %>
+    <% include ../partials/header %>
+    <% let dropdownsInHeader = false; %>
+    <% include ../partials/header-large %>
+    <%  ctaFullwidth = [{
             "cta": 'Blue Tag Site-wide Sale',
             "ctaLink": '#',
             "imageURL": "http://placehold.it/600x350"
@@ -21,41 +20,39 @@
             "ctaLink": '#',
             "imageURL": "http://placehold.it/600x350"
         }
-    ];
-    
-    preFooter = [
-        {
-            "title": 'Appointment',
-            "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
-            "btn": {
-                btnLink: '#' ,
-                btnTxt: 'schedule today'
-            }
-        },
-        {
-            "title": 'Register Wedding',
-            "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
-            "btn": {
-                btnLink: '#' ,
-                btnTxt: 'register today'
-            }
-        },
-        {
-            "title": 'Register Prom',
-            "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
-            "btn": {
-                btnLink: '#' ,
-                btnTxt: 'register today'
-            }
-        }
-        
-    ];
-    
-%>
-<!-- CONTENT -->
-<% include ../partials/head %>
-    <% include ../partials/header %>
-    <% include ../partials/header-large %>
+    ]%>
     <% include ../partials/cta-fullwidth %>
-    <% include ../partials/pre-footer-content %>
+    
+<section class="content container-fluid">
+    <div class="row">
+        <%  preFooterColumns = 3;   
+            preFooter = [{
+                "title": 'Appointment',
+                "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
+                "btn": {
+                    btnLink: '#' ,
+                    btnTxt: 'schedule today'
+                }
+            },
+            {
+                "title": 'Register Wedding',
+                "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
+                "btn": {
+                    btnLink: '#' ,
+                    btnTxt: 'register today'
+                }
+            },
+            {
+                "title": 'Register Prom',
+                "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
+                "btn": {
+                    btnLink: '#' ,
+                    btnTxt: 'register today'
+                }
+            }
+        ]%>
+        <% include ../partials/pre-footer-content %>
+    </div>
+</section>
+
 <% include ../partials/footer %>

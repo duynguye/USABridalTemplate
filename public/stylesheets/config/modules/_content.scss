@@ -1,38 +1,41 @@
-%row-default {
-    flex-flow: row wrap;
-    justify-content: center;
+%row-spacing-align-footer {
+    padding: 0 40px;
+    margin: 0; // make row fit inside container-fluid
     [class*='col-'] {
-        padding-right: 5%;
-        @media (min-width: 992px) {
-            margin-left: 8.33333333%;
+        @media (min-width: $bp-md) {
+            margin-right: 5%;
+            &:nth-of-type(1) {
+                margin-left: 8.33333333%;
+            }
         }
         &:not(:last-child) {
             margin-bottom: 60px;
         }
     }
-    @media screen and (min-width:$bp-md) {
-        flex-flow: row wrap;
+    [class*="col-md-5"] {
+        @media (min-width: 992px) {
+            padding-right: 3%;
+            margin-right: 0;
+        }
     }
+
+    @media screen and (min-width:$bp-sm) {
+        padding: 0 60px;
+    }
+   
 }
 
-%content-default {
-    padding: 100px 40px;
+.content { // place on a div or section with a .container-fluid class
+    padding: 100px 0;
     @media screen and (min-width: $bp-md) {
-        // padding: 80px 60px 40px;
-        padding: 100px 60px;
+        // margin: 0 60px;
     }
-}
-
-.content {
-    @extend %content-default;
     .row {
-        @extend %row-default;
+        @extend %row-spacing-align-footer;
     }
     &--full {
-        @extend .content;
         .row {
             [class*='col-'] {
-                
                 p {
                     column-gap: 4em;
                     max-width: 590px;
@@ -40,14 +43,6 @@
                 .txt__columns--2 {
                     max-width: unset;
                 }
-            }
-        }
-    }
-    &--pre-footer {
-        @extend .content;
-        .row {
-            [class*='col-']:nth-of-type(2n) {
-                margin-left: 0;
             }
         }
     }

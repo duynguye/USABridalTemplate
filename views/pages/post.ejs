@@ -21,7 +21,7 @@
                 heroSupport: 'images/00092747-bride.jpg' // Image below the fold
             };
     
-            images = [
+            imageCaption = [
                 {
                     id: 0,
                     title: 'maggie',
@@ -57,9 +57,9 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <img class="post__image" src="<%-images[0].imgURL-%>" alt="">
-                                <figcaption class="img-caption__text-top--right">
-                                    <%-images[0].caption-%>
+                                <img class="post__image" src="<%-imageCaption[0].imgURL-%>" alt="">
+                                <figcaption class="caption__text-top--right">
+                                    <%-imageCaption[0].caption-%>
                                 </figcaption>
                             </div>
                         </div>
@@ -68,9 +68,9 @@
                         <!-- CONTENT-RIGHT -->
                         <div class="row">
                             <div class="col-md-4">
-                                <img class="post__image" src="<%-images[1].imgURL-%>" alt="">
-                                <figcaption class="img-caption__text-right">
-                                    <%-images[1].caption-%>
+                                <img class="post__image" src="<%-imageCaption[1].imgURL-%>" alt="">
+                                <figcaption class="caption__text-right">
+                                    <%-imageCaption[1].caption-%>
                                 </figcaption>
                             </div>
                             <div class="col-md-8">
@@ -91,7 +91,7 @@
                     <!-- BLOG NAVIGATION ROW -->
                     <div class="post__nav">
                         <div class="container-fluid">
-                            <div class="row">
+                            <div class="row row--eq-height flex-center--vertical">
                                 <div class="col-md-4" aria-label="...">
                                     <a href="#">
                                         <div class="post__pager--prev">
@@ -99,23 +99,17 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="post__related active">
-                                        <a href="#">
-                                            <h5 class="post__related-title title__underline">Related Blog Article 1</h5>
-                                            <p class="post__related-body">Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class=" col-md-4">
-                                    <div class="post__related active">
-                                        <a href="#">
-                                            <h5 class="post__related-title title__underline">Related Blog Article 1</h5>
-                                            <p class="post__related-body">Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...</p>
-                                        </a>
-                                    </div>
-                                </div>
-
+                                <%  let preFooterColumns = 3;  
+                                    preFooter = [{
+                                        "title": 'Related Blog Article 1',
+                                        "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
+                                    },
+                                    {
+                                        "title": 'Related Blog Article 2',
+                                        "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
+                                    }
+                                ];%>
+                                <% include ../partials/pre-footer-content %>
                             </div>
                         </div>
                     </div>

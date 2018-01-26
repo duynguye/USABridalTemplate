@@ -1,12 +1,11 @@
 <!-- pages/categories -->
 
-<!-- SET VARIABLES -->
-<% let dropdownsInHeader = false; %>
-<% let preFooterColumns = 2; %>
-<% 
-
-    ctaFullwidth = [ 
-        {
+<!-- CONTENT -->
+<% include ../partials/head %>
+    <% include ../partials/header %>
+    <% let dropdownsInHeader = false; %>
+    <% include ../partials/header-large %>
+    <%  ctaFullwidth = [{
             "cta": 'Shop All</br>Bridal Gowns',
             "ctaLink": '#',
             "imageURL": "http://placehold.it/600x350"
@@ -26,10 +25,11 @@
             "ctaLink": '#',
             "imageURL": "http://placehold.it/600x350"
         }
-    ];
+    ];%>
+    <% include ../partials/cta-fullwidth %>
     
-    preFooter = [
-        {
+    <%  let preFooterColumns = 2;  
+        preFooter = [{
             "title": 'Request Appointment',
             "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
             "btn": {
@@ -45,15 +45,10 @@
                 btnTxt: 'register today'
             }
         }
-    ];
-%>
-
-<!-- CONTENT -->
-<% include ../partials/head %>
-    <% include ../partials/header %>
-    <% include ../partials/header-large %>
-    <% include ../partials/cta-fullwidth %>
-    <% include ../partials/pre-footer-content %>
+    ];%>
+    <section class="content container-fluid">
+        <% include ../partials/pre-footer-content %>
+    </section>
 
 
 <% include ../partials/footer %>

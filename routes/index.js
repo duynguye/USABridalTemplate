@@ -119,7 +119,7 @@ router.get('/categories', function (req, res) {
 
 router.get('/my-info', function (req, res) {
     res.render('pages/my-info', { title: 'Online Account Access' });
-});
+})
 
 // your-bridal
 //      bridal-gowns

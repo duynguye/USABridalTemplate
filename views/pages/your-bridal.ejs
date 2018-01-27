@@ -1,9 +1,91 @@
+<!-- views/pages/your-bridal.ejs -->
 <% include ../partials/head %>
 <% include ../partials/header %>
 
-<div>
-    <!-- Your Content Goes Here -->
+<%
+    path = "your-bridal" // Keep text lowercase. Seperate additional links with "/" and no spaces
 
-</div>
+    page = {
+        smallTitle: 'This is all about',
+        largeTitle: 'Your<br>Dream',
+        description: 'USA Bridal is celebrating over two decades of excellent service to our brides. You have your dream gown in mind. It will be a wonderful, exciting journey as we guide you on your quest to  nd your special wedding gown.'
+    };
+
+    image = {
+        hero: '/images/pexels-photo-566451.jpg',
+        heroAlt: '#',
+    };
+
+    cta = {
+        title: 'Shop all bridal'
+    };
+
+    optional = {
+        dropdowns: false
+    }
+
+    lp_btf = {
+        row_1_img : '/images/2708_073-crop.jpg',
+        row_1_title : 'Romantic & elegant—classic silhouettes & timeless appeal',
+
+        row_2_img : '/images/2779_0035.jpg',
+        row_2_title : 'Styles, Selection, Value... USA Bridal has it all!',
+        row_2_desc : "<p><strong>The Styles</strong> - Modern interpretations of classic silhouettes, glorious & rich fabrics, strapless, halters, a-lines, ball gowns, mermaids, empire, sheaths, princess styles all in your size.</p><p><strong>The Designers</strong> - Designer wedding gowns by Mori Lee, Allure Bridal, Bonny, Casablanca, Maggie Sottero, Private Label, Mary's, Alfred Angelo, Angelina Faccenda, Forever Yours, Jacquelin, Justin Alexander, Venus, Enzonia, Christina Wu, and many more...</p><p><strong>The Accessories</strong> - You have your dream gown, but your fabulous look isn't complete without the appropriate matching accessories. Matching Veil, Tiara, Jewelry, Shoes, and more...</p>",
+
+        row_3_img : '/images/hero.png',
+        row_3_title : 'Purchase from an Award Winning Store...',
+        row_3_desc : '<p>Personal customer service is our objective. USA Bridal is one of the largest and most respected Formal Wear Stores in the United States. Our customers begin as pre-teens in pageants, then prom, sorority formals, and  nally their dream wedding. Most return again when a formal event calls for that special dress. Due to all of our loyal customers, we have won many industry service awards from designers Allure Bridal, Jovani, Mori Lee, Casablanca, IPA/NPA (National Prom Association) and have been voted National Bridal Retailer of the Year! Schedule your appointment at our Louisville, KY, Nashville/ Goodlettesville, TN, Evansville, IN or Elizabethtown, KY locations.</p>'
+    }
+    
+%>
+<% include ../partials/header-large  %>
+
+<% include ../partials/lp-btf-module %>
+
+<% productSliders = [{
+        sectionId: 'lp-bridal',
+        sliderClass: 'slider-bridal',
+        header: 'Your Bridal',
+        products: [
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9000F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/107_0009.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9215F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9250F.jpg' ,
+            }
+        ]
+    }
+] %>
+
+<% include ../partials/product-slider%>
+
+<%
+ bottom_cta = {
+        title : 'Chance to Win When Registering Your Wedding',
+        desc : 'FREE Wedding Gown or Bridal Gown<br>Up to 5 Brides Maid Dresses<br>$300 Bridal Warehouse Gift Card<br>Plus receive sale announcements, show dates notifications & special email promotions!',
+        link_url : "#",
+        link_text : 'register your wedding'
+    }
+ %>
+
+<% include ../partials/bottom-cta %>
 
 <% include ../partials/footer %>

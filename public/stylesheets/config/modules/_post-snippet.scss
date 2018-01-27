@@ -1,53 +1,77 @@
-.blog__post-snippet {
-    border: none;
-    padding: 5% 2% 10%;
-    position: relative;
-    
-    &:before {
-        @extend %accent-line;
-        max-width: 100%;
-        left: 0;
-        bottom: 0;
+.blog__post {
+    $parent: &;
+    margin-top: 200px;
+    @media (max-width: $bp-xs) {
+        margin-top: 100px;
     }
-    &__title {
-        // @extend %underline;
-        padding: 0 30px;
-        @media screen and (min-width: 768px) {
+    &-snippet {
+        margin: 0 7.5vw 100px;
+        padding: 0 3.5vw 125px;
+        position: relative;
+        @media (max-width: $bp-md) {
+            padding: 0 0 125px;
+        }
+        @media (max-width: $bp-sm) {
             margin-bottom: 60px;
+            padding: 0 0 100px;
         }
-        h2 {
-            margin-bottom: 5px;
-            font-size: 110px;
-            line-height: 1;
-            span {
-                font-family: $secondary-font;
-                font-weight: 100;
-                font-size: 43px;
-                display: inline-block;
-                padding-bottom: 10px;
-                letter-spacing: -0.1rem;
+        @at-root #{$parent} .row:not(:nth-child(4)) &:after {
+            @extend %accent-line;
+            bottom: 0;
+            left: 0;
+            width: 0;
+        }
+        &__title {
+            margin-bottom: 60px;
+            padding: 0 30px;
+            @media (max-width: $bp-xs) {
+                margin-bottom: 0px;
+                padding: 0 10px;
             }
-        }
-    }
-    &__content {
-        display: flex;
-        justify-content: flex-start;
-        flex-flow: row wrap;
-        padding: 0 30px;
-        p {
-            flex: 1 100%;
-            margin-bottom: 30px;
-            @media screen and (min-width: 768px) {
-                flex: 1 33%;
-                margin-right: 3%;
-                margin-bottom: 60px;
-                &:last-of-type {
-                    margin-right: 17%;
+            h1 {
+                display: block;
+                font-size: $h1-size / 1.1;
+                white-space: normal;
+                @media (max-width: $bp-md) {
+                    font-size: $h1-size / 1.5;
+                    small {
+                        font-size: $h3-size / 1.35;
+                    }
+                }
+                @media (max-width: $bp-sm - 1px) {
+                    font-size: $h1-size / 1.75;
+                    line-height: 1;
+                    small {
+                        font-size: $h3-size / 1.75;
+                    }
+                }
+                @media (max-width: $bp-xs - 1px) {
+                    font-size: $h2-size / 1.75;
+                    small {
+                        font-size: $h4-size / 1.5;
+                        line-height: 1.1;
+                    }
                 }
             }
         }
-    }
-    &__button {
-        flex: 1 100%;
+        &__content {
+            padding: 0 50px;
+            @media (max-width: $bp-md) {
+                padding: 0 30px;
+            }
+            @media (max-width: $bp-xs) {
+                padding: 0 10px;
+            }
+            p {
+                margin-bottom: 60px;
+                max-width: 900px;
+                @media (max-width: $bp-sm) {
+                    font-size: $font-base - 2px;
+                }
+            }
+        }
+        .txt__columns--2 {
+            column-gap: 60px;
+        }
     }
 }

@@ -1,38 +1,50 @@
-%row-default {
-    flex-flow: row wrap;
-    justify-content: center;
+%content-col-spacing {
     [class*='col-'] {
-        padding-right: 5%;
-        @media (min-width: 992px) {
-            margin-left: 8.33333333%;
-        }
         &:not(:last-child) {
             margin-bottom: 60px;
         }
+        @media (min-width: $bp-md) {
+            margin-right: 5%;
+            &:nth-of-type(1) {
+                margin-left: 8.33333333%;
+            }
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+            
+        }
     }
-    @media screen and (min-width:$bp-md) {
-        flex-flow: row wrap;
-    }
+    [class*="col-md-5"] {
+        @media (min-width: $bp-md) {
+            padding-right: 3%;
+            margin-right: 0;
+        }
+    } 
 }
+%content-row-spacing {
+    padding: 0 40px;
+    margin: 0; // make row fit inside container-fluid
 
-%content-default {
-    padding: 100px 40px;
-    @media screen and (min-width: $bp-md) {
-        // padding: 80px 60px 40px;
-        padding: 100px 60px;
+    @media screen and (min-width:$bp-sm) {
+        padding: 0 60px;
     }
+   
 }
-
-.content {
-    @extend %content-default;
+.content { // place on a div or section with a .container-fluid class
+    padding: 100px 0;
     .row {
-        @extend %row-default;
+        @extend %content-row-spacing;
+        @extend %content-col-spacing;
     }
     &--full {
         @extend .content;
         .row {
+            @extend %content-row-spacing;
+            @extend %content-col-spacing;
             [class*='col-'] {
-                
+                @media (min-width: $bp-md) {
+                    margin-left: 8.33333333%;
+                }
                 p {
                     column-gap: 4em;
                     max-width: 590px;
@@ -44,11 +56,20 @@
         }
     }
     &--pre-footer {
-        @extend .content;
+        $parent: &;
         .row {
-            [class*='col-']:nth-of-type(2n) {
-                margin-left: 0;
+            @extend %content-row-spacing;
+            @extend %content-col-spacing;
+            padding: 30px;
+            @at-root #{$parent}-prev {
+                background: $tan;
+                padding: 80px 70px;
+                max-width: 100%;
+                // margin: 30px;
+                text-align: center;
+                vertical-align: middle;
             }
         }
+        
     }
 }

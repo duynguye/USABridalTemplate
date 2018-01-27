@@ -123,12 +123,15 @@
             }
             &-up { // .animation-object--fade-up
                 @extend %fade;
-                animation: fade-Y .5s both;
+                animation-duration: .5s;
                 animation-delay: 1.5s;
+                animation-fill-mode: both;
+                animation-name: fade-Y;
             }
             &-down { // .animation-object--fade-down
                 @extend .animation-object--fade-up;
                 animation-direction: reverse;
+                animation-fill-mode: forwards !important;
             }
             &-right:after { // .animation-object--fade-right
                 @extend %fade;
@@ -160,9 +163,9 @@
 
 
 
-// -----------------------
-// Animations & Keyframes
-// -----------------------
+// // -----------------------
+// // Animations & Keyframes
+// // -----------------------
 
 // %blinds {
 //     animation: blinds 1s forwards;
@@ -276,7 +279,7 @@
 //                 transition: transform .5s ease-in;
 //                 @for $i from 1 to 10 {
 //                     @at-root .row &:nth-child(#{$i}) { 
-//                         animation-delay: $i * .1s + .05; 
+//                         animation-delay: $i * .1s + .55; 
 //                     }
 //                 }
 //             }

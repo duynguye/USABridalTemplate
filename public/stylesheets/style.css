@@ -461,7 +461,7 @@ body {
         font-weight: 400;
         margin-left: 5px; }
 
-.btn__outline {
+.btn__outline, .btn__outline--white {
   font-family: "Playfair Display", serif;
   font-size: 20px;
   line-height: 1;
@@ -471,15 +471,19 @@ body {
   display: inline-block;
   font-style: italic;
   padding-bottom: 5px; }
-  .btn__outline:hover {
+  .btn__outline:hover, .btn__outline--white:hover {
     color: unset; }
   @media (max-width: 768px) {
-    .btn__outline {
+    .btn__outline, .btn__outline--white {
       font-size: 18px; } }
   @media (max-width: 500px) {
-    .btn__outline {
+    .btn__outline, .btn__outline--white {
       border-width: 4px;
       font-size: 16px; } }
+  .btn__outline--white {
+    border-bottom: 5px solid #ffffff;
+    text-transform: lowercase;
+    color: #ffffff; }
 
 .input__divide {
   display: flex;
@@ -638,7 +642,7 @@ body {
   margin-bottom: 80px;
   margin-left: 2.75vw;
   min-height: 200px; }
-  .pagination__prev .btn__outline {
+  .pagination__prev .btn__outline, .pagination__prev .btn__outline--white {
     align-self: center;
     margin: 0 auto; }
 
@@ -1904,5 +1908,18 @@ body {
       .sub-hero__section--about .row .social-icons .social-icon {
         display: block;
         margin-bottom: 13px; }
+
+.btn__box {
+  background: #282828;
+  text-align: center;
+  padding: 60px 0; }
+  .btn__box-container {
+    padding-top: 40px; }
+  .btn__box a {
+    transition: all ease .4s; }
+  .btn__box:hover a {
+    border-bottom: 10px solid #c5eff7;
+    color: #ffffff;
+    padding-bottom: -10px; }
 
 /*# sourceMappingURL=style.css.map */

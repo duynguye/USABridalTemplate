@@ -4,6 +4,9 @@
 <% include ../partials/head %>
     <% include ../partials/header %>
     <%  path = '/The Wedding Party',
+        optional = {
+            dropdowns: true
+        },
         page = {
             smallTitle: 'Spring Bridal Gown Trends',
             largeTitle: 'The<br/>Wedding<br/>Party',
@@ -18,6 +21,7 @@
             heroSupport: 'images/00092747-bride.jpg' // Image below the fold
     };%>
     <% include ../partials/header-large %>
+    
     <%  ctaFullwidth = [{
             "cta": 'Shop All</br>Bridal Gowns',
             "ctaLink": '#',

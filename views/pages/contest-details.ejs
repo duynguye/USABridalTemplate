@@ -3,7 +3,7 @@
 <% include ../partials/header %>
 
 <%
-    path = "Wedding Contest" // Keep text lowercase. Seperate additional links with "/" and no spaces
+    path = "Contests/Wedding Contest" // Keep text lowercase. Seperate additional links with "/" and no spaces
 
     page = {
         smallTitle: 'Chance to Win One of',
@@ -24,8 +24,13 @@
     };
 %>
 <% include ../partials/header-trio  %>
-<section>
-    <div class="">
-        <a class=" btn__outline" href="#">register your wedding</a>
+<section class="btn__box-container container">
+    <div class="row">
+        <div class="btn__box col-md-8 col-md-offset-2">
+            <a class=" btn__outline--white" href="#">register your wedding</a>
+        </div>
     </div>
 </section>
+
+
+<% include ../partials/footer %>

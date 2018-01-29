@@ -1,0 +1,20 @@
+.btn__box {
+    &-container {
+        padding-top: 40px;
+    }
+    background:$black;
+    text-align: center;
+    padding: 60px 0;
+    a { 
+        transition: all ease .4s;
+    }
+    &:hover{
+        // margin-bottom: -5px;
+        a {
+        border-bottom: 10px solid $lt-blue;
+        color: $white;
+        padding-bottom: -10px;
+        // line-height: 1px;
+        }
+    }   
+}

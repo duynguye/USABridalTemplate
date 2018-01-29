@@ -1,8 +1,9 @@
 <%# ../partials/pre-footer-content %>
-<%  let columns = (12 / preFooterColumns) - 1
-%>
+<%  let columns = (12 / preFooterColumns) %>
+
     
     <% for(let i= 0; i < preFooter.length; i++) {%>
+        
         <div class="col-xs-12 col-md-<%=columns%>">
             <h4 class="title__underline">
                     <%- preFooter[i].title -%>
@@ -12,7 +13,7 @@
             </p>
             <% if(preFooter[i].btn) {%>
                 <div>
-                    <a href='<%- preFooter[i].btn.btnLink -%>' class="btn__outline">
+                    <a href='<%- preFooter[i].btn.btnLink -%>' class="content__btn btn__outline">
                         <%- preFooter[i].btn.btnTxt -%>
                     </a>
                 </div>

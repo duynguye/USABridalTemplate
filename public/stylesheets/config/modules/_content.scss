@@ -5,35 +5,26 @@
             margin-bottom: 60px;
         }
         @media (min-width: $bp-md) {
-            margin-right: 5%;
-            // &:first-of-type {
-            //     @media screen and (min-width:$bp-md) {
-            //         margin-left: 8.33333333%;
-            //     } 
-            // }    
-        }
-    }
-    [class*="col-md-5"] {
-        @media (min-width: $bp-md) {
-            padding-right: 3%;
+            margin-right: 5%; 
+            padding-right: 10%;
             margin-right: 0;
         }
-    } 
+    }
 }
 %content-row-spacing {
     padding: 0 40px;
     margin: 0; // make row fit inside container-fluid
-
     @media screen and (min-width:$bp-sm) {
         padding: 0 60px;
-       
+        
     }
     @media screen and (min-width:$bp-md) {
+        padding: 0 40px;
         margin-left: 8.33333333%;
     }
    
 }
-.content { // place on a div or section with a .container-fluid class
+.content { // place on element with a .container-fluid class
     padding: 100px 0;
     .row--eq-height {
         flex-flow: row wrap;
@@ -41,6 +32,9 @@
     .row {
         @extend %content-row-spacing;
         @extend %content-col-spacing;
+    }
+    &__btn {
+        margin-top: 40px;
     }
     &--full {
         @extend .content;
@@ -55,6 +49,9 @@
                 .txt__columns--2 {
                     max-width: unset;
                 }
+                &:nth-of-type(2n){
+                    // padding-right:
+                }
             }
         }
     }
@@ -68,11 +65,11 @@
                 background: $tan;
                 padding: 80px 70px;
                 max-width: 100%;
-                // margin: 30px;
                 text-align: center;
                 vertical-align: middle;
             }
         }
         
     }
+    
 }

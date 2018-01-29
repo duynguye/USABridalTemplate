@@ -1,0 +1,31 @@
+<!-- views/pages/contest-details.ejs -->
+<% include ../partials/head %>
+<% include ../partials/header %>
+
+<%
+    path = "Wedding Contest" // Keep text lowercase. Seperate additional links with "/" and no spaces
+
+    page = {
+        smallTitle: 'Chance to Win One of',
+        largeTitle: 'These<br/>Prizes',
+        description: '<b>FREE WEDDING GOWN</b> or <b> BRIDAL GOWN UP TO 5 BRIDES MAID DRESSES $300 BRIDAL WAREHOUSE GIFT CARD<b/>'
+    };
+
+    image = {
+        hero: 'images/pexels-photo-265750.jpeg',
+        heroAlt: '#',
+        heroSupport: 'images/pexels-photo-566450.jpeg' // Image below the fold
+    };
+
+    cta = {
+        title: 'You will receive email specials, show date notifcations &amp; sale announcements!',
+        columns: false, // True for 2 columns, false for 1 column
+        description: ''
+    };
+%>
+<% include ../partials/header-trio  %>
+<section>
+    <div class="">
+        <a class=" btn__outline" href="#">register your wedding</a>
+    </div>
+</section>

@@ -1,3 +1,4 @@
+// Placeholders for col and row spacing
 %content-col-spacing {
     [class*='col-'] {
         &:not(:last-child) {
@@ -5,13 +6,11 @@
         }
         @media (min-width: $bp-md) {
             margin-right: 5%;
-            &:nth-of-type(1) {
-                margin-left: 8.33333333%;
-            }
-            &:not(:last-child) {
-                margin-bottom: 0;
-            }
-            
+            // &:first-of-type {
+            //     @media screen and (min-width:$bp-md) {
+            //         margin-left: 8.33333333%;
+            //     } 
+            // }    
         }
     }
     [class*="col-md-5"] {
@@ -27,11 +26,18 @@
 
     @media screen and (min-width:$bp-sm) {
         padding: 0 60px;
+       
+    }
+    @media screen and (min-width:$bp-md) {
+        margin-left: 8.33333333%;
     }
    
 }
 .content { // place on a div or section with a .container-fluid class
     padding: 100px 0;
+    .row--eq-height {
+        flex-flow: row wrap;
+    }
     .row {
         @extend %content-row-spacing;
         @extend %content-col-spacing;
@@ -42,9 +48,6 @@
             @extend %content-row-spacing;
             @extend %content-col-spacing;
             [class*='col-'] {
-                @media (min-width: $bp-md) {
-                    margin-left: 8.33333333%;
-                }
                 p {
                     column-gap: 4em;
                     max-width: 590px;

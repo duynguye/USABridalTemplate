@@ -1168,6 +1168,9 @@ body {
     flex-flow: row wrap; }
   .content__btn {
     margin-top: 40px; }
+  @media (min-width: 992px) {
+    .content--full .row [class*='col-'] {
+      padding-right: 0; } }
   .content--full .row [class*='col-'] p {
     column-gap: 4em;
     max-width: 590px; }

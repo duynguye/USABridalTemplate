@@ -42,6 +42,9 @@
             @extend %content-row-spacing;
             @extend %content-col-spacing;
             [class*='col-'] {
+                @media (min-width: $bp-md) {
+                    padding-right: 0;
+                }
                 p {
                     column-gap: 4em;
                     max-width: 590px;
@@ -50,7 +53,6 @@
                     max-width: unset;
                 }
                 &:nth-of-type(2n){
-                    // padding-right:
                 }
             }
         }

@@ -120,6 +120,9 @@ router.get('/categories', function (req, res) {
 router.get('/my-info', function (req, res) {
     res.render('pages/my-info', { title: 'Online Account Access' });
 })
+router.get('/contest-details', function (req, res) {
+    res.render('pages/contest-details', { title: 'Contest Detials' });
+})
 
 // your-bridal
 //      bridal-gowns

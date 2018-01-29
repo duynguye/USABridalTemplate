@@ -1,21 +1,21 @@
 
 <% for(i= 0; i < ctaFullwidth.length; i++) {%>
-    <section class="cta-full">
-        <div class="container-fluid">
-            <div class="row row--eq-height">
-                <div class="col-xs-12 col-md-5">
-                    <img class="cta-full__image " src= "<%- ctaFullwidth[i].imageURL -%>" alt="">
-                </div>
-                <div class="col-md-5 col-md-offset-2">
-                    <div class="cta-full__btn accent__offset-lines">
-                        <a href='<%- ctaFullwidth[i].ctaLink -%>'>
-                            <h2 class="">
-                                <%- ctaFullwidth[i].cta -%>
-                            </h2>
-                        </a>
-                    </div>
+<section class="cta-full">
+    <div class="container-fluid">
+        <div class="row row--eq-height">
+            <div class="cta-full__image col-xs-12 col-md-5">
+                <img class="" src= "<%- ctaFullwidth[i].imageURL -%>" alt="" />
+            </div>
+            <div class="col-xs-12 col-md-5 col-md-offset-2">
+                <div class="cta-full__btn-txt accent__offset-lines">
+                    <a href='<%- ctaFullwidth[i].ctaLink -%>'>
+                        <h2 class="">
+                            <%- ctaFullwidth[i].cta -%>
+                        </h2>
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 <%}%>

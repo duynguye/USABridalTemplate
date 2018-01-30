@@ -1,0 +1,84 @@
+<!-- views/pages/product-category.ejs -->
+<% include ../partials/head %>
+<% include ../partials/header %>
+
+<%
+    path = "The Wedding Party/Bridal Gowns" // Keep text lowercase. Seperate additional links with "/" and no spaces
+
+    page = {
+        smallTitle: 'The Wedding Party:',
+        largeTitle: 'Bridal<br/>Gowns',
+        description: 'Os excestrum et mod quis minvele ssernate ant lignatur aliquaes ipsantis corro occabor solorporatur sit quiate aditior secesto rporem et laborib usapit aut qui tem. Laccus, optas si sit et expe sinci doluptatur antem.'
+    };
+
+    image = {
+        hero: '/images/2819_0134.jpg',
+        heroAlt: '#',
+        heroSupport: '/images/6749_028-v2.jpg' // Image below the fold
+    };
+
+    cta = {
+        title: 'You will receive email specials, show date notifcations &amp; sale announcements!',
+        columns: false, // True for 2 columns, false for 1 column
+        description: ''
+    };
+%>
+<% include ../partials/header-trio  %>
+
+
+<section class="product__listings-container container-fluid">
+    <div class="row">
+        <div class="col-md-4 product__listings-container-sidebar">
+            <div class="product__listings-container-sidebar-search">
+                <h5 class="title__underline">Search by Style/Keyword</h5>
+                <form>
+                    <input type="text" class="input__field">
+
+                    <div class="product__listings-container-sidebar-search-filter">
+                        <input type="checkbox" id="only-category" name="only-category" value="only-category">
+                        <label for="only-category">Search Only in this Category</label>
+                    </div>
+                    <div class="product__listings-container-sidebar-search-filter">
+                        <input type="checkbox" id="price-filter" name="price-filter" value="price-filter">
+                        <label for="price-filter">+Price Filter</label>
+                    </div>
+                    <div class="product__listings-container-sidebar-search-filter">
+                        <input type="checkbox" id="in-stock" name="in-stock" value="in-stock">
+                        <label for="in-stock">+Search Only In-Stock</label>
+                    </div> 
+                    <div class="product__listings-container-sidebar-search-filter">
+                        <input type="checkbox" id="feature" name="feature" value="feature">
+                        <label for="feature">+Narrow by Feature</label>
+                    </div>
+                    <div class="product__listings-container-sidebar-search-filter">
+                        <input type="checkbox" id="color" name="color" value="color">
+                        <label for="color">+Narrow by Color</label>
+                    </div>
+                </form>
+            </div>
+            <div class="product__listings-container-sidebar-collections">
+                <h5 class="title__underline">Collections</h5>
+                <a class="product__listings-container-sidebar-collections-subtitle" role="button" data-toggle="collapse" href="#bridalCollections" aria-expanded="false" aria-controls="bridalCollections">
+                     <h5>Bridal Collections</h5>
+                    </a>
+                    <div class="collapse" id="bridalCollections">
+                        <ul>
+                            <li>AF Couture</li>
+                            <li>Allure Couture</li>
+                            <li>Allure Bridal</li>
+                            <li>Allure Romance</li>
+                            <li>Allure Womens</li>
+                            <li>Allure Modest</li>
+                            <li>Bonny Essence</li>
+                        <ul>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            images
+        </div>
+    </div>
+</section>
+
+
+<% include ../partials/footer %>

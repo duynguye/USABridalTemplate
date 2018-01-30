@@ -14,12 +14,17 @@
 	background: white;
 	border: none;
 	margin-bottom: 0;
+
+	@media (max-width: $bp-sm) {
+		background: $black;
+	}
+
 		&-brand { // override bootstrap default value
 		padding-top: 40px;
 		height: 100%;
 
 		@media (max-width: $bp-sm) {
-			padding-top: 12px;
+			display: none;
 		}
 		img {
 			height: auto;
@@ -27,7 +32,7 @@
 			max-width: 100%;
 
 			@media (max-width: $bp-md) {
-				width: 185px;
+				width: 175px;
 			}
 		}
 	}
@@ -40,7 +45,72 @@
 			padding-right: 15px;
 		}
 	}
+	.mobile-nav-icon {
+		display: none;
+		width: 19%;
+		text-align: center;
+		vertical-align: top;
+		padding: 20px 0;
+
+		@media (max-width: $bp-sm) {
+			display: inline-block;
+		}
+
+		.mobile-navbar-link {
+			color: $white;
+			font-size: 20px;
+
+			.mobile-navbar-link-counter-contain {
+				max-width: 64px;
+				margin: 0px auto;
+
+				.mobile-nav-icon-counter {
+					float: right;
+					position: relative;
+					color: $white;
+					background-color: $lavender;
+					padding-top: 1px;
+					border-radius: 50px;
+					height: 18px;
+					width: 18px;
+					margin: 12px 10px 0px -34px;
+					font-size: 14px;
+					line-height: 14px;
+					font-weight: 700;
+					z-index: 1;
+					text-align: center;
+				}
+			}
+		}
+	}
 	.navbar-toggle {
+		border: none;
+		width: 19%;
+		display: none;
+		float: none;
+		margin: 0;
+		padding: 25px 0 20px 0;
+
+		@media (max-width: $bp-sm) {
+			display: inline-block;
+		}
+
+		&:hover, &:focus {
+			background-color: transparent;
+		}
+
+		.icon-bar {
+			background-color: $white;
+			width: 30px;
+			height: 3px;
+			border-radius: 1px;
+			margin: 0px auto 6px auto;
+
+			&:last-of-type {
+				margin-bottom: 0px;
+			}
+		}
+
 		.collapsed {
 			padding-top: 40px;
 		}
@@ -56,7 +126,6 @@
 		}
 		>.nav-item {
 			color: $black;
-			font-family: $primary-font;
 			font-weight: 900;
 			margin-right: 25px;
 			border: 1px solid $white;
@@ -64,18 +133,32 @@
 			@media (max-width: $bp-md) {
 				margin-right: 10px;
 			}
+			@media (max-width: $bp-sm) {
+				margin-right: 0px;
+			}
 			>a {
 				color: inherit;
+				font-family: $primary-font;
+				font-weight: 700;
 
 				@media (max-width: $bp-md) {
 					padding: 10px 7px;
+				}
+
+				@media (max-width: $bp-sm) {
+					font-size: 25px;
+					padding: 25px 10px;
+					border-bottom: 2px solid $black;
 				}
 			}
 			&-last {
 				margin-right: 100px;
 
 				@media (max-width: $bp-lg) {
-					margin-right: 40px;
+					margin-right: 22px;
+				}
+				@media (max-width: $bp-sm) {
+					margin-right: 0px;
 				}
 			}
 			.dropdown-menu {
@@ -147,11 +230,17 @@
 								font-size: 11px;
 								letter-spacing: 1px;
 							}
+							h5 {
+								&:after {
+									display: none;
+								}
+							}
 							ul {
 								font-family: $secondary-font;
 								text-transform: uppercase;
 								font-size: 11px;
 								letter-spacing: 1px;
+								list-style-type: none; 
 
 								li {
 									padding-bottom: 8px;
@@ -212,8 +301,7 @@
 			padding-right: 0;
 
 			@media (max-width: $bp-sm) {
-				width: 42px;
-				display: inline-block;
+				display: none;
 			}
 			>a {
 				color: $black;
@@ -243,6 +331,14 @@
 					text-align: center;
 				}
 			}
+		}
+	}
+	.navbar-collapse {
+		background-color: $white;
+		max-height: none;
+
+		@media (max-width: $bp-sm) {
+			border-bottom: 12px solid $black;
 		}
 	}
 	/* &.navbar-fixed-top {

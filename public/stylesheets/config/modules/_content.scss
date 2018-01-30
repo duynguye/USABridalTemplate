@@ -1,38 +1,50 @@
-%row-default {
-    flex-flow: row wrap;
-    justify-content: center;
+// Placeholders for col and row spacing
+%content-col-spacing {
     [class*='col-'] {
-        padding-right: 5%;
-        @media (min-width: 992px) {
-            margin-left: 8.33333333%;
-        }
         &:not(:last-child) {
             margin-bottom: 60px;
         }
+        @media (min-width: $bp-md) {
+            margin-right: 5%; 
+            padding-right: 10%;
+            margin-right: 0;
+        }
+    }
+}
+%content-row-spacing {
+    padding: 0 40px;
+    margin: 0; // make row fit inside container-fluid
+    @media screen and (min-width:$bp-sm) {
+        padding: 0 60px;
+        
     }
     @media screen and (min-width:$bp-md) {
+        padding: 0 40px;
+        margin-left: 8.33333333%;
+    }
+   
+}
+.content { // place on element with a .container-fluid class
+    padding: 100px 0;
+    .row--eq-height {
         flex-flow: row wrap;
     }
-}
-
-%content-default {
-    padding: 100px 40px;
-    @media screen and (min-width: $bp-md) {
-        // padding: 80px 60px 40px;
-        padding: 100px 60px;
-    }
-}
-
-.content {
-    @extend %content-default;
     .row {
-        @extend %row-default;
+        @extend %content-row-spacing;
+        @extend %content-col-spacing;
+    }
+    &__btn {
+        margin-top: 40px;
     }
     &--full {
         @extend .content;
         .row {
+            @extend %content-row-spacing;
+            @extend %content-col-spacing;
             [class*='col-'] {
-                
+                @media (min-width: $bp-md) {
+                    padding-right: 0;
+                }
                 p {
                     column-gap: 4em;
                     max-width: 590px;
@@ -40,15 +52,26 @@
                 .txt__columns--2 {
                     max-width: unset;
                 }
+                &:nth-of-type(2n){
+                }
             }
         }
     }
     &--pre-footer {
-        @extend .content;
+        $parent: &;
         .row {
-            [class*='col-']:nth-of-type(2n) {
-                margin-left: 0;
+            @extend %content-row-spacing;
+            @extend %content-col-spacing;
+            padding: 30px;
+            @at-root #{$parent}-prev {
+                background: $tan;
+                padding: 80px 70px;
+                max-width: 100%;
+                text-align: center;
+                vertical-align: middle;
             }
         }
+        
     }
+    
 }

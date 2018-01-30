@@ -34,7 +34,7 @@
 }
 
 // @at-root #{$parent}
-.img-caption {
+.caption {
     &__text {
         @extend %caption-style;
         &-top {

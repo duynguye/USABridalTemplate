@@ -2,7 +2,34 @@
 <% include ../partials/head %>
 <% include ../partials/header %>
 
-<% path = "about" %>
+<%
+    path = "about" // Keep text lowercase. Seperate additional links with "/" and no spaces
+
+    page = {
+        smallTitle: 'About Us &',
+        largeTitle: 'Our<br>History',
+    };
+
+    image = {
+        hero: '/images/usa-bridal_about.png',
+        heroAlt: '#',
+    };
+
+    cta = {
+        title: 'learn more'
+    }; 
+
+    lp_btf = {
+    	row_1_img : '/images/lp-btf-img-01.jpg',
+    	row_1_title : 'Customers want more gowns and styles, including the ability to try it on.',
+    	row_2_img : '/images/usa-bridal-about-img-row2.png',
+    	row_2_title : 'Thousands of square feet full of designer wedding gowns.',
+    	row_2_desc : "Bridal Warehouse opened in Louisville, Kentucky in 1994. It was an immediate success. Each superstore location has over one thousand bridal and destination gowns from the world's best formal designers. The entire wedding party is catered to. Brides maids, mothers and  ower girls each have a huge selection to choose from. Each location also features over one thousand prom, pageant and special occasion gowns and dresses. Bridal Warehouse is a unique experience that caters to you. Now, some sixteen years later, Bridal Warehouse has expanded to four bridal superstores and a new bridal/prom/tux boutique store.",
+    	row_3_img : '/images/hero.png',
+    	row_3_title : 'USA Bridal is honored and proud to have received the following awards and recognitions:',
+    	row_3_desc : '<ul><li>Voted the National Bridal  Retailer of the Year.</li><li>Best of the Knot</li><li>Selected Chamber of Commerce Business Person of the Year.</li><li>Multiple Excellence awards from Mori Lee, Casablanca Bridal, Jovani Fashions, Allure Bridal.</li><li>IPA/NPA  ve time winner of International Prom Excellence Award.</li><li>Selected to serve on the Mori Lee Design Team for Bridal and Prom.</li><li>Selected to serve on the Allure Bridal &amp; Night Moves Prom design team.</li></ul>'
+    } 
+%>
 
 <main class="sub-hero__section--about">
     <div class="row">
@@ -12,100 +39,33 @@
             <div class="trio__header">
                 <% include ../partials/breadcrumb %>
                 <h1 class="animation-txt--reveal animation-object--extend">
-                    <small>
-                        About Us &amp;
-                    </small>
-                    Our<br>History
+                    <small><%= page.smallTitle %></small>
+                    <%- page.largeTitle %>
                 </h1>
             </div>
         </div>
           <div class="col-xs-11 col-lg-7 col-sm-pull-1 col-md-pull-1 sub-hero__img-hero-container animation-object--fade-up">
-            <img class="sub-hero__img-hero" src="/images/usa-bridal_about.png" alt="">
+            <img class="sub-hero__img-hero" src="<%= image.hero %>" alt="<%= image.heroAlt %>">
         </div>
         <div class="col-lg-2"></div>
             <!-- Promo Bar -->
             <div class="about-main-section-btn text-center animation-object--fade-up">
-                <a href="#info">learn more</a>
+                <a href="#info"><%- cta.title %></a>
             </div>
     </div>
 </main>
 
-<!-- Start LP Content Module BTF -->
-<section class="section btf__section--lp animation-object--fade-up">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6 btf__section--lp__img">
-                <img src="/images/usa-bridal_about_btf-img.png" alt="About Us">                 
-            </div>
-            <div class="col-md-6 btf__section--lp__txt">
-                <div class="btf__section--lp__txt__content">
-                    <h3 class="accent__offset-lines">
-                       Customers want more gowns and styles, including the ability to try it on.
-                    </h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End LP Content Module BTF -->
+<% include ../partials/lp-btf-module %>
 
-<section class="section btf__section--lp-row2" id="info">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 btf__section--lp-row2__content">
-                    <h4 class="title__underline">
-                      Thousands of square feet full of designer wedding gowns.
-                    </h4>
-                    <p>Bridal Warehouse opened in Louisville, Kentucky in 1994. It was an immediate success. Each superstore location has over one thousand bridal and destination gowns from the world's best formal designers. The entire wedding party is catered to. Brides maids, mothers and  ower girls each have a huge selection to choose from. Each location also features over one thousand prom, pageant and special occasion gowns and dresses. Bridal Warehouse is a unique experience that caters to you. Now, some sixteen years later, Bridal Warehouse has expanded to four bridal superstores and a new bridal/prom/tux boutique store.
-                    </p>
-            </div>
-            <div class="col-lg-push-1 col-md-3 btf__section--lp-row2__img">
-                <img src="/images/usa-bridal-about-img-row2.png">                 
-            </div>
-        </div>
-    </div>
-</section>
+<%
+	bottom_cta = {
+        title : 'We wish to extend a special thank you to all of our loyal customers and fantastic employees.',
+        desc : 'In a company this size opportunities are always available - managers, bridal associates, tuxedo associates, and alteration specialists are always needed.',
+       	link_url : "#",
+        link_text : 'view more'
+    }  
+%>
 
-<section class="section btf__section--lp-row3">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-push-2 col-md-push-1 col-md-2 btf__section--lp-row3__accent">
-                <div class="landing-page-btf-row3-section__accent-box"></div>
-            </div>
-            <div class="col-lg-push-1 col-md-9 btf__section--lp-row3__content">
-                <div class="landing-page-btf-section-txt__content">
-                    <h4 class="title__underline">
-                        USA Bridal is honored and proud to have received the following awards and recognitions:
-                    </h4>
-                    <ul>
-                        <li>Voted the National Bridal  Retailer of the Year.</li>
-                        <li>Best of the Knot</li>
-                        <li>Selected Chamber of Commerce Business Person of the Year.</li>
-                        <li>Multiple Excellence awards from Mori Lee, Casablanca Bridal, Jovani Fashions, Allure Bridal.</li>
-                        <li>IPA/NPA  ve time winner of International Prom Excellence Award.</li>
-                        <li>Selected to serve on the Mori Lee Design Team for Bridal and Prom.</li>
-                        <li>Selected to serve on the Allure Bridal &amp; Night Moves Prom design team.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section btf__section--lp-row4">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-push-2 col-md-push-1 col-md-2 btf__section--lp-row4__btn">
-                <a href="#">view more</a>
-            </div>
-            <div class="col-lg-push-1 col-md-9 btf__section--lp-row4__content">
-                <h4 class="title__underline">
-                    We wish to extend a special thank you to all of our loyal customers and fantastic employees.
-                </h4>
-                <p>In a company this size opportunities are always available - managers, bridal associates, tuxedo associates, and alteration specialists are always needed.</p>
-            </div>
-        </div>
-    </div>
-</section>
+<% include ../partials/bottom-cta %>
 
 <% include ../partials/footer %>

@@ -1,35 +1,66 @@
 <!-- pages/categories -->
 
-<!-- SET VARIABLES -->
-<% let dropdownsInHeader = false; %>
-<% let preFooterColumns = 2; %>
-<% 
-
-    ctaFullwidth = [ 
-        {
+<!-- CONTENT -->
+<% include ../partials/head %>
+    <% include ../partials/header %>
+    <%  path = '/The Wedding Party',
+        optional = {
+            dropdowns: true
+        },
+        page = {
+            largeTitle: 'The<br/>Wedding<br/>Party',
+            description: 'Idenduciunt eatis volora dolore ped mos pe voluptatiam quunt quis sum enissi occus, que sit ma sin et etur? Omnimus moluptate od et acitini conse eveni andit utatur rerum consequiae aute accabore laborestia dolendes autatia ndandae omni occum rentem facideb itaquatia quo',
+        };
+        cta = {
+            title: 'Also view our designers',
+        };
+        image = {
+            hero: 'images/2621_094.jpg',
+            heroAlt: '#',
+            heroSupport: 'images/00092747-bride.jpg' // Image below the fold
+    };%>
+    <% include ../partials/header-large %>
+    
+    <%  ctaFullwidth = [{
             "cta": 'Shop All</br>Bridal Gowns',
             "ctaLink": '#',
-            "imageURL": "http://placehold.it/600x350"
+            "imageURL": "images/9215F.jpg"
+        },
+        {
+            "cta": 'Shop All</br>Bridesmaids<br/>Dresses',
+            "ctaLink": '#',
+            "imageURL": "images/T1507.jpg"
+        },
+        {
+            "cta": 'Shop All</br>Mother of the<br/>Bride Dresses',
+            "ctaLink": '#',
+            "imageURL": "images/115866_014-H_Guest_of_the_Wedding.jpg"
         },
         {
             "cta": 'Shop All</br>Destination Gowns',
             "ctaLink": '#',
-            "imageURL": "http://placehold.it/600x350"
+            "imageURL": "images/6749_028.jpg"
         },
         {
-            "cta": 'Shop All</br>Bridal Party Dresses',
+            "cta": 'Shop All</br>Bridal Party<br/>Dresses',
             "ctaLink": '#',
-            "imageURL": "http://placehold.it/600x350"
+            "imageURL": "images/655_351.jpg"
         },
         {
             "cta": 'Shop All</br>Flower Girl Dresses',
             "ctaLink": '#',
-            "imageURL": "http://placehold.it/600x350"
-        }
-    ];
-    
-    preFooter = [
+            "imageURL": "images/117342_White.jpg"
+        },
         {
+            "cta": 'Shop All</br>Tuxedos',
+            "ctaLink": '#',
+            "imageURL": "images/pexels-photo-177328.jpeg"
+        }
+    ];%>
+    <% include ../partials/cta-fullwidth %>
+    
+    <%  let preFooterColumns = 2;  
+        preFooter = [{
             "title": 'Request Appointment',
             "body":'Non consenis asitionsequi te nonsequam voloreprata quo venihitatis ma aditi velesed quae con eseque nosam destrum iuscian dantur...',
             "btn": {
@@ -45,15 +76,12 @@
                 btnTxt: 'register today'
             }
         }
-    ];
-%>
-
-<!-- CONTENT -->
-<% include ../partials/head %>
-    <% include ../partials/header %>
-    <% include ../partials/header-large %>
-    <% include ../partials/cta-fullwidth %>
-    <% include ../partials/pre-footer-content %>
+    ];%>
+    <section class="content container-fluid">
+        <div class="row">
+            <% include ../partials/pre-footer-content %>
+        </div>
+    </section>
 
 
 <% include ../partials/footer %>

@@ -1,0 +1,41 @@
+.lp__section-bottom-cta {
+
+	&__btn {
+		background-color: $tan;
+		margin: 5% 0;
+		text-align: center;
+		padding: 4% 1%;
+
+		@media (max-width: $bp-md) {
+			margin: 5%;
+		}
+
+		a {
+			color: $black;
+			text-align: center;
+			font-family: $primary-font;
+			font-style: italic;
+			font-weight: 700;
+			font-size: $button-size;
+			margin: 0px auto;
+			display: inline-block;
+			border-bottom: 3px solid $black;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	&__content {
+		padding: 5% 5% 5% 14%;
+		width: 60%;
+
+		@media (max-width: $bp-lg) {
+			width: 75%;
+		}
+
+		 p {
+			font-size: $font-sm;
+		 }
+	}
+}

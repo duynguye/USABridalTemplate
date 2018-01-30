@@ -1,9 +1,91 @@
+<!-- views/pages/your-prom.ejs -->
 <% include ../partials/head %>
 <% include ../partials/header %>
 
-<div>
-    <!-- Your Content Goes Here -->
+<%
+    path = "your-prom" // Keep text lowercase. Seperate additional links with "/" and no spaces
 
-</div>
+    page = {
+        smallTitle: 'Fabulous, Romatic,',
+        largeTitle: 'Fun &<br>Flirty',
+        description: 'Nam dolent doluptas dolor mo et pliquidesto evendignam apis simagnatis id undus dunt pa dolorest, ut volorestiis estias volupis dolest autet arum quam earum lautat est, oditiisi id quaepero magnis dus accatur simusci anditis eos vendam.'
+    };
+
+    image = {
+        hero: '/images/487834632.jpg',
+        heroAlt: '#',
+    };
+
+    cta = {
+        title: 'Shop all prom-pageant'
+    };
+
+    optional = {
+        dropdowns: false
+    }
+
+    lp_btf = {
+        row_1_img : '/images/teenagers-prom-formal-young.jpg',
+        row_1_title : 'Prom, pageant, party & evening wear from USA Bridal',
+
+        row_2_img : '/images/sherrihill_50756_red_5.jpg',
+        row_2_title : 'Styles, Selection, Value... USA Bridal has it all!',
+        row_2_desc : "<p><strong>The Styles</strong> - The colors, the selection, and your size. Thousands of gowns - Ball Gowns, Mermaid Gowns, Red Carpet Styles, Cocktail Dresses, Designer Prints and more.</p><p><strong>The Designers</strong> - Mori Lee, Tony Bowls, Flirt by Maggie Sottero, Sherry Hill, Jovani, Alyce, LaFemme, Jasz, Night Moves, Paris, Tiffany, Blush and many more...</p><p><strong>The Accessories</strong> - You have your gown, but your fabulous look isn't complete without the appropriate matching accessories. Jewelry, Shoes, Purses, Tiaras and more...</p>",
+
+        row_3_img : '/images/hero.png',
+        row_3_title : 'Purchase from an Award Winning Store...',
+        row_3_desc : '<p>Personal customer service is our objective. USA Bridal is one of the largest and most respected Formal Wear Stores in the United States. Our customers begin as pre-teens in pageants, then prom, sorority formals, and  nally their dream wedding. Most return again when a formal event calls for that special dress. Due to all of our loyal customers, we have won many industry service awards from designers Allure Bridal, Jovani, Mori Lee, Casablanca, IPA/NPA (National Prom Association) and have been voted National Bridal Retailer of the Year! Schedule your appointment at our Louisville, KY, Nashville/ Goodlettesville, TN, Evansville, IN or Elizabethtown, KY locations.</p>'
+    }
+    
+%>
+<% include ../partials/header-large  %>
+
+<% include ../partials/lp-btf-module %>
+
+<% productSliders = [{
+        sectionId: 'lp-prom',
+        sliderClass: 'slider-prom',
+        header: 'Your Prom',
+        products: [
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9000F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/107_0009.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9215F.jpg' ,
+            },
+            {
+                title: 'Dress Name',
+                salePrice: '359',
+                retailPrice: '399',
+                imageURL: '/images/9250F.jpg' ,
+            }
+        ]
+    }
+] %>
+
+<% include ../partials/product-slider%>
+
+<%
+ bottom_cta = {
+        title : 'Join Our Text Club',
+        desc : 'Luptatur, commolo riorese quatiatus as dolupta tionseque labore, cum fugiatis dolorerum il iunt pa in pos mint omnit et ullitate et accus, comnihit, et alique es.',
+        link_url : "#",
+        link_text : 'join today'
+    }
+ %>
+
+<% include ../partials/bottom-cta %>
 
 <% include ../partials/footer %>

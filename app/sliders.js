@@ -33,6 +33,7 @@ let sliderProductParams = {
         },
         // when window width is <= 1441px
         1441: {
+            slidesPerGroup: 4,
             slidesPerView: 4,
             spaceBetween: 100
         }

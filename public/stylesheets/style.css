@@ -1442,6 +1442,38 @@ body {
     .btf__section--lp-row3__content ul li {
       margin-bottom: 4px; }
 
+.product__listings-container {
+  padding: 0px 60px; }
+  .product__listings-container-sidebar .title__underline {
+    margin-left: -60px;
+    padding-left: 60px; }
+  .product__listings-container-sidebar-search {
+    margin-bottom: 60px; }
+    .product__listings-container-sidebar-search .input__field, .product__listings-container-sidebar-search .input__dropdown, .product__listings-container-sidebar-search .input__calendar, .product__listings-container-sidebar-search .input__textarea {
+      border-bottom: 2px solid #282828;
+      font-size: 21px;
+      margin-bottom: 25px; }
+    .product__listings-container-sidebar-search-filter {
+      display: block; }
+      .product__listings-container-sidebar-search-filter label {
+        font-family: "Muli", sans-serif;
+        font-weight: 500;
+        font-size: 14px; }
+  .product__listings-container-sidebar-collections-subtitle:hover, .product__listings-container-sidebar-collections-subtitle:focus {
+    color: #282828;
+    text-decoration: none;
+    outline: none; }
+  .product__listings-container-sidebar-collections-subtitle h5:after {
+    content: "+";
+    font-family: "Playfair Display", serif;
+    display: inline-block;
+    font-weight: 900;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    background: none;
+    padding-left: 7px; }
+
 .footer {
   padding: 0 60px; }
   @media (max-width: 992px) {
